@@ -1,4 +1,4 @@
-# State 12 — Gauge Interrupts: The Selection Surface
+# State 18 — Gauge Interrupts: The Selection Surface
 
 ## What This State Is
 

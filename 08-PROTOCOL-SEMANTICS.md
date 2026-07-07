@@ -1,4 +1,4 @@
-# State 08 — Protocol: The Wire
+# State 08 — Protocol Semantics: The Wire
 
 ## What This State Is
 

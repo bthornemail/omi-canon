@@ -158,19 +158,23 @@ Each truth-gate file (FACTS.omi, RULES.omi, COMBINATORS.omi, CLOSURES.omi, CONS.
 | `05-PURE-ALGORITHMS.md` | The 7 canonical operations |
 | `06-FORMAL-PROOFS.md` | Proof stack tracking |
 | `07-ISA.md` | Machine implementation of all 7 algorithms |
-| `08-PROTOCOL.md` | Control-plane (A2) and escape (A4) spec; frame format |
+| `08-PROTOCOL-SEMANTICS.md` | Control-plane (A2) and escape (A4) spec; frame format |
 | `09-OMI-LISP.md` | Declaration surface — SExpr grammar, decision tables |
 | `10-BLACKBOARD.md` | Evaluation surface — bitboards, bit-blips |
-| `11-PROJECTION-FACES.md` | Projection algorithm (A3) specification |
-| `12-GAUGE-INTERRUPTS.md` | Gauge selection (A4/A5) — orientation, pleth |
-| `13-SURFACE-APPLICATIONS.md` | Transition algorithm (A1) — Delta Law, quadratic forms, Fano |
-| `14-WAVE-SURFACE-INTERPRETER.md` | Wave classification (A3 projection over analog) |
-| `15-IMO-PORTS.md` | External nondeterminism ports (A5/A6) |
-| `16-DISTRIBUTED-OPEN-WORLD.md` | Proposal/receipt (A6) and branch/reconciliation (A7) |
-| `17-BUFFER-FRAMING.md` | Transport carriers (A2 control-plane) |
-| `18-VERSION-CONTROL.md` | Seeds, citations, scopes |
-| `19-CONSTITUTION.md` | This matrix |
-| `20-GLOSSARY.md` | Definitions of every term used in the grid |
+| `11-NOTATION-MULTIPLEXING.md` | Earned gauge-band multiplexing; pre-language structure |
+| `12-VERSION-CONTROL.md` | Seeds, citations, scopes |
+| `13-MASTER-ARCHITECTURE.md` | Architecture map — construction spine, constitutional spine |
+| `14-CANONICAL-CONSTITUTION.md` | The verification grid — this matrix's companion |
+| `15-CLASSIFICATION-TERMINOLOGY.md` | Term roles and document categories |
+| `16-SYMBOLIC-GRAMMAR.md` | The Omi-* protocol grammar boundary |
+| `17-RELATIONAL-QUOTATION.md` | Cardinality, ordinality, quotation, carry-forward |
+| `18-GAUGE-INTERRUPTS.md` | Gauge selection (A4/A5) — orientation, pleth |
+| `19-PROJECTION-FACES.md` | Projection algorithm (A3) specification |
+| `20-TRANSFORM-CARRIERS.md` | External nondeterminism port contracts (A5/A6) |
+| `21-SURFACE-CLAUSES.md` | Transition algorithm (A1) — Delta Law, quadratic forms, Fano |
+| `22-PROPAGATION-MODEL.md` | Wave classification and carrier propagation (A3/A6/A7) |
+| `23-REFERENCE-GLOSSARY.md` | Definitions of every term used in the canon |
+| `24-OBSERVER-CHANGELOG.md` | Observer-facing migration history |
 
 ---
 

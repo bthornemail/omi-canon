@@ -1,4 +1,4 @@
-# State 20 — Glossary: The Closure
+# State 23 — Reference Glossary: The Closure
 
 ## What This State Is
 

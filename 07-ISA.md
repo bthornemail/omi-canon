@@ -361,4 +361,4 @@ validated frame
 
 From this state — having built the machine — I moved to State 08 (Protocol) to answer: how does the machine communicate? What wire format carries state between observers?
 
-Continue to `08-PROTOCOL.md`.
+Continue to `08-PROTOCOL-SEMANTICS.md`.

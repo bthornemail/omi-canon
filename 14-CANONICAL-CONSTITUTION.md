@@ -1,4 +1,4 @@
-# Constitution of the OMI Canon
+# State 14 — Canonical Constitution: The Verification Grid
 
 ## The 112 Proofs Matrix — Constitutional Verification Grid
 
@@ -19,21 +19,23 @@ omi-canon/
 ├── 05-PURE-ALGORITHMS.md        ← State 05 — Pure Algorithms
 ├── 06-FORMAL-PROOFS.md          ← State 06 — Formal Proofs
 ├── 07-ISA.md                    ← State 07 — ISA
-├── 08-PROTOCOL.md               ← State 08 — Protocol
+├── 08-PROTOCOL-SEMANTICS.md     ← State 08 — Protocol Semantics
 ├── 09-OMI-LISP.md               ← State 09 — OMI-Lisp
 ├── 10-BLACKBOARD.md             ← State 10 — Blackboard
-├── 11-SYMBOLIC-GRAMMAR.md       ← State 11 — Symbolic Grammar
-├── 12-RELATIONAL-ACCESS-ENVELOPE.md ← State 12 — Relational Access Envelope
-├── 13-PROJECTION-FACES.md       ← State 13 — Projection Faces
-├── 14-GAUGE-INTERRUPTS.md       ← State 14 — Gauge Interrupts
-├── 15-SURFACE-APPLICATIONS.md   ← State 15 — Surface Applications
-├── 16-WAVE-SURFACE-INTERPRETER.md ← State 16 — Wave Surface Interpreter
-├── 17-IMO-PORTS.md              ← State 17 — IMO Ports
-├── 18-DISTRIBUTED-OPEN-WORLD.md ← State 18 — Distributed Open World
-├── 19-BUFFER-FRAMING.md         ← State 19 — Buffer Framing
-├── 20-VERSION-CONTROL.md        ← State 20 — Version Control
-├── 21-CONSTITUTION.md           ← State 21 — Constitution
-├── 22-GLOSSARY.md               ← State 22 — Glossary
+├── 11-NOTATION-MULTIPLEXING.md  ← State 11 — Notation Multiplexing
+├── 12-VERSION-CONTROL.md        ← State 12 — Version Control
+├── 13-MASTER-ARCHITECTURE.md    ← State 13 — Master Architecture
+├── 14-CANONICAL-CONSTITUTION.md ← State 14 — Canonical Constitution
+├── 15-CLASSIFICATION-TERMINOLOGY.md ← State 15 — Classification Terminology
+├── 16-SYMBOLIC-GRAMMAR.md       ← State 16 — Symbolic Grammar
+├── 17-RELATIONAL-QUOTATION.md   ← State 17 — Relational Quotation
+├── 18-GAUGE-INTERRUPTS.md       ← State 18 — Gauge Interrupts
+├── 19-PROJECTION-FACES.md       ← State 19 — Projection Faces
+├── 20-TRANSFORM-CARRIERS.md     ← State 20 — Transform Carriers
+├── 21-SURFACE-CLAUSES.md        ← State 21 — Surface Clauses
+├── 22-PROPAGATION-MODEL.md      ← State 22 — Propagation Model
+├── 23-REFERENCE-GLOSSARY.md     ← State 23 — Reference Glossary
+├── 24-OBSERVER-CHANGELOG.md     ← State 24 — Observer Changelog
 │
 ├── AGENTS.md                 ← Coding agent configuration
 ├── CONTRIBUTING.md           ← Contribution guide
@@ -62,7 +64,7 @@ omi-canon/
 │   └── axioms/
 │       ├── verified_execution.md       ← Verified C/Coq correspondence
 │       ├── omi_pi_proof.md             ← π approximation via 1/73 weight block
-│       ├── OMI_bialgebra.md            ← Bialgebraic collapse of representation/interpretation
+│       ├── OMI_bialgebra.md            ← Bialgebraic collapse
 │       ├── functorial_semantics.md     ← Functor from frames to states
 │       ├── delta_orbit_theory.md       ← Algebraic Delta Law orbit properties
 │       ├── coalgebraic_bisimulation.md ← Bisimulation for projection equivalence
@@ -329,21 +331,23 @@ Each Q × A cell now contains 8 sub-cells (4 citation pairs × 2 proof forms), e
 | `05-PURE-ALGORITHMS.md` | Specifies the 7 canonical operations from which every algorithm is composed |
 | `06-FORMAL-PROOFS.md` | Tracks the proof stack — what has been verified and what remains conjectural |
 | `07-ISA.md` | Implements all 7 algorithms as an instruction set architecture — the machine that executes the constitution |
-| `08-PROTOCOL.md` | Specifies the A2 control-plane and A4 escape algorithms — frame format, control markers, receipt packing |
+| `08-PROTOCOL-SEMANTICS.md` | Specifies the A2 control-plane and A4 escape algorithms — frame format, control markers, receipt packing |
 | `09-OMI-LISP.md` | Defines the declaration surface — SExpr grammar, symbols, strings, decision tables |
 | `10-BLACKBOARD.md` | Defines the construction surface — citation, truth gates, Karnaugh reduction, combinators, Delta transition, closure, attestation |
-| `11-SYMBOLIC-GRAMMAR.md` | Defines the `Omi-*` protocol grammar boundary — names, states, phases, carriers, projection, and attestation vocabulary |
-| `12-RELATIONAL-ACCESS-ENVELOPE.md` | Defines `|OMI---IMO>` identity — gauge, place value, relation, 512-bit access envelope, unary/XOR/shift doctrine |
-| `13-PROJECTION-FACES.md` | Specifies the A3 projection algorithm — how the invisible becomes visible |
-| `14-GAUGE-INTERRUPTS.md` | Specifies the A4/A5 gauge selection surface — orientation, pleth, SOAP |
-| `15-SURFACE-APPLICATIONS.md` | Derives the A1 transition algorithm (Delta Law), quadratic forms, Fano, factorial tower |
-| `16-WAVE-SURFACE-INTERPRETER.md` | Applies A3 projection to analog signals — wave classification |
-| `17-IMO-PORTS.md` | Applies A5/A6 to external nondeterminism — sensor, packet, file ports |
-| `18-DISTRIBUTED-OPEN-WORLD.md` | Applies A6/A7 to multi-agent collaboration — proposals, receipts, reconciliation |
-| `19-BUFFER-FRAMING.md` | Applies A2 control-plane to transport carriers — BLOBs, GLOBs, streams |
-| `20-VERSION-CONTROL.md` | Seeds, citations, scopes, and receipts for versioning the canon |
-| `21-CONSTITUTION.md` | This file — the verification grid itself, cross-referencing every state |
-| `22-GLOSSARY.md` | Defines every term used in the constitutional grid — closes the vocabulary |
+| `11-NOTATION-MULTIPLEXING.md` | Defines earned gauge-band multiplexing — pre-language control, structure, and declaration surfaces |
+| `12-VERSION-CONTROL.md` | Seeds, citations, scopes, and receipts for versioning the canon |
+| `13-MASTER-ARCHITECTURE.md` | Maps the architecture — construction spine, constitutional spine, repository roles |
+| `14-CANONICAL-CONSTITUTION.md` | This file — the verification grid itself, cross-referencing every state |
+| `15-CLASSIFICATION-TERMINOLOGY.md` | Classifies terms, roles, and document categories across the canon |
+| `16-SYMBOLIC-GRAMMAR.md` | Defines the `Omi-*` protocol grammar boundary — names, states, phases, carriers, projection, and attestation vocabulary |
+| `17-RELATIONAL-QUOTATION.md` | Defines `|OMI---IMO>` identity — cardinality, ordinality, quotation, carry-forward |
+| `18-GAUGE-INTERRUPTS.md` | Specifies the A4/A5 gauge selection surface — orientation, pleth, SOAP |
+| `19-PROJECTION-FACES.md` | Specifies the A3 projection algorithm — how the invisible becomes visible |
+| `20-TRANSFORM-CARRIERS.md` | Applies A5/A6 to external nondeterminism — port contracts and carrier boundaries |
+| `21-SURFACE-CLAUSES.md` | Derives the A1 transition algorithm (Delta Law), quadratic forms, Fano, factorial tower |
+| `22-PROPAGATION-MODEL.md` | Applies A3/A6/A7 to analog signals, independent observers, and carrier propagation |
+| `23-REFERENCE-GLOSSARY.md` | Defines every term used in the constitutional grid — closes the vocabulary |
+| `24-OBSERVER-CHANGELOG.md` | Records observer-facing spine changes and migration history |
 
 ---
 

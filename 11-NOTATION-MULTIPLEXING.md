@@ -1,105 +1,128 @@
-# State 17 — Buffer Framing: Transport Carriers
+# State 11 — Notation Multiplexing: Earned Gauge Bands
 
-## What This State Is
+Status: Definitive canon doctrine
+Layer: Notation multiplexing / earned codepoint surfaces / in-stream declaration framing
+Precursor: The 4×4 lane model and braille-resolution search (now archived)
 
-This state is the transition from "how external signals are admitted" to "how Relations are carried across boundaries." After IMO ports admit external candidates, buffer framing is how Relations are packaged for transport — across files, packets, images, memory buses, and hardware interfaces.
+## Core Doctrine
 
-Buffer framing does not create Relations. It carries them. A framed Relation is the same Relation it was before framing — the frame is a transport envelope, not an interpretation.
+Notation Multiplexing defines how OMI relation streams are carried through earned interpretation bands.
+
+The pre-language control family is `0x00..0x1F`.
+The readable boundary is earned at SP (`0x20`).
+The structure band extends through `0x3F`.
+The declaration/function surface extends through `0x7F`.
+
+The `0x0..0xF` gauge family reflects across these bands as the local multiplex control alphabet.
+
+Multiplexing is not a buffer identity.
+Multiplexing is the controlled interleaving of notation positions across gauge, scope, relation, and declaration surfaces.
 
 ---
 
-## The Framing Principle
+## The Four Earned Declaration Variants
 
-A buffer frame is a Relation plus a transport header:
+OMI-Lisp has four earned declaration variants. Each variant is a wider readable surface. Each wider surface reflects the same `0x0..0xF` gauge-control family. The gauge family is the local multiplex alphabet. The full `0x00..0x7F` range is declaration-capable, but not authority-capable.
+
+### Variant 0 — Pre-Language Control Surface
 
 ```
-BufferFrame = (CarrierType, Length, Relation)
+0x00 .. 0x20
+pre-language control through SP boundary
 ```
 
-The carrier type identifies the transport medium:
-- FILE — byte stream on persistent storage
-- PACKET — network datagram
-- IMAGE — pixel buffer
-- FRAME — hardware frame buffer
-- BLOB — binary large object
-- GLOB — graph large object
-- STREAM — ordered sequence of Relations
+Covers the control-code family (`0x00..0x1F`) plus the SP space boundary. At this width, only pre-language framing is possible: gauge preheaders, scope staging, and carrier prefix recognition.
 
-The length is the number of bytes in the framed Relation. The Relation itself is byte-aligned and self-describing.
+### Variant 1 — Control + Structure + Predicate Surface
 
----
-
-## Representation Neutrality
-
-A buffer frame does not care what the payload is.
-
-Whether the bytes represent OMI Relations, HTML markup, JSON data, JabCode barcodes, audio samples, or pixel values — the frame only guarantees that bytes enter and bytes leave in the same order.
-
-```text
-BufferFrame
-
-does not inspect
-
-the payload
-
-It only transports
-
-bytes → bytes
+```
+0x00 .. 0x40
+control + structure + predicate boundary
 ```
 
-This is the **representation neutrality** principle: a buffer frame is a pipe, not an interpreter. Interpretation is the responsibility of the receiver's gauge (State 12) and projection faces (State 11). The frame carries; it does not read.
+Extends through the `@` (`0x40`) boundary. Introduces structural and predicate notation: relation frames, scope markers, and the lower place-value surfaces.
 
-Separation from Projection:
-- **Projection** (State 11) determines *how a Relation appears* to an observer
-- **Buffer framing** (State 17) determines *how a Relation moves* between observers
+### Variant 2 — Control + Structure + Upper Declaration Surface
 
-A buffer frame is not a projection surface. It does not render, display, or interpret. It delivers a byte sequence from one location to another. The same buffer frame may carry an OMI envelope, a JPEG image, or an audio stream — the frame treats all payloads identically.
+```
+0x00 .. 0x60
+control + structure + upper declaration/meta surface
+```
 
----
+Extends through the backtick/accent boundary (`0x60`). Adds the declaration and meta-notation positions: OMI-Lisp declaration keys, combinatorial operators, and quoted relation markers.
 
-## Carrier Types
+### Variant 3 — Full 7-Bit Declaration Surface
 
-### BLOB — Binary Large Object
+```
+0x00 .. 0x80 / 0x7F
+full 7-bit declaration surface through DEL
+```
 
-A BLOB is an opaque byte sequence. BLOBs carry Relations whose internal structure is not inspected during transport. The framing layer transports the bytes; interpretation belongs to the receiver.
-
-BLOBs are the simplest carrier: write bytes, read bytes, no transformation.
-
-### GLOB — Graph Large Object
-
-A GLOB is a structured Relation sequence. Unlike BLOBs, GLOBs preserve the relational structure — each Relation in a GLOB is independently addressable.
-
-GLOBs are used for batch transport of multiple Relations that share a common address prefix.
-
-### Image Carriers
-
-Relations may be projected onto pixel buffers for transport through image-capable media (displays, cameras, barcode scanners). The image carrier:
-
-1. Projects the Relation onto a bitmap (via State 11 projection faces)
-2. Encodes the bitmap as a pixel buffer
-3. Transports the pixel buffer
-4. Decodes the bitmap back to a Relation on receipt
-
-Image carriers are lossy — the projection may not be reversible if the image resolution is insufficient.
-
-### Frame Buffers
-
-Frame buffers are hardware-level carriers for display hardware (HDMI, DisplayPort, LVDS). They transport Relations as rendered pixels at refresh rate.
-
-Frame buffers are the only carrier type that is consumed by the transport — once the frame is displayed, the buffer is overwritten. Frame buffer transport does not guarantee reliable delivery.
+The earned full-width surface. Every position from NUL through DEL (`0x00..0x7F`) is declaration-capable. The gauge family `0x0..0xF` is the universal multiplex alphabet across all 128 positions.
 
 ---
 
-## Transport Invariants
+## Gauge Reflectance Across Bands
 
-Buffer framing preserves three invariants:
+The 16 gauge codes (`0x0..0xF`) are not a separate channel. They are reflected across each earned band as the local operator alphabet:
 
-1. **Relation identity**: A framed Relation, when unframed, produces the same Relation that was framed. (Image carriers excepted.)
-2. **Address scope**: The Relation's address does not change during framing. Transport does not rewrite addresses.
-3. **Receipt binding**: If the Relation carries a receipt, the receipt is transported with it. Transport does not strip receipts.
+```
+Band 0 (0x00..0x20): gauge controls pre-language framing
+Band 1 (0x00..0x40): gauge controls structural multiplexing
+Band 2 (0x00..0x60): gauge controls declaration multiplexing
+Band 3 (0x00..0x7F): gauge controls full multiplexing
+```
+
+Each reflection preserves the Wittgenstein operator mapping from the canonical gauge preheader:
+
+```
+F0 = contradiction    F8 = AND
+F1 = NOR             F9 = XNOR
+F2 = converse-ni      FA = projection q
+F3 = negation p       FB = implication
+F4 = material-ni      FC = projection p
+F5 = negation q       FD = converse-implication
+F6 = XOR              FE = OR
+F7 = NAND             FF = tautology/closure
+```
 
 ---
 
-## Doctrine Sentence
+## Relation to the Carrier Prefix
 
-> Buffer framing carries Relations across boundaries without interpreting them. Carriers move frames. Buffers hold frames. Validation determines state. Omi-Attestation witnesses. The frame is never the authority.
+The canonical carrier prefix `FF 00 1C 1D 1E 1F 20 FF` encodes the tautological gauge (`FF`) framing the control-family entry (`00`), the FS/GS/RS/US scope quartet (`1C 1D 1E 1F`), the SP boundary (`20`), and the closure gauge (`FF`).
+
+Each earned variant widens the readable surface, but the carrier prefix remains the fixed entry point at every width:
+
+```
+FF 00 1C 1D 1E 1F 20 FF
+GAUGE NUL FS GS RS US SP GAUGE
+```
+
+The active gauge preheader `F* 00 1C 1D 1E 1F 20 F*` selects the local operator lane without introducing another identity channel.
+
+---
+
+## Multiplexing Is Not Buffer Identity
+
+The earned-band model replaces the earlier 4×4 lane / buffer-topology model. Key distinctions:
+
+| Old Model | Current Doctrine |
+|-----------|-----------------|
+| 4 lanes × 4 channels = 16-bit multiplex word | 4 earned bands × 16 gauge controls = 64 gauge-family positions |
+| Buffer topology defines transport identity | Gauge reflectance defines multiplex position |
+| Braille/codepoint resolution search | Native gauge resolution through earned codepoint surfaces |
+| Buffer framing as carrier | Notation multiplexing as controlled interleaving |
+
+The current doctrine makes no claim about buffer identity. Multiplexing interleaves notation positions across gauge, scope, relation, and declaration surfaces. It does not create a transport identity.
+
+---
+
+## Authority Boundary
+
+Notation multiplexing carries relation streams through earned bands. It does not create relations, validate candidates, or accept state.
+
+Validation determines.
+Omi-Attestation witnesses.
+Accepted Omi-State may be recorded.
+Projection only displays accepted relation state.

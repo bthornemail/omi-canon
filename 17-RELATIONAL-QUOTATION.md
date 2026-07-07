@@ -1,10 +1,50 @@
-# OMI Relational Access Envelope
+# State 17 — Relational Quotation: Cardinality, Ordinality, Qualification, and Carry-Forward
 
-Status: Definitive canon doctrine  
-Layer: Citation / protocol core / object model  
+Status: Definitive canon doctrine
+Layer: Citation / relational quotation / identity / object model
 Verification target: constitutional grid, later pass
 
-## Core Rule
+## Core Doctrine
+
+Relational Quotation is the canonical act of placing a candidate relation into an addressable, inspectable, non-authoritative frame. It preserves the relation without accepting it.
+
+Relational quotation declares the relation.
+Relational cardinality bounds the relation set.
+Relational ordinality places the relation sequence.
+Relational LFSR carries accepted relation state forward.
+Validation adjudicates.
+Attestation witnesses.
+Projection displays.
+
+The layer is not merely wrapping a relation. It is quoting the relation into a lawful frame so another layer can resolve it.
+
+### Cardinality
+
+Cardinality names how many relation positions are present in the quotation frame.
+
+A single-addressed envelope carries one relation position. A CAR/CDR pair carries two. A carrier fragment carries a bounded multiset of quoted relations. Cardinality is not a size claim — it is a position count within the frame.
+
+### Ordinality
+
+Ordinality names how those positions are placed, sequenced, and carried.
+
+The place-value frame `o---o/---/?---?@---@ / S0..S7?PAYLOAD?MASK@CAR@CDR` establishes the canonical ordering: scope, path, query, socket, payload, and the CAR/CDR continuation pair. Ordinality is the ordering law that makes the frame resolvable.
+
+### Quotation
+
+Quotation is the act that distinguishes a carried relation from an executed one.
+
+A quoted relation can be inspected, lowered, validated, and projected without being immediately accepted. This is the OMI-Lisp/fexpr idea: a candidate declaration is not an executed instruction. The relation is quoted into the frame, and validation determines whether it becomes accepted state.
+
+### LFSR Carry-Forward
+
+Relational LFSR is the deterministic carry-forward mechanism by which validated relation state advances without replacing identity with a hash, digest, or surrogate label.
+
+The LFSR is not identity. It is the deterministic sequence that carries accepted relation state from one frame to the next. It preserves the quotation boundary — the relation is carried forward as a quoted candidate for further resolution, not as an executed result.
+
+---
+
+## Core Identity Rule
 
 The citation identity is:
 
@@ -29,7 +69,7 @@ or external compatibility material.
 
 ## Algebraic Core
 
-The relational access envelope reduces to:
+The relational quotation frame reduces to:
 
 ```text
 |OMI---IMO>
@@ -54,12 +94,12 @@ Relation:
 S0..S7?PAYLOAD?MASK@CAR@CDR
 ```
 
-The 512-bit envelope is the carrier/access realization of this smaller
+The 512-bit envelope is the carrier/quotation realization of this smaller
 algebraic core.
 
-## Canonical Relational Access Envelope
+## Canonical Relational Quotation Frame
 
-The canonical envelope is:
+The canonical quotation frame is:
 
 ```text
 |OMI---IMO>
@@ -89,9 +129,9 @@ F* 00 1C 1D 1E 1F 20 F*
 `FF` as the canonical sealed prefix. A different active `F*` may stage a local
 operator lane, but it does not introduce another identity channel.
 
-## 512-Bit Relational Access Envelope
+## 512-Bit Relational Envelope
 
-OMI standardizes a 512-bit relational access envelope:
+OMI standardizes a 512-bit relational envelope:
 
 ```text
 512 bits = 64 bytes
@@ -104,7 +144,7 @@ first 256 bits  = prefix / gauge / orientation half
 second 256 bits = OMI-IMO place-value frame half
 ```
 
-The first half orients access:
+The first half orients the quotation:
 
 ```text
 carrier prefix
@@ -125,7 +165,7 @@ Expanded:
 S0..S7?PAYLOAD?MASK@CAR@CDR
 ```
 
-The envelope stages access. It does not accept state.
+The envelope stages the quotation. It does not accept state.
 
 Validation determines.
 
@@ -414,11 +454,15 @@ The active gauge preheader frames.
 
 The place-value frame addresses.
 
+The quotation preserves without accepting.
+
 The monotonic unary array composes.
 
 XOR and rotation preserve reversible relation behavior.
 
 Narrow shifts may stage stream entry.
+
+Relational LFSR carries forward without replacing identity.
 
 Validation determines.
 
@@ -426,9 +470,11 @@ Omi-Attestation witnesses.
 
 Accepted Omi-State may be recorded.
 
+Projection only displays accepted relation state.
+
 ## Later Constitutional-Grid Verification
 
-A later pass over `/home/main/omi/omi-canon/constitutional-grid` should verify
+A later pass over `constitutional-grid` should verify
 that each constitutional cell agrees with:
 
 ```text

@@ -4,9 +4,11 @@ Status: Definitive canon doctrine
 Layer: symbolic protocol grammar / projection vocabulary  
 References:
 
-- `12-RELATIONAL-ACCESS-ENVELOPE.md`
+- `17-RELATIONAL-QUOTATION.md`
 - `/home/main/omi/omi-tetragrammatron/docs/Omi Surface Projection Faces.md`
 - `/home/main/omi/omi-tetragrammatron/docs/Omi Glossary.md`
+
+# State 16 — Symbolic Grammar: The Boundary
 
 ## Purpose
 
