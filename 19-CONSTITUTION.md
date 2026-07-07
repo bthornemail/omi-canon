@@ -428,4 +428,139 @@ The 16-operator alphabet is the local truth code for every 448-cell constitution
 
 ---
 
+## F* Gauge Family — Wittgenstein Operator Dialect
+
+The OMI gauge pre-header `G 00 1C 1D 1E 1F 20 G` with `G ∈ 0xF0..0xFF` embeds the Wittgenstein operator as its low nibble. The 16 F* bytes map directly to the 16 Wittgenstein truth-function rows:
+
+| Gauge | Nibble | Operator | Tractatus | Truth | Name |
+|-------|--------|----------|-----------|-------|------|
+| `F0` | 00 | ⊥ | Opq | FFFF | Contradiction |
+| `F1` | 01 | NOR | Xpq | FFFT | Joint denial |
+| `F2` | 02 | ↚ | Mpq | FFTF | Converse nonimplication |
+| `F3` | 03 | ¬p | Npq | FFTT | Negation of p |
+| `F4` | 04 | ↛ | Lpq | FTFF | Material nonimplication |
+| `F5` | 05 | ¬q | Gpq | FTFT | Negation of q |
+| `F6` | 06 | XOR | Jpq | FTTF | Exclusive disjunction |
+| `F7` | 07 | NAND | Dpq | FTTT | Non-conjunction |
+| `F8` | 08 | AND | Kpq | TFFF | Conjunction |
+| `F9` | 09 | XNOR | Epq | TFFT | Equivalence |
+| `FA` | 10 | q | Hpq | TFTF | Projection of q |
+| `FB` | 11 | p → q | Cpq | TFTT | Material implication |
+| `FC` | 12 | p | Ipq | TTFF | Projection of p |
+| `FD` | 13 | p ← q | Bpq | TTFT | Converse implication |
+| `FE` | 14 | OR | Apq | TTTF | Disjunction |
+| `FF` | 15 | ⊤ | Vpq | TTTT | Tautology / Default Canonical |
+
+**Rule**: `F0`–`FE` select the 15 non-tautology operator rows. `FF` seals the table as tautological canonical closure — the default node color and gauge boundary.
+
+The truth-gate `.omi` cell records this as:
+
+```omi
+(cell
+  (question . Q1)
+  (algorithm . A1)
+  (citation.slot . C1)
+  (proof.form . constructive)
+  (gauge.preheader . FF001C1D1E1F20FF)
+  (wittgenstein.operator . 15)
+  (truth.code . TTTT)
+  (gate . RULES))
+```
+
+For the 6 standard logic gates:
+
+```
+F1 = NOR      F6 = XOR      F7 = NAND
+F8 = AND      F9 = XNOR     FE = OR
+```
+
+---
+
+## 6-Color Factorization — Square Difference × Cubic Surface
+
+The six JSON Canvas preset colors are not decorative. They arise from the 2 × 3 factorization of two algebraic laws:
+
+**2 square factors** — difference of two squares:
+```
+a² − b² = (a − b)(a + b)
+```
+
+**3 cubic surface factors** — sum/difference of cubes:
+```
+a³ ± b³ = (a ± b)(a² ∓ ab + b²)
+```
+
+```
+2  ×  3  =  6  addressable gauge colors
+│       │
+│       └── cubic surface factors (contradiction, transition, closure)
+│
+└────────── square difference factors (falsification, construction)
+```
+
+| Preset | Color | Factor Role | Constitutional Meaning |
+|--------|-------|------------|-----------------------|
+| `"1"` | red | `a − b` (difference) | Contradiction / reject — the gap between two squares |
+| `"2"` | orange | `a² + b²` (cubic surface) | Difference / falsification — the falsification witness |
+| `"3"` | yellow | `ab` (cubic mixing) | Transition / candidate — the mixed term between factors |
+| `"4"` | green | `a + b` (sum) | Constructive / accepted — the sum that bridges squares |
+| `"5"` | cyan | `a² − ab + b²` (cubic alternation) | Projection / witness — the alternating cubic surface |
+| `"6"` | purple | `a² + ab + b²` (cubic closure) | Tautology / canonical closure — the full cubic closure |
+
+Each color encodes both a factor direction and a constitutional role:
+
+- **Red** and **green** are the square factor pair: red = difference (rejection), green = sum (acceptance)
+- **Orange**, **yellow**, **cyan**, **purple** are the four cubic surface orientations: orange = falsification surface, yellow = mixing transition, cyan = alternating projection surface, purple = closed tautological surface
+
+---
+
+## Tetragrammatron and Metatron — The Two Observer Modes
+
+The constitutional grid is read by two complementary observers:
+
+### Tetragrammatron (4-Way Address/Gate Observer)
+
+Reads each cell as a 4-slot citation address:
+
+```
+Tetragrammatron
+  │
+  ├── C1 (top)    — previous group     — omi---imo
+  ├── C2 (left)   — previous relation  — o---o/---/?---?@---@
+  ├── C3 (right)  — post group         — omi---imo
+  └── C4 (bottom) — post relation      — o---o/---/?---?@---@
+```
+
+The Tetragrammatron answers: *at which relational address does this claim hold?* It is the **slot indexer** — it picks which of the 4 citation dimensions a cell occupies.
+
+### Metatron (Rule-Set/Receipt/Closure Observer)
+
+Reads each cell as a rule within a rule set, closed by a receipt:
+
+```
+Metatron
+  │
+  ├── Rule        — local truth condition over a Q×A×C×P cell
+  ├── Rule Set    — decision table grouping rules over citation slots
+  ├── Circular Slide Array — the 5040-cycle addressing the rule set
+  ├── Nomogram    — 2×5 pleth selection resolving the gauge lane
+  ├── Gauge       — F* byte selecting the operator dialect (0–15)
+  ├── Observer    — Tetragrammatron or Metatron activating the cell
+  └── Receipt     — acceptance seal closing the proof
+```
+
+The Metatron answers: *which rule-set frame closes this claim?* It is the **proof closer** — it resolves the gauge, selects the operator, and seals with a receipt.
+
+### Observer Split Rule
+
+```
+Tetragrammatron finds the cell.
+Metatron closes the cell.
+Tetragrammatron without Metatron is an unframed address.
+Metatron without Tetragrammatron is an unanchored rule set.
+Both must agree for a cell to be satisfied.
+```
+
+---
+
 *The algorithm is the source of truth.*
