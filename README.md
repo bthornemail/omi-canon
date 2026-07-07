@@ -23,6 +23,8 @@ The project begins by asking what must exist before computation.
 **The Protocol** makes them communicable between observers.
 **OMI-Lisp** declares relations as notation.
 **The Blackboard** resolves those declarations into an addressed construction surface.
+**Symbolic Grammar** defines the `Omi-*` boundary between categorical description and canonical protocol grammar.
+**Relational Access** defines identity as `|OMI---IMO>` through gauge, place value, and relation.
 **Projection Faces** provide human-readable interpretations of that surface.
 **Gauge Interrupts** select which orientation to read on the surface.
 **Surface Applications** render the oriented surface as a deterministic world.
@@ -50,16 +52,18 @@ The project begins by asking what must exist before computation.
 08 — PROTOCOL                How do observers communicate?
 09 — OMI-LISP                How are relations declared?
 10 — BLACKBOARD              How are declarations resolved?
-11 — PROJECTION FACES        How is the surface read?
-12 — GAUGE INTERRUPTS        Which orientation is selected?
-13 — SURFACE APPLICATIONS    What world is rendered?
-14 — WAVE SURFACE INTERPRETER  How are analog signals classified?
-15 — IMO PORTS               How does nondeterminism enter?
-16 — DISTRIBUTED OPEN WORLD  How do independent observers coexist?
-17 — BUFFER FRAMING          How are relations transported?
-18 — VERSION CONTROL         How does the canon version itself?
-19 — CONSTITUTION            What does the project claim?
-20 — GLOSSARY                What do the terms mean?
+11 — SYMBOLIC GRAMMAR        Which names are canonical?
+12 — RELATIONAL ACCESS       What is protocol identity?
+13 — PROJECTION FACES        How is the surface read?
+14 — GAUGE INTERRUPTS        Which orientation is selected?
+15 — SURFACE APPLICATIONS    What world is rendered?
+16 — WAVE SURFACE INTERPRETER  How are analog signals classified?
+17 — IMO PORTS               How does nondeterminism enter?
+18 — DISTRIBUTED OPEN WORLD  How do independent observers coexist?
+19 — BUFFER FRAMING          How are relations transported?
+20 — VERSION CONTROL         How does the canon version itself?
+21 — CONSTITUTION            What does the project claim?
+22 — GLOSSARY                What do the terms mean?
 ```
 
 ---
@@ -88,32 +92,34 @@ The project begins by asking what must exist before computation.
 - **07** — The instruction set architecture: opcodes, dispatch, gauge tables, compiler
 - **08** — The wire format: envelopes, receipts, ring indexer
 
-## Movement IV — The Surface (States 09–13)
+## Movement IV — The Surface (States 09–15)
 
 > How are relations declared, resolved, read, and rendered?
 
 - **09** — The notation surface: SExpr grammar, symbols, strings, lists, pairs
 - **10** — The construction surface: citation, truth gates, Karnaugh reduction, combinators, Delta transition, closure, attestation
-- **11** — The vocabulary of named faces: Omi-Ring, Omi-World, Omi-Sense, Omi-Portal, Omi-Gnomon
-- **12** — The selection surface: gauge word vs. gauge table, pleth, SOAP, sexagesimal weighting
-- **13** — The rendered world: Delta Law, quadratic law, Fano, 240 bridge, factorial tower
+- **11** — The symbolic grammar: `Omi-*` names, Omi-Ring, Omi-Delta, Omi-Carrier, acceptance boundary
+- **12** — The relational access envelope: `|OMI---IMO>`, gauge preheader, place-value frame, unary/XOR/shift doctrine
+- **13** — The vocabulary of named faces: Omi-Ring, Omi-World, Omi-Sense, Omi-Portal, Omi-Gnomon
+- **14** — The selection surface: gauge word vs. gauge table, pleth, SOAP, sexagesimal weighting
+- **15** — The rendered world: Delta Law, quadratic law, Fano, 240 bridge, factorial tower
 
-## Movement V — The World (States 14–17)
+## Movement V — The World (States 16–19)
 
 > How does the protocol interact with the physical and distributed world?
 
-- **14** — Analog signal classification: wave type, cadence, amplitude, shape
-- **15** — External nondeterminism ports: sensor, packet, file, interrupt
-- **16** — Independent observers: agents, eBPF kernel gates, networking, mesh
-- **17** — Transport carriers: BLOBs, GLOBs, images, frame buffers, streams
+- **16** — Analog signal classification: wave type, cadence, amplitude, shape
+- **17** — External nondeterminism ports: sensor, packet, file, interrupt
+- **18** — Independent observers: agents, eBPF kernel gates, networking, mesh
+- **19** — Transport carriers: BLOBs, GLOBs, images, frame buffers, streams
 
-## Movement VI — The Closure (States 18–20)
+## Movement VI — The Closure (States 20–22)
 
 > How does the canon govern itself?
 
-- **18** — Seed objects, citation routes, FS/GS/RS/US scopes
-- **19** — The 112-proof constitutional verification grid
-- **20** — Every term defined. The circle closes.
+- **20** — Seed objects, citation routes, FS/GS/RS/US scopes
+- **21** — The 112-proof constitutional verification grid
+- **22** — Every term defined. The circle closes.
 
 ---
 
@@ -121,7 +127,7 @@ The project begins by asking what must exist before computation.
 
 ### As a Journey (Recommended)
 
-Read the state files in order, `00-COSMOLOGY.md` through `20-GLOSSARY.md`. Each file represents a phase of discovery. Start with `00-COSMOLOGY.md` to understand where the project began, then follow the numbered progression.
+Read the state files in order, `00-COSMOLOGY.md` through `22-GLOSSARY.md`. Each file represents a phase of discovery. Start with `00-COSMOLOGY.md` to understand where the project began, then follow the numbered progression.
 
 ### As a Dependency Graph
 
@@ -149,29 +155,33 @@ The canon is not a chain — it is a directed graph. After the blackboard resolv
 09 — OMI-LISP
     │
 10 — BLACKBOARD
+    │
+11 — SYMBOLIC GRAMMAR
+    │
+12 — RELATIONAL ACCESS
    ┌┴──────────────┐
    │               │
-11 — PROJECTION  12 — GAUGE
+13 — PROJECTION  14 — GAUGE
    └───────┬───────┘
            │
-13 — SURFACE APPLICATIONS
+15 — SURFACE APPLICATIONS
            │
-14 — WAVE SURFACE INTERPRETER
+16 — WAVE SURFACE INTERPRETER
            │
-15 — IMO PORTS
+17 — IMO PORTS
            │
-16 — DISTRIBUTED OPEN WORLD
+18 — DISTRIBUTED OPEN WORLD
            │
-17 — BUFFER FRAMING
+19 — BUFFER FRAMING
            │
-18 — VERSION CONTROL
+20 — VERSION CONTROL
            │
-19 — CONSTITUTION
+21 — CONSTITUTION
            │
-20 — GLOSSARY
+22 — GLOSSARY
 ```
 
-**Projection (11)** and **Gauge (12)** are sibling stages. Both operate over the same evaluated blackboard surface. Projection asks "how is this visible?" Gauge asks "which orientation is selected?" Neither contains the other. Both feed into Surface Applications (13), which render the gauge-oriented, projection-carried surface as a deterministic world.
+**Symbolic Grammar (11)** defines canonical names. **Relational Access (12)** defines protocol identity. **Projection (13)** and **Gauge (14)** are sibling stages. Both operate over the same evaluated blackboard surface. Projection asks "how is this visible?" Gauge asks "which orientation is selected?" Neither contains the other. Both feed into Surface Applications (15), which render the gauge-oriented, projection-carried surface as a deterministic world.
 
 ---
 
@@ -181,12 +191,12 @@ The canon is not a chain — it is a directed graph. After the blackboard resolv
 |-------------|------------|
 | Newcomer | `00-COSMOLOGY.md` → `02-DOCTRINE.md` |
 | Philosopher | `02-DOCTRINE.md` → `01-ONTOLOGY.md` → `00-COSMOLOGY.md` |
-| Mathematician | `04-ATOMIC-KERNEL.md` → `13-SURFACE-APPLICATIONS.md` |
+| Mathematician | `04-ATOMIC-KERNEL.md` → `15-SURFACE-APPLICATIONS.md` |
 | Engineer | `07-ISA.md` → `08-PROTOCOL.md` → `09-OMI-LISP.md` |
-| Implementer | `04-ATOMIC-KERNEL.md` → `05-PURE-ALGORITHMS.md` → `11-PROJECTION-FACES.md` |
-| Verifier | `06-FORMAL-PROOFS.md` → `19-CONSTITUTION.md` |
-| Versionist | `18-VERSION-CONTROL.md` → `AGENTS.md` → `SKILLS.md` |
-| Student | `20-GLOSSARY.md` → `00-COSMOLOGY.md` |
+| Implementer | `04-ATOMIC-KERNEL.md` → `05-PURE-ALGORITHMS.md` → `11-SYMBOLIC-GRAMMAR.md` → `13-PROJECTION-FACES.md` |
+| Verifier | `06-FORMAL-PROOFS.md` → `21-CONSTITUTION.md` |
+| Versionist | `20-VERSION-CONTROL.md` → `AGENTS.md` → `SKILLS.md` |
+| Student | `22-GLOSSARY.md` → `00-COSMOLOGY.md` |
 
 ---
 

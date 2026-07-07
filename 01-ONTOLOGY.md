@@ -119,7 +119,9 @@ Facts ground.
 Closures seal.
 Combinators compose.
 CONS reduces.
-Receipts accept.
+Validation determines.
+Omi-Attestation witnesses.
+Accepted Omi-State may be recorded.
 ```
 
 And the canonical gate order:
@@ -129,7 +131,9 @@ Q_frame validates.
 Base36 indexes only after validation.
 Q_xy projects.
 DOM exposes.
-Receipt accepts.
+Validation determines.
+Omi-Attestation witnesses.
+Accepted Omi-State may be recorded.
 ```
 
 ### 5. The Boundary Signature

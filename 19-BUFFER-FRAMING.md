@@ -102,4 +102,4 @@ Buffer framing preserves three invariants:
 
 ## Doctrine Sentence
 
-> Buffer framing carries Relations across boundaries without interpreting them. Carriers move frames. Buffers hold frames. Receipts accept frames. The frame is never the authority.
+> Buffer framing carries Relations across boundaries without interpreting them. Carriers move frames. Buffers hold frames. Validation determines state. Omi-Attestation witnesses. The frame is never the authority.

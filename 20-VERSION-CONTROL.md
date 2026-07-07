@@ -201,7 +201,7 @@ This identifies scope, carrier, relation, and receipt. A peer can resolve: which
 
 ## 6. AGENTS.md and SKILLS.md in Version Control
 
-`AGENTS.md` versions the allowed behavior. `SKILLS.md` versions the algorithms. `.imo` files carry normalized declarations. Receipts accept exact versions.
+`AGENTS.md` versions the allowed behavior. `SKILLS.md` versions the algorithms. `.imo` files carry normalized declarations. Validation determines exact versions, Omi-Attestation witnesses them, and accepted Omi-State may be recorded.
 
 ```lisp
 (agent.allowed-skill . skill.base64.decode)
@@ -260,7 +260,7 @@ Accepted:
 
 ## 8. Canon Statement
 
-OMI version control treats every version as a scoped, validated relation. `o.o` is the neutral origin object. Objects such as `o.base64.o` are scoped seed models that define neutral encoding interpretation surfaces. Routes such as `omi-base-64-imo` declare how the seed moves between citation and carrier. FS/GS/RS/US provide the place-value scope hierarchy. SKILLS.md defines the exact algorithms that make the relation reproducible. AGENTS.md defines which version transitions are allowed. Betti numbers describe the topology of the accepted relation. Schläfli symbols describe the projected geometric class. Receipts accept version transitions.
+OMI version control treats every version as a scoped, validated relation. `o.o` is the neutral origin object. Objects such as `o.base64.o` are scoped seed models that define neutral encoding interpretation surfaces. Routes such as `omi-base-64-imo` declare how the seed moves between citation and carrier. FS/GS/RS/US provide the place-value scope hierarchy. SKILLS.md defines the exact algorithms that make the relation reproducible. AGENTS.md defines which version transitions are allowed. Betti numbers describe the topology of the accepted relation. Schläfli symbols describe the projected geometric class. Validation determines version transitions, Omi-Attestation witnesses them, and accepted Omi-State may be recorded.
 
 Therefore a version is not merely a file snapshot. A version is an accepted scoped relation over a carrier file, interpreted through a seed object, validated by deterministic skills, and projected through topology.
 

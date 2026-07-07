@@ -81,7 +81,7 @@ escape :: Port → Relation → (Relation, Signal)
 
 Escape is the only algorithm that interacts with the outside world. It takes a Relation and a port identifier, and returns either a continuation (if no signal is available) or a new Relation incorporating the external signal.
 
-This is the boundary between pure computation (States 00–13) and the open world (States 14–17).
+This is the boundary between pure computation (States 00–15) and the open world (States 16–19).
 
 ### 7. Composition
 

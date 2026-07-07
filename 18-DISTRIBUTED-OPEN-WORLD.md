@@ -86,7 +86,9 @@ CLOSURES bound
 COMBINATORS transform
 CONS folds
 CONFIGURATIONS bind runtime
-Receipts accept
+Validation determines
+Omi-Attestation witnesses
+Accepted Omi-State may be recorded
 ```
 
 ### 2.3 The Non-Collapse Doctrine
@@ -97,7 +99,9 @@ Implementation is not doctrine.
 Doctrine is not proof.
 Proof is not collaboration.
 Collaboration is not possession.
-Receipt accepts.
+Validation determines.
+Omi-Attestation witnesses.
+Accepted Omi-State may be recorded.
 ```
 
 ### 2.4 Agents as Portals
@@ -330,4 +334,4 @@ The label is an interface summary. The receipt chain is the inspectable evidence
 
 From this state — having placed the machine in the world — I moved to State 17 (Buffer Framing) to answer: how are relations transported across boundaries? What carriers move frames across files, packets, and hardware?
 
-Continue to `17-BUFFER-FRAMING.md`.
+Continue to `19-BUFFER-FRAMING.md`.

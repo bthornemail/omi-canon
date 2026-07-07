@@ -1,10 +1,10 @@
 # OMI Symbolic Grammar
 
-Status: Definitive dev doctrine  
+Status: Definitive canon doctrine  
 Layer: symbolic protocol grammar / projection vocabulary  
 References:
 
-- `dev-docs/OMI-RELATIONAL-ACCESS-ENVELOPE.md`
+- `12-RELATIONAL-ACCESS-ENVELOPE.md`
 - `/home/main/omi/omi-tetragrammatron/docs/Omi Surface Projection Faces.md`
 - `/home/main/omi/omi-tetragrammatron/docs/Omi Glossary.md`
 
@@ -12,6 +12,10 @@ References:
 
 The `Omi-*` prefix establishes a symbolic protocol grammar independent of any
 particular implementation.
+
+The `Omi-` prefix is the boundary marker between categorical description and
+canonical protocol grammar; outside that boundary OMI explains in Markdown, and
+inside it OMI declares relations in OMI-Lisp dot notation.
 
 Ordinary terms such as object, node, record, frame, message, document, and
 receipt have accumulated different meanings across programming languages,

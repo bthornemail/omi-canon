@@ -1,6 +1,6 @@
 # OMI Relational Access Envelope
 
-Status: Definitive dev doctrine  
+Status: Definitive canon doctrine  
 Layer: Citation / protocol core / object model  
 Verification target: constitutional grid, later pass
 

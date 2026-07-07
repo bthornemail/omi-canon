@@ -22,16 +22,18 @@ omi-canon/
 ├── 08-PROTOCOL.md               ← State 08 — Protocol
 ├── 09-OMI-LISP.md               ← State 09 — OMI-Lisp
 ├── 10-BLACKBOARD.md             ← State 10 — Blackboard
-├── 11-PROJECTION-FACES.md       ← State 11 — Projection Faces
-├── 12-GAUGE-INTERRUPTS.md       ← State 12 — Gauge Interrupts
-├── 13-SURFACE-APPLICATIONS.md   ← State 13 — Surface Applications
-├── 14-WAVE-SURFACE-INTERPRETER.md ← State 14 — Wave Surface Interpreter
-├── 15-IMO-PORTS.md              ← State 15 — IMO Ports
-├── 16-DISTRIBUTED-OPEN-WORLD.md ← State 16 — Distributed Open World
-├── 17-BUFFER-FRAMING.md         ← State 17 — Buffer Framing
-├── 18-VERSION-CONTROL.md        ← State 18 — Version Control
-├── 19-CONSTITUTION.md           ← State 19 — Constitution
-├── 20-GLOSSARY.md               ← State 20 — Glossary
+├── 11-SYMBOLIC-GRAMMAR.md       ← State 11 — Symbolic Grammar
+├── 12-RELATIONAL-ACCESS-ENVELOPE.md ← State 12 — Relational Access Envelope
+├── 13-PROJECTION-FACES.md       ← State 13 — Projection Faces
+├── 14-GAUGE-INTERRUPTS.md       ← State 14 — Gauge Interrupts
+├── 15-SURFACE-APPLICATIONS.md   ← State 15 — Surface Applications
+├── 16-WAVE-SURFACE-INTERPRETER.md ← State 16 — Wave Surface Interpreter
+├── 17-IMO-PORTS.md              ← State 17 — IMO Ports
+├── 18-DISTRIBUTED-OPEN-WORLD.md ← State 18 — Distributed Open World
+├── 19-BUFFER-FRAMING.md         ← State 19 — Buffer Framing
+├── 20-VERSION-CONTROL.md        ← State 20 — Version Control
+├── 21-CONSTITUTION.md           ← State 21 — Constitution
+├── 22-GLOSSARY.md               ← State 22 — Glossary
 │
 ├── AGENTS.md                 ← Coding agent configuration
 ├── CONTRIBUTING.md           ← Contribution guide
@@ -330,16 +332,18 @@ Each Q × A cell now contains 8 sub-cells (4 citation pairs × 2 proof forms), e
 | `08-PROTOCOL.md` | Specifies the A2 control-plane and A4 escape algorithms — frame format, control markers, receipt packing |
 | `09-OMI-LISP.md` | Defines the declaration surface — SExpr grammar, symbols, strings, decision tables |
 | `10-BLACKBOARD.md` | Defines the construction surface — citation, truth gates, Karnaugh reduction, combinators, Delta transition, closure, attestation |
-| `11-PROJECTION-FACES.md` | Specifies the A3 projection algorithm — how the invisible becomes visible |
-| `12-GAUGE-INTERRUPTS.md` | Specifies the A4/A5 gauge selection surface — orientation, pleth, SOAP |
-| `13-SURFACE-APPLICATIONS.md` | Derives the A1 transition algorithm (Delta Law), quadratic forms, Fano, factorial tower |
-| `14-WAVE-SURFACE-INTERPRETER.md` | Applies A3 projection to analog signals — wave classification |
-| `15-IMO-PORTS.md` | Applies A5/A6 to external nondeterminism — sensor, packet, file ports |
-| `16-DISTRIBUTED-OPEN-WORLD.md` | Applies A6/A7 to multi-agent collaboration — proposals, receipts, reconciliation |
-| `17-BUFFER-FRAMING.md` | Applies A2 control-plane to transport carriers — BLOBs, GLOBs, streams |
-| `18-VERSION-CONTROL.md` | Seeds, citations, scopes, and receipts for versioning the canon |
-| `19-CONSTITUTION.md` | This file — the verification grid itself, cross-referencing every state |
-| `20-GLOSSARY.md` | Defines every term used in the constitutional grid — closes the vocabulary |
+| `11-SYMBOLIC-GRAMMAR.md` | Defines the `Omi-*` protocol grammar boundary — names, states, phases, carriers, projection, and attestation vocabulary |
+| `12-RELATIONAL-ACCESS-ENVELOPE.md` | Defines `|OMI---IMO>` identity — gauge, place value, relation, 512-bit access envelope, unary/XOR/shift doctrine |
+| `13-PROJECTION-FACES.md` | Specifies the A3 projection algorithm — how the invisible becomes visible |
+| `14-GAUGE-INTERRUPTS.md` | Specifies the A4/A5 gauge selection surface — orientation, pleth, SOAP |
+| `15-SURFACE-APPLICATIONS.md` | Derives the A1 transition algorithm (Delta Law), quadratic forms, Fano, factorial tower |
+| `16-WAVE-SURFACE-INTERPRETER.md` | Applies A3 projection to analog signals — wave classification |
+| `17-IMO-PORTS.md` | Applies A5/A6 to external nondeterminism — sensor, packet, file ports |
+| `18-DISTRIBUTED-OPEN-WORLD.md` | Applies A6/A7 to multi-agent collaboration — proposals, receipts, reconciliation |
+| `19-BUFFER-FRAMING.md` | Applies A2 control-plane to transport carriers — BLOBs, GLOBs, streams |
+| `20-VERSION-CONTROL.md` | Seeds, citations, scopes, and receipts for versioning the canon |
+| `21-CONSTITUTION.md` | This file — the verification grid itself, cross-referencing every state |
+| `22-GLOSSARY.md` | Defines every term used in the constitutional grid — closes the vocabulary |
 
 ---
 

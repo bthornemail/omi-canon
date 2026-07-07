@@ -338,7 +338,8 @@ CSS selects projection.
 JSDOM manipulates structure.
 DOM receives interaction.
 OMI validates.
-Receipt accepts.
+Omi-Attestation witnesses.
+Accepted Omi-State may be recorded.
 ```
 
 The GUI is never the source of truth. It is always a projection of accepted state.
@@ -349,4 +350,4 @@ The GUI is never the source of truth. It is always a projection of accepted stat
 
 From this state — having defined the vocabulary of named faces — I moved to State 12 (Gauge Interrupts) to answer: which interpretation is selected? How does the gauge choose the reading orientation?
 
-Continue to `12-GAUGE-INTERRUPTS.md`.
+Continue to `14-GAUGE-INTERRUPTS.md`.

@@ -558,4 +558,4 @@ Lisp collapsed program and object. POSIX collapsed storage and communication. OM
 
 From this state — having articulated the invariant laws — I moved to State 03 (The Meaning) to answer: why does this matter? What philosophical lens makes sense of this cosmology?
 
-Continue to `03-MANIFESTO.md`.
+Continue to `03-FOUNDATIONS.md`.
