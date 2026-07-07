@@ -1,0 +1,140 @@
+.
+├── 00-COSMOLOGY.md
+├── 01-ONTOLOGY.md
+├── 02-DOCTRINE.md
+├── 03-MANIFESTO.md
+├── 04-FOUNDATIONS.md
+├── 05-PROJECTIONS.md
+├── 06-PROTOCOL.md
+├── 07-GEOMETRY.md
+├── 08-ISA.md
+├── 09-ECOSYSTEM.md
+├── 10-GLOSSARY.md
+├── 11-CONSTITUTION.md
+├── 12-VERSION-CONTROL.md
+├── AGENTS.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── SKILLS.md
+├── _archive
+│   ├── 00-origin
+│   │   ├── STATE.md
+│   │   ├── archive
+│   │   ├── html
+│   │   ├── images
+│   │   ├── publications
+│   │   └── temp
+│   ├── 01-ontology
+│   ├── 02-doctrine
+│   │   ├── AGREEMENT_DOCTRINE.md
+│   │   ├── AGREEMENT_OPERATORS.md
+│   │   ├── CONFORMANCE_CANON.md
+│   │   ├── LOWER_OMICRON_UPPER_BIDI.md
+│   │   ├── OPEN_WORLD_PORTAL_MODEL.md
+│   │   └── RULE_TO_FACT_DERIVATION.md
+│   ├── 03-manifesto
+│   │   ├── MANIFESTO.md
+│   │   └── THE_THIRD_COLLAPSE.md
+│   ├── 04-foundations
+│   │   ├── HORN_CLAUSE_DERIVATION.md
+│   │   ├── NIBBLE_WHEEL_AND_DIAGONALS.md
+│   │   ├── OMICRON_AS_ZERO_FRAME.md
+│   │   ├── THE_OMICRON_ANCHORS.md
+│   │   ├── THE_OMI_DECLARATION_LANGUAGE.md
+│   │   ├── THE_OMI_RING.md
+│   │   ├── THE_OMI_UNIVERSAL_CONSTANT.md
+│   │   ├── THE_PALINDROME.md
+│   │   └── THE_SLASH_PATH.md
+│   ├── 05-projections
+│   │   ├── CONTROL_CODES_AND_PRINTABLE_PROJECTIONS.md
+│   │   ├── DOM_HIERARCHY.md
+│   │   ├── META_CIRCULAR_COMPILER.md
+│   │   ├── WORMHOLE_PORTALS.md
+│   │   └── public
+│   ├── 06-protocol
+│   │   ├── IPv6_FRAME_MAPPING.md
+│   │   ├── OVERWRITE_POLICY.md
+│   │   └── RING_INDEXER.md
+│   ├── 07-geometry
+│   │   ├── ATOMIC_DELTA_AND_COSMIC_ORBIT.md
+│   │   ├── CHIRALITY_SELECTION_AND_SNUB_CARDINALITY.md
+│   │   ├── FIVE_FOLD_FOUR_FOLD_AND_THE_240_BRIDGE.md
+│   │   ├── GEOMETRIC_BRIDGE_PLATONIC_SNUB_4D.md
+│   │   ├── LIGHT_SOUND_AND_FRAME_REFERENCE.md
+│   │   ├── OMI_GRAVITY_AND_CENTROID.md
+│   │   ├── OMI_NOMOGRAM.md
+│   │   ├── P2P_TRAVERSAL_AND_MIRROR_SPACE.md
+│   │   ├── POLYCUBES_AND_GROUPS.md
+│   │   ├── PRINCIPAL_ADDRESS_DOMAIN.md
+│   │   ├── PROJECTIVE_CLOSURE_AND_THE_EMPTY_LIST.md
+│   │   ├── SEXAGESIMAL_SYSTEM.md
+│   │   ├── SNUB_CUBE_AND_SNUB_DODECAHEDRON.md
+│   │   ├── SNUB_TRAVERSAL_MATH_FOR_EVERYONE.md
+│   │   ├── SNUB_TRUNCATION_AS_MODEL_OPERATION.md
+│   │   ├── STANDARD_TRUNCATION_VS_SNUB_OPERATION.md
+│   │   ├── THE_DELTA_LAW.md
+│   │   ├── THE_OMI_RING_DOMAIN.md
+│   │   ├── THE_QUADRATIC_LAW.md
+│   │   └── UNICODE_AS_INCIDENCE_GEOMETRY.md
+│   ├── 08-isa
+│   │   ├── C99_CORE.md
+│   │   ├── LL_KET_SCOPE_AND_0xE_MANIFOLD.md
+│   │   ├── NODEJS_COMPILER.md
+│   │   ├── RULE_RESOLVER_AND_MATERIALIZER.md
+│   │   └── TEST_SUITE.md
+│   ├── 09-ecosystem
+│   │   ├── AGENTS.md
+│   │   ├── RULES_OMI.md
+│   │   └── eBPF_KERNEL_GATE.md
+│   ├── 10-glossary
+│   │   └── GLOSSARY.md
+│   ├── AXIOMS.md
+│   ├── DECLARATIONS.md
+│   ├── DOCTRINE.md
+│   ├── ONTOLOGY.md
+│   ├── POSTULATES.md
+│   ├── PROJECTIONS.md
+│   └── README.md
+├── constitutional-grid
+│   ├── Q1-source-of-truth.md
+│   ├── Q2-system-movement.md
+│   ├── Q3-control-vs-payload.md
+│   ├── Q4-meaning-across-projections.md
+│   ├── Q5-intervention-and-replay.md
+│   ├── Q6-collaboration-without-hidden-authority.md
+│   ├── Q7-branch-and-return.md
+│   ├── Q8-open-meaning-closed-law.md
+│   ├── README.md
+│   ├── algorithms
+│   │   ├── A1-transition.md
+│   │   ├── A2-control-plane.md
+│   │   ├── A3-projection.md
+│   │   ├── A4-escape.md
+│   │   ├── A5-partition-chirality.md
+│   │   ├── A6-proposal-receipt.md
+│   │   └── A7-branch-reconciliation.md
+│   └── axioms
+│       ├── AtomicKernel.md
+│       ├── OMI_bialgebra.md
+│       ├── coalgebraic_bisimulation.md
+│       ├── delta_orbit_theory.md
+│       ├── functorial_semantics.md
+│       ├── omi_pi_proof.md
+│       └── verified_execution.md
+├── mirrors
+│   ├── CLOSURES.imo
+│   ├── COMBINATORS.imo
+│   ├── CONS.imo
+│   ├── FACTS.imo
+│   └── RULES.imo
+├── surface-expressions
+├── tree.txt
+└── truth-gates
+    ├── CLOSURES.omi
+    ├── COMBINATORS.omi
+    ├── CONS.omi
+    ├── FACTS.omi
+    └── RULES.omi
+
+25 directories, 113 files

@@ -23,6 +23,7 @@ omi-canon/
 ├── 09-ECOSYSTEM.md           ← State 09 — The World
 ├── 10-GLOSSARY.md            ← State 10 — The Closure
 ├── 11-CONSTITUTION.md        ← State 11 — The Verification Matrix
+├── 12-VERSION-CONTROL.md     ← State 12 — The Seed
 │
 ├── AGENTS.md                 ← Coding agent configuration
 ├── CONTRIBUTING.md           ← Contribution guide
@@ -260,6 +261,8 @@ Every cell in the 8 × 7 grid requires both forms.
 | `08-ISA.md` | Implements all 7 algorithms as 32 opcodes with C99 and NodeJS backends — the machine that executes the constitution |
 | `09-ECOSYSTEM.md` | Applies the constitution to multi-agent collaboration — A6 proposal/receipt and A7 branch/reconciliation in the open world |
 | `10-GLOSSARY.md` | Defines every term used in the constitutional grid — closes the vocabulary |
+| `11-CONSTITUTION.md` | This file — the verification matrix itself, cross-referencing every state |
+| `12-VERSION-CONTROL.md` | Seeds, citations, scopes, and receipts for versioning the canon |
 
 ---
 

@@ -10,30 +10,36 @@ Each numbered directory is a **state** in this journey. Each state contains the 
 
 ---
 
-## The Eleven States
+## OMI Canon
+
+> OMI Canon is the flat constitutional documentation spine for the OMI ecosystem: cosmology, ontology, doctrine, protocol, geometry, ISA, ecosystem, verification grid, truth gates, and mirrors.
 
 ```text
-00 — THE VOID        I knew nothing. I read the Bible as code.
-                      ↓
-01 — THE NAMING      I learned what exists in this cosmology.
-                      ↓
-02 — THE LAW         I discovered what must be preserved.
-                      ↓
-03 — THE MEANING     I understood why it matters.
-                      ↓
-04 — THE PRIMITIVES  I found the irreducible boundaries.
-                      ↓
-05 — THE SURFACE     I learned to make the invisible visible.
-                      ↓
-06 — THE WIRE        I defined how it communicates.
-                      ↓
-07 — THE UNFOLDING   I unfolded the mathematical consequences.
-                      ↓
-08 — THE MACHINE     I built the machine that runs it.
-                      ↓
-09 — THE WORLD       I placed the machine in the world.
-                      ↓
-10 — THE CLOSURE     I named everything. The circle closes.
+00 — THE VOID          I knew nothing. I read the Bible as code.
+                        ↓
+01 — THE NAMING        I learned what exists in this cosmology.
+                        ↓
+02 — THE LAW           I discovered what must be preserved.
+                        ↓
+03 — THE MEANING       I understood why it matters.
+                        ↓
+04 — THE PRIMITIVES    I found the irreducible boundaries.
+                        ↓
+05 — THE SURFACE       I learned to make the invisible visible.
+                        ↓
+06 — THE WIRE          I defined how it communicates.
+                        ↓
+07 — THE UNFOLDING     I unfolded the mathematical consequences.
+                        ↓
+08 — THE MACHINE       I built the machine that runs it.
+                        ↓
+09 — THE WORLD         I placed the machine in the world.
+                        ↓
+10 — THE CLOSURE       I named everything. The circle closes.
+                        ↓
+11 — THE CONSTITUTION  I verified every claim against every invariant.
+                        ↓
+12 — THE SEED          I version the seeds, scopes, and receipts.
 ```
 
 ---
@@ -42,14 +48,14 @@ Each numbered directory is a **state** in this journey. Each state contains the 
 
 ### As a Journey (Recommended)
 
-Read the state files in order, `00-ORIGIN.md` through `10-GLOSSARY.md`. Each file represents a phase of discovery. Start with `00-ORIGIN.md` to understand where I began, then follow the numbered progression to see how each insight led to the next.
+Read the state files in order, `00-COSMOLOGY.md` through `12-VERSION-CONTROL.md`. Each file represents a phase of discovery. Start with `00-COSMOLOGY.md` to understand where I began, then follow the numbered progression to see how each insight led to the next.
 
 Each state file is self-contained, telling the complete story of that phase: the discoveries made, the concepts that emerged, and the transition to the next state.
 
 ### As a Reference
 
 Each file is a self-contained reference. If you want to understand a specific concept — the Delta Law, the 240 bridge, the palindrome structure — go directly to the file that covers it:
-- **00-ORIGIN.md** — Origin story, timeline, resolution lineage
+- **00-COSMOLOGY.md** — Origin story, timeline, resolution lineage
 - **01-ONTOLOGY.md** — Address, truth gates, what exists
 - **02-DOCTRINE.md** — Invariant laws, agreement model, conformance
 - **03-MANIFESTO.md** — Philosophical lens, Third Collapse
@@ -60,6 +66,8 @@ Each file is a self-contained reference. If you want to understand a specific co
 - **08-ISA.md** — Opcodes, dispatch, gauge tables, compiler
 - **09-ECOSYSTEM.md** — Agents, eBPF gates, networking
 - **10-GLOSSARY.md** — Canonical terms
+- **11-CONSTITUTION.md** — 112-proof constitutional verification matrix
+- **12-VERSION-CONTROL.md** — Seed objects, citation routes, scoped versioning
 
 ### As a State Transition System
 
@@ -162,6 +170,13 @@ Only validation and receipt may accept.
 
 - **10-glossary** — Every term defined. The circle closes.
 
+### Movement VI — What Holds (States 11–12)
+
+> What verifies the whole system, and how does it version itself?
+
+- **11-constitution** — The 112-proof verification grid: 8 invariants × 7 algorithms × 2 proof forms
+- **12-version-control** — Seed objects, citation routes, FS/GS/RS/US scopes, Betti–Schläfli topology
+
 ---
 
 ## Truth Gates and Mirrors
@@ -211,13 +226,15 @@ Projection is never authority.
 
 | Reader Type | Start With |
 |-------------|------------|
-| Newcomer | `00-ORIGIN.md` → `03-MANIFESTO.md` |
+| Newcomer | `00-COSMOLOGY.md` → `03-MANIFESTO.md` |
 | Philosopher | `03-MANIFESTO.md` → `02-DOCTRINE.md` → `01-ONTOLOGY.md` |
-| Resolutionist | `00-ORIGIN.md` (Resolution Lineage section) → `04-FOUNDATIONS.md` → `07-GEOMETRY.md` |
+| Resolutionist | `00-COSMOLOGY.md` (Resolution Lineage section) → `04-FOUNDATIONS.md` → `07-GEOMETRY.md` |
 | Mathematician | `07-GEOMETRY.md` → `04-FOUNDATIONS.md` → `06-PROTOCOL.md` |
 | Engineer | `08-ISA.md` → `06-PROTOCOL.md` → `09-ECOSYSTEM.md` |
 | Implementer | `05-PROJECTIONS.md` → `06-PROTOCOL.md` → `08-ISA.md` |
-| Student | `10-GLOSSARY.md` → `00-ORIGIN.md` |
+| Verifier | `11-CONSTITUTION.md` → `constitutional-grid/` → `10-GLOSSARY.md` |
+| Versionist | `12-VERSION-CONTROL.md` → `AGENTS.md` → `SKILLS.md` |
+| Student | `10-GLOSSARY.md` → `00-COSMOLOGY.md` |
 
 ---
 
@@ -247,4 +264,4 @@ That is the research program. This repository is its state transition record.
 
 ---
 
-**Start here:** `00-ORIGIN.md`
+**Start here:** `00-COSMOLOGY.md`
