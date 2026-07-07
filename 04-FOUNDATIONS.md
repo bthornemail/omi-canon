@@ -398,6 +398,169 @@ The diagonal sum `0x1E + 0x1E = 0x3C = 60` is the sexagesimal gate. It appears r
 
 ---
 
+## Part IX — Declaration Templates (merged from root DECLARATIONS.md)
+
+### 9.1 The Derivation Template
+
+Every derivation from a `RULES.omi` row to a `FACTS.omi` row follows this a-list template:
+
+```lisp
+(
+  (rule-id . "0x___")
+  (rule-pointer . "omi-____-____-____-____-____-____-____-____/___")
+  (modal . "MUST")
+  (invariant . "________________________")
+  (axiom-family . "________________________")
+  (state-before . "unverified")
+  (transition . "derive-applied-fact")
+  (state-after . "configured")
+  (segment-mask . "[____,____,____,____,____,____,____,____]")
+  (expected-segments . "[____,____,____,____,____,____,____,____]")
+  (bitboard-mask . "0x________________________________")
+  (bitblip-policy . "accept-exact | correct-single | evict-single | evict-over-2")
+  (fact-pointer . "omi-____-____-____-____-____-____-____-____/___")
+  (fact-name . "________________________")
+  (test . "test/________________.test.js")
+  (projection . "cssom | json-canvas | sse | bpf-map | replay-ring | log")
+  (failure-behavior . "reject-token | evict-frame | drop-packet | route-preset-1 | skip-replay")
+)
+```
+
+### 9.2 Bitboard Mask Rules by Prefix
+
+| Prefix | Segment Mask |
+| ------:| ------------ |
+|  `/48` | `[ffff,ffff,ffff,0000,0000,0000,0000,0000]` or rule-specific first three-segment family |
+|  `/80` | `[ffff,ffff,ffff,ffff,ffff,0000,0000,0000]` |
+|  `/96` | `[ffff,ffff,ffff,ffff,ffff,ffff,0000,0000]` |
+| `/112` | `[ffff,ffff,ffff,ffff,ffff,ffff,ffff,0000]` |
+| `/120` | byte-specific narrowing of final segment |
+| `/128` | `[ffff,ffff,ffff,ffff,ffff,ffff,ffff,ffff]` |
+
+Many OMI rules use sparse symbolic masks, not plain CIDR masks. When a rule explicitly constrains non-contiguous segments, derive the mask from the comments and invariant name rather than prefix alone.
+
+### 9.3 Bitblip Policies by Axiom Family
+
+| Axiom Family | Default Bitblip Policy |
+| ------------ | ---------------------- |
+| algebraic-membership | `evict-single` |
+| delta-orbit | `evict-single` |
+| barcode-ecc | `correct-up-to-2`, then `evict-over-2` |
+| telemetry-isolation | `accept-exact` |
+| kernel-enforcement | `drop-packet` |
+| browser-projection | `warn-near-miss` |
+| replay-ring | `reject-warm-overwrite` |
+| clock-tree | `mark-gated` |
+| notation | `evict-fractional-overflow` |
+| service-bus | `accept-exact` |
+
+### 9.4 Example Derivation: eBPF XDP Gate
+
+Source rule:
+```text
+omi-0000-0000-0000-0000-0000-0000-00eb-0066/112 MUST initialize-xdp-packet-parsing-gates
+```
+
+Derived fact:
+```text
+omi-0000-0000-0000-0000-0000-0000-00eb-0066/112 FACT xdp-packet-parsing-gate-configured
+```
+
+A-list:
+```lisp
+(
+  (rule-id . "0x12D")
+  (rule-pointer . "omi-0000-0000-0000-0000-0000-0000-00eb-0066/112")
+  (modal . "MUST")
+  (invariant . "initialize-xdp-packet-parsing-gates")
+  (axiom-family . "kernel-enforcement")
+  (state-before . "unverified")
+  (transition . "compile-and-load-xdp-gate")
+  (state-after . "configured")
+  (segment-mask . "[0000,0000,0000,0000,0000,0000,ffff,ffff]")
+  (expected-segments . "[0000,0000,0000,0000,0000,0000,00eb,0066]")
+  (bitboard-mask . "0x000000000000000000000000ffffffff")
+  (bitblip-policy . "evict-single")
+  (fact-pointer . "omi-0000-0000-0000-0000-0000-0000-00eb-0066/112")
+  (fact-name . "xdp-packet-parsing-gate-configured")
+  (test . "test/ebpf-pipeline.test.js")
+  (projection . "bpf-map + cssom")
+  (failure-behavior . "drop-packet")
+)
+```
+
+## Part X — Ones-Complement State Table (merged from root AXIOMS.md)
+
+| Original | Complement | OMI Meaning |
+| -------- | ---------- | ----------- |
+| `0000`   | `ffff`     | empty/full |
+| `00ff`   | `ff00`     | low/high byte reflection |
+| `03bf`   | `fc40`     | chiral delimiter complement |
+| `039f`   | `fc60`     | cardinal delimiter complement |
+| `5a3c`   | `a5c3`     | inversion constant complement |
+| `7c00`   | `83ff`     | boot boundary complement |
+| `aa55`   | `55aa`     | boot signature complement |
+| `00eb`   | `ff14`     | eBPF marker complement |
+| `0066`   | `ff99`     | XDP marker complement |
+
+The complement table is not a validity table. It is a reflection table. A complement state becomes valid only if a rule explicitly accepts it.
+
+## Part XI — Bitboard Fold Table (merged from root AXIOMS.md)
+
+| Fold Type | Operation | Meaning |
+| --------- | --------- | ------- |
+| Identity fold | `x` | preserve state |
+| Ones-complement fold | `x XOR all_ones` | reflect all bits |
+| Segment fold | `Sᵢ XOR 0xFFFF` | reflect one segment |
+| Byte fold | `byte XOR 0xFF` | reflect one byte |
+| Mask fold | `mask XOR all_ones` | invert relevant fields |
+| Bitblip fold | `x XOR (1 << k)` | one-bit deviation |
+| Delta fold | `Δ_C(x)` | orbit transition |
+| Inversion fold | `x XOR 0x5A3C` | central inversion |
+| Endian fold | `swap16(x)` | orientation reversal |
+| Replay fold | `slot → slot + steps mod 5040` | timeline movement |
+
+## Part XII — The 12-Step Structural Execution Flow (merged from root AXIOMS.md)
+
+```text
+[1. SOURCE]     ──► Read high-level, human-readable .omi source files.
+[2. VALIDATE]   ──► Verify the 128-bit wire carrier shell via Q_frame(S) == 0.
+[3. GENERATE]   ──► Resolve principal pointer / ideal generator for the region.
+[4. MIRROR]     ──► Execute Cayley-Dickson doubling to lower .omi to .imo bytecode.
+[5. ENTER]      ──► Enclose the low-ASCII opcode line within native ο / Ο delimiters.
+[6. COMPOSE]    ──► Process the 32x32 operator-table32 matrix for composition.
+[7. ROUTE]      ──► Intersect S-P-O coordinate paths via the triad-router155 engine.
+[8. SCOPE]      ──► Enforce CIDR prefix network specificity (/128 down to /64).
+[9. TIMING]     ──► Advance the internal logic pacing tick via the Delta Law.
+[10. NAMING]    ──► Read the derived orbital position using the Base36 label layer.
+[11. PROJECT]   ──► Extrude 2.5D visual polyomino/domino voxels via Q_xy(x,y).
+[12. REPLAY]    ──► Compress historical context states into the slot5040 receipt.
+```
+
+## Part XIII — Collaboration Axiom (merged from root AXIOMS.md)
+
+> Agreement is the synthesis of shared intelligence. Disagreement is simply a missing structural file path. Productivity is appreciation made executable.
+
+A rejected layout or conceptual gap is never left un-routed. It must immediately become a clear boundary, the boundary must become a strict rule, the rule must become an explicit test case, the test must verify a stable replay path, and the replay path must render as visible state on the user screen.
+
+**O14 — Fold Address Onto Its Own Creation Step (Self-Sufficiency):**
+Given an OMI address A, the creation step is a function of the frame alone:
+```text
+step720(A)  = Q_xy(S3, S4)       — LL-derived Fano/lane coordinate
+slot5040(A) = fano7 × 720 + role3 × 240 + local240
+```
+No prefix /N or lens /@N changes step(A). The address is the thing.
+
+**O15 — Three-Way Distinction: Claim / Backoff / Lens:**
+```text
+/N     = CIDR claim boundary          (first slash, no @)
+/N-M   = claim backoff                (reduce claim by M bits)
+/@N    = reader lens                  (select projection/cadence)
+```
+Neither creates identity; both operate on an already-valid address.
+
+---
+
 ## The Transition to State 05
 
 From this state — having identified the irreducible boundaries — I moved to State 05 (The Surface) to answer: how does the invisible become visible? How are these primitives projected for observers?

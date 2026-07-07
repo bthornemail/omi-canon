@@ -1,24 +1,20 @@
-(**
- * functorial_semantics.v
- *
- * Functorial semantics for OMI: proves that the OMI specification
- * defines a functor from the syntactic category of frames to the
- * semantic category of state transitions, establishing that meaning
- * is preserved under lawful transformation.
- *
- * Maps to: A3 (Projection), A6 (Proposal/Receipt)
- * 112 cells: Q6A6c, Q6A6f, Q4A3c, Q4A3f
- *)
+# Functorial Semantics
 
+Proves that the OMI specification defines a functor from the syntactic category of frames to the semantic category of state transitions, establishing that meaning is preserved under lawful transformation.
+
+**112 Matrix:** A3 (Projection), A6 (Proposal/Receipt)  
+**Cells:** Q6A6c, Q6A6f, Q4A3c, Q4A3f
+
+```coq
 Require Import Coq.Setoids.Setoid.
 Require Import Coq.Program.Basics.
 Require Import Coq.Lists.List.
 Import ListNotations.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Categories *)
-(* ------------------------------------------------------------------ *)
+## Categories
 
+```coq
 Record Category (Obj : Type) (Hom : Obj -> Obj -> Type) : Type := {
   id   : forall (A : Obj), Hom A A;
   comp : forall (A B C : Obj), Hom A B -> Hom B C -> Hom A C;
@@ -29,11 +25,11 @@ Record Category (Obj : Type) (Hom : Obj -> Obj -> Type) : Type := {
   assoc    : forall (A B C D : Obj) (f : Hom A B) (g : Hom B C) (h : Hom C D),
                comp A B D f (comp B C D g h) = comp A C D (comp A B C f g) h
 }.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Syntactic category: frames *)
-(* ------------------------------------------------------------------ *)
+## Syntactic Category: Frames
 
+```coq
 Inductive Frame : Type :=
   | mkFrame : Z -> Z -> Z -> Z -> Z -> Z -> Z -> Z -> Frame.
 
@@ -70,11 +66,11 @@ Definition FrameCategory : Category Frame FrameHom :=
       | frame_transform _ _ _, frame_transform _ _ _, frame_transform _ _ _ => eq_refl
       end
   |}.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Semantic category: state transitions *)
-(* ------------------------------------------------------------------ *)
+## Semantic Category: State Transitions
 
+```coq
 Inductive State : Type :=
   | mkState : Z -> State.
 
@@ -95,11 +91,11 @@ Definition StateCategory : Category State StateHom :=
       | delta_transition _ _, delta_transition _ _, delta_transition _ _ => eq_refl
       end
   |}.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Functor: frames -> states *)
-(* ------------------------------------------------------------------ *)
+## Functor: Frames → States
 
+```coq
 Definition frame_to_state (f : Frame) : State :=
   match f with mkFrame _ _ _ _ _ _ _ _ => mkState 0 end.
 
@@ -109,8 +105,11 @@ Definition framehom_to_statehom (A B : Frame) (f : FrameHom A B) :
   | frame_sync _ _ => delta_transition (frame_to_state A) (frame_to_state B)
   | frame_transform _ _ _ => delta_transition (frame_to_state A) (frame_to_state B)
   end.
+```
 
-(* Functoriality: preserves identities *)
+**Theorem:** The functor preserves identities.
+
+```coq
 Theorem preserves_identities :
   forall (A : Frame),
     framehom_to_statehom A A (FrameCategory.(id) A) =
@@ -121,8 +120,11 @@ Proof.
   destruct A; simpl.
   reflexivity.
 Qed.
+```
 
-(* Functoriality: preserves composition *)
+**Theorem:** The functor preserves composition.
+
+```coq
 Theorem preserves_composition :
   forall (A B C : Frame) (f : FrameHom A B) (g : FrameHom B C),
     framehom_to_statehom A C (FrameCategory.(comp) A B C f g) =
@@ -132,17 +134,13 @@ Proof.
   intros A B C f g.
   destruct A, B, C; destruct f, g; simpl; reflexivity.
 Qed.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Semantic preservation *)
-(* ------------------------------------------------------------------ *)
+## Semantic Preservation
 
-(* The functor establishes that every lawful frame transformation
-   corresponds to a deterministic state transition.
-   Meaning is preserved because the functor respects the
-   categorical structure: composition of frame transformations
-   maps to composition of state transitions. *)
+The functor establishes that every lawful frame transformation corresponds to a deterministic state transition. Meaning is preserved because the functor respects the categorical structure: composition of frame transformations maps to composition of state transitions.
 
+```coq
 Theorem meaning_is_preserved :
   forall (A B : Frame) (f g : FrameHom A B),
     f = g -> framehom_to_statehom A B f = framehom_to_statehom A B g.
@@ -151,3 +149,4 @@ Proof.
   rewrite H.
   reflexivity.
 Qed.
+```

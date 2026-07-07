@@ -11,10 +11,7 @@ This document defines the constitution of the OMI canon. The constitution is not
 ```
 omi-canon/
 │
-├── CONSTITUTION.md           ← This file — the verification matrix
-├── README.md                 ← State transition manifest (reading paths)
-│
-├── 00-ORIGIN.md              ← State 00 — The Void
+├── 00-COSMOLOGY.md           ← State 00 — The Void
 ├── 01-ONTOLOGY.md            ← State 01 — The Naming
 ├── 02-DOCTRINE.md            ← State 02 — The Law
 ├── 03-MANIFESTO.md           ← State 03 — The Meaning
@@ -25,6 +22,13 @@ omi-canon/
 ├── 08-ISA.md                 ← State 08 — The Machine
 ├── 09-ECOSYSTEM.md           ← State 09 — The World
 ├── 10-GLOSSARY.md            ← State 10 — The Closure
+├── 11-CONSTITUTION.md        ← State 11 — The Verification Matrix
+│
+├── AGENTS.md                 ← Coding agent configuration
+├── CONTRIBUTING.md           ← Contribution guide
+├── LICENSE                   ← MIT license
+├── README.md                 ← State transition manifest (reading paths)
+├── SKILLS.md                 ← Repeatable project workflows
 │
 ├── constitutional-grid/      ← The 112 Proofs Matrix
 │   ├── README.md             ← Grid overview
@@ -44,14 +48,14 @@ omi-canon/
 │   │   ├── A5-partition-chirality.md  ← Algorithm 5 (16 proof cells)
 │   │   ├── A6-proposal-receipt.md     ← Algorithm 6 (16 proof cells)
 │   │   └── A7-branch-reconciliation.md← Algorithm 7 (16 proof cells)
-│   └── proofs/
-│       ├── verified_execution.v       ← Verified C/Coq correspondence
-│       ├── omi_pi_proof.v             ← π approximation via 1/73 weight block
-│       ├── OMI_bialgebra.v            ← Bialgebraic collapse of representation/interpretation
-│       ├── functorial_semantics.v     ← Functor from frames to states
-│       ├── delta_orbit_theory.v       ← Algebraic Delta Law orbit properties
-│       ├── coalgebraic_bisimulation.v ← Bisimulation for projection equivalence
-│       └── AtomicKernel.v            ← Atomicity of transitions, proposals, branches
+│   └── axioms/
+│       ├── verified_execution.md       ← Verified C/Coq correspondence
+│       ├── omi_pi_proof.md             ← π approximation via 1/73 weight block
+│       ├── OMI_bialgebra.md            ← Bialgebraic collapse of representation/interpretation
+│       ├── functorial_semantics.md     ← Functor from frames to states
+│       ├── delta_orbit_theory.md       ← Algebraic Delta Law orbit properties
+│       ├── coalgebraic_bisimulation.md ← Bisimulation for projection equivalence
+│       └── AtomicKernel.md            ← Atomicity of transitions, proposals, branches
 │
 ├── truth-gates/               ← OMI truth gate files (normative)
 │   ├── RULES.omi
@@ -231,13 +235,13 @@ Every cell in the 8 × 7 grid requires both forms.
 
 | Proof File | Primary Cells | Secondary Cells |
 |-----------|--------------|-----------------|
-| `proofs/verified_execution.v` | Q1A1c, Q1A1f, Q2A1c, Q2A1f, Q3A2c, Q3A2f | Q1A7c, Q1A7f |
-| `proofs/omi_pi_proof.v` | Q2A1c, Q2A1f, Q4A5c, Q4A5f | Q1A5c, Q1A5f |
-| `proofs/OMI_bialgebra.v` | Q8A1c, Q8A1f, Q4A3c, Q4A3f | Q8A3c, Q8A3f |
-| `proofs/functorial_semantics.v` | Q6A6c, Q6A6f, Q4A3c, Q4A3f | Q1A3c, Q1A3f |
-| `proofs/delta_orbit_theory.v` | Q2A1c, Q2A1f, Q1A1c, Q1A1f | Q4A1c, Q4A1f |
-| `proofs/coalgebraic_bisimulation.v` | Q4A3c, Q4A3f, Q5A4c, Q5A4f, Q1A6c, Q1A6f | Q4A7c, Q4A7f |
-| `proofs/AtomicKernel.v` | Q5A4c, Q5A4f, Q6A6c, Q6A6f, Q7A7c, Q7A7f | Q6A7c, Q6A7f |
+| `axioms/verified_execution.md` | Q1A1c, Q1A1f, Q2A1c, Q2A1f, Q3A2c, Q3A2f | Q1A7c, Q1A7f |
+| `axioms/omi_pi_proof.md` | Q2A1c, Q2A1f, Q4A5c, Q4A5f | Q1A5c, Q1A5f |
+| `axioms/OMI_bialgebra.md` | Q8A1c, Q8A1f, Q4A3c, Q4A3f | Q8A3c, Q8A3f |
+| `axioms/functorial_semantics.md` | Q6A6c, Q6A6f, Q4A3c, Q4A3f | Q1A3c, Q1A3f |
+| `axioms/delta_orbit_theory.md` | Q2A1c, Q2A1f, Q1A1c, Q1A1f | Q4A1c, Q4A1f |
+| `axioms/coalgebraic_bisimulation.md` | Q4A3c, Q4A3f, Q5A4c, Q5A4f, Q1A6c, Q1A6f | Q4A7c, Q4A7f |
+| `axioms/AtomicKernel.md` | Q5A4c, Q5A4f, Q6A6c, Q6A6f, Q7A7c, Q7A7f | Q6A7c, Q6A7f |
 
 ---
 
@@ -245,7 +249,7 @@ Every cell in the 8 × 7 grid requires both forms.
 
 | State File | Constitutional Relevance |
 |-----------|------------------------|
-| `00-ORIGIN.md` | Documents the genesis of the 8 questions — what the author was discovering and why these invariants emerged from the void |
+| `00-COSMOLOGY.md` | Documents the genesis of the 8 questions — what the author was discovering and why these invariants emerged from the void |
 | `01-ONTOLOGY.md` | Names the entities — pointer, rule, proof, receipt, projection — that the constitution governs |
 | `02-DOCTRINE.md` | Encodes the invariant laws that the 112 matrix formalizes as proof obligations |
 | `03-MANIFESTO.md` | Articulates the philosophical foundation for Q8 (open meaning, closed law) — the rotation over mutation principle |

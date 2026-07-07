@@ -478,6 +478,68 @@ Both are projections. Neither validates the object.
 
 ---
 
+## Part VIII — Control Characters as Rewrite Operators (merged from root DOCTRINE.md)
+
+### 33. Control Characters
+
+ASCII control characters are rewrite operators. They are not merely non-printing characters. Historically they altered the state of a receiver. OMI restores this interpretation.
+
+In conventional language, control codes were thirty-two non-printing characters. In OMI, control codes become transformation operators rather than textual characters. Control characters are operational geometry.
+
+### 34. Unicode as Rewrite Manifold
+
+Unicode is not merely a character set. Unicode is a rewrite manifold. Planes, surrogates, private-use ranges, direction markers, byte-order marks, and framing operators define lawful transitions between interpretations of the same binary source.
+
+Rows are blocks. Code points are points. Relationships are incidences. The table is no longer merely a lookup structure. It becomes a rewrite structure.
+
+### 35. Downward Execution Flow
+
+When an application verifies a transaction or routes an agent state, it may begin with a Level 5 implementation rule. The runtime compiles that rule downward:
+
+```text
+Level 5 implementation rule
+→ Level 4 operational address route
+→ Level 3 discrete coordinate wheel
+→ Level 2 information-preserving rotation
+→ Level 1 stream boundary and control surface
+→ Level 0 notation-cipher invariant
+```
+
+The final check is doctrinal: the underlying binary platform did not need to mutate. The system generated a receipt showing that the interpretive framework transitioned lawfully.
+
+### 36. Upward Invariant Flow
+
+When a node receives a packet, it does not need to trust Level 5 application meaning first. It validates upward:
+
+```text
+source identity
+→ rotation law
+→ projective boundary
+→ address route
+→ implementation meaning
+→ lawful receipt
+```
+
+If the structural math holds as a valid projection, the node may issue a lawful receipt. Higher-order meaning is accepted because the lower-level rewrite path is valid.
+
+### 37. The Pipe Stack
+
+The pipe stack follows the same doctrine:
+
+```text
+source
+→ carrier
+→ reconstruction
+→ causal proof
+→ RS proof
+→ acceptance
+→ receipt
+```
+
+There is no database commit in this chain. The system proves relations and accepts receipts.
+
+---
+
 ## The Doctrine in the Shortest Form
 
 > OMI does not store data; it preserves versioned sources of truth as binary rewrite tables, then uses Omicron identity, slash-path routing, BiDi interpretation, and Omi-Nomogram scales to produce lawful receipts.

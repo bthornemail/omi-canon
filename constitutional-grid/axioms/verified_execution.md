@@ -1,29 +1,25 @@
-(**
- * verified_execution.v
- *
- * Verified execution framework for OMI.
- * Proves that C99 implementation of the Delta Law and ISA
- * faithfully executes the OMI specification.
- *
- * Maps to: A1 (Transition), A2 (Control-Plane)
- * 112 cells: Q1A1c, Q1A1f, Q2A1c, Q2A1f, Q3A2c, Q3A2f
- *)
+# Verified Execution
 
+Verified execution framework for OMI. Proves that the C99 implementation of the Delta Law and ISA faithfully executes the OMI specification.
+
+**112 Matrix:** A1 (Transition), A2 (Control-Plane)  
+**Cells:** Q1A1c, Q1A1f, Q2A1c, Q2A1f, Q3A2c, Q3A2f
+
+```coq
 Require Import Coq.ZArith.ZArith.
 Require Import Coq.Lists.List.
 Require Import Coq.Bool.Bool.
 Import ListNotations.
+```
 
-(* ------------------------------------------------------------------ *)
-(* 16-bit word operations *)
-(* ------------------------------------------------------------------ *)
+## 16-bit Word Operations
 
+```coq
 Definition word : Set := Z.
 Definition w16 (x : Z) : word := x mod 65536.
 
 Definition rotl (x : word) (n : nat) : word :=
   let bits := Z.to_nat (x mod 65536) in
-  (* circular left rotation on 16 bits *)
   let lo := (x shl (Z.of_nat n)) mod 65536 in
   let hi := (x shr (16 - Z.of_nat n)) in
   w16 (lo lor hi).
@@ -33,19 +29,22 @@ Definition rotr (x : word) (n : nat) : word :=
 
 Definition xor (a b : word) : word :=
   w16 (Z.lxor a b).
+```
 
-(* ------------------------------------------------------------------ *)
-(* Delta Law *)
-(* ------------------------------------------------------------------ *)
+## Delta Law
 
+```coq
 Definition C0 : word := w16 0x5A3C.
 
 Definition delta (x : word) (C : word) : word :=
   xor (xor (rotl x 1) (rotl x 3)) (xor (rotr x 2) C).
 
 Definition delta_law (x : word) : word := delta x C0.
+```
 
-(* Theorem: period 8 for all 16-bit states *)
+**Theorem:** Period 8 for all 16-bit states.
+
+```coq
 Theorem delta_period_8 :
   forall (x : word),
     (x >= 0 /\ x < 65536) ->
@@ -55,11 +54,11 @@ Proof.
   (* Verified by exhaustive enumeration over [0, 65536) *)
   (* See delta_orbit_theory.v for algebraic proof *)
 Admitted.
+```
 
-(* ------------------------------------------------------------------ *)
-(* ISA opcode semantics *)
-(* ------------------------------------------------------------------ *)
+## ISA Opcode Semantics
 
+```coq
 Inductive opcode : Set :=
   | NOP | PROBE | PROBE_ACK | SYNC_COMMIT | SEAL
   | BOOT | RESET | ROUTE | BROADCAST | SEND
@@ -104,8 +103,11 @@ Definition opcode_of_byte (b : Z) : option opcode :=
   | 0x1E => Some STREAM_MERGE
   | _    => None
   end.
+```
 
-(* Theorem: every valid opcode decodes uniquely *)
+**Theorem:** Every valid opcode decodes uniquely.
+
+```coq
 Theorem opcode_decoding_is_deterministic :
   forall (b : Z) (op1 op2 : opcode),
     opcode_of_byte b = Some op1 ->
@@ -117,17 +119,12 @@ Proof.
   injection H2.
   trivial.
 Qed.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Frame validation *)
-(* ------------------------------------------------------------------ *)
+## Frame Validation
 
+```coq
 Definition Q_frame (S : list word) : Z :=
-  (* Quadratic form over 8 segments of 16 bits *)
-  (* Q_frame(S) = E_var + E_const *)
-  (* E_var = sum of segment contributions *)
-  (* E_const = constant alignment check *)
-  (* Returns 0 if frame is valid, non-zero if malformed *)
   let E_var :=
     match S with
     | [s0; s1; s2; s3; s4; s5; s6; s7] =>
@@ -143,7 +140,11 @@ Definition Q_frame (S : list word) : Z :=
     end
   in
   E_var + E_const.
+```
 
+**Theorem:** Frame validation rejects malformed frames.
+
+```coq
 Theorem frame_validation_rejects_malformed :
   forall (S : list word),
     length S <> 8 -> Q_frame S <> 0.
@@ -152,13 +153,12 @@ Proof.
   unfold Q_frame.
   destruct S; try (simpl; omega).
   destruct S; try (simpl; omega).
-  (* ... full pattern match for 8-element list *)
 Admitted.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Control plane markers *)
-(* ------------------------------------------------------------------ *)
+## Control Plane Markers
 
+```coq
 Definition FS : Z := 0x05.
 Definition GS : Z := 0x2B.
 Definition RS : Z := 0x2F.
@@ -168,17 +168,21 @@ Definition ESC : Z := 0x03BF.
 Definition is_control_marker (b : Z) : bool :=
   (b / 256 =? FS) || (b / 256 =? GS) || (b / 256 =? RS) ||
   (b =? US) || (b =? ESC).
+```
 
+**Theorem:** Control markers are unique.
+
+```coq
 Theorem control_markers_are_unique :
   FS <> GS /\ GS <> RS /\ RS <> US /\ US <> ESC.
 Proof.
   repeat split; omega.
 Qed.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Verification: manual state overwrite yields replay mismatch *)
-(* ------------------------------------------------------------------ *)
+## Verification: Manual State Overwrite Yields Replay Mismatch
 
+```coq
 Definition simulate (n : nat) (init : word) : list word :=
   match n with
   | 0 => [init]
@@ -198,3 +202,4 @@ Proof.
   (* If bad_val is not the delta_law of the previous state,
      the traces diverge at tick_overwrite *)
 Admitted.
+```

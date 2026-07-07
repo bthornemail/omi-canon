@@ -223,6 +223,28 @@ The address is not where information is stored. The address is where interpretat
 
 ---
 
+## Part II — Relation to omi-portal (merged from root ONTOLOGY.md)
+
+This canon is the documentation spine. The reference implementation lives at `omi-portal`:
+
+| Layer | Canon Document | Portal Implementation |
+|-------|---------------|----------------------|
+| Ontology | `ONTOLOGY.md` | `ONTOLOGY.md` (portal) |
+| Doctrine | `DOCTRINE.md` | `DOCTRINE.md` (portal) |
+| Manifesto | `MANIFESTO.md` | `MANIFESTO.md` (portal) |
+| Postulates | `POSTULATES.md` | `POSTULATES.md` (portal) |
+| Axioms | `AXIOMS.md` | `AXIOMS.md` (portal) |
+| Declarations | `DECLARATIONS.md` | `DECLARATIONS.md` (portal) |
+| Projections | `PROJECTIONS.md` | `PROJECTIONS.md` (portal) |
+| RULES | `truth-gates/RULES.omi` | `RULES.omi` (portal) |
+| FACTS | `truth-gates/FACTS.omi` | `FACTS.omi` (portal) |
+| CLOSURES | `truth-gates/CLOSURES.omi` | `CLOSURES.omi` (portal) |
+| COMBINATORS | `truth-gates/COMBINATORS.omi` | `COMBINATORS.omi` (portal) |
+| CONS | `truth-gates/CONS.omi` | `CONS.omi` (portal) |
+| GLOSSARY | `GLOSSARY.md` | `GLOSSARY.md` (portal) |
+
+---
+
 ## The Transition to State 02
 
 From this state — having named what exists — I moved to State 02 (The Law) to answer: what must be preserved? What are the invariant laws that hold across all legitimate operations?

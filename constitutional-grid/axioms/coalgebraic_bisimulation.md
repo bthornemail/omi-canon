@@ -1,43 +1,42 @@
-(**
- * coalgebraic_bisimulation.v
- *
- * Coalgebraic bisimulation for OMI: proves that two OMI states
- * are bisimilar if and only if they produce the same observation
- * under all projections and the same transition behavior.
- *
- * Maps to: A3 (Projection), A4 (Escape), A6 (Proposal/Receipt)
- * 112 cells: Q4A3c, Q4A3f, Q5A4c, Q5A4f, Q1A6c, Q1A6f
- *)
+# Coalgebraic Bisimulation
 
+Proves that two OMI states are bisimilar if and only if they produce the same observation under all projections and the same transition behavior.
+
+**112 Matrix:** A3 (Projection), A4 (Escape), A6 (Proposal/Receipt)  
+**Cells:** Q4A3c, Q4A3f, Q5A4c, Q5A4f, Q1A6c, Q1A6f
+
+```coq
 Require Import Coq.Setoids.Setoid.
 Require Import Coq.Relations.Relation_Definitions.
 Require Import Coq.Lists.List.
 Import ListNotations.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Coalgebra *)
-(* ------------------------------------------------------------------ *)
+## Coalgebra
 
+```coq
 Definition Obs (S : Type) : Type := S -> Prop.
 
 Record Coalgebra (S : Type) : Type := {
-  next : S -> S;          (* transition function *)
-  observe : S -> Z;       (* observation function *)
+  next : S -> S;
+  observe : S -> Z;
   transition_observe_commute : forall s : S,
     observe (next s) = observe s + 1
-    (* Simplified: each tick increments the observed address *)
 }.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Bisimulation *)
-(* ------------------------------------------------------------------ *)
+## Bisimulation
 
+```coq
 Definition Bisimulation (S : Type) (c1 c2 : Coalgebra S) : relation S :=
   fun s1 s2 =>
     c1.(observe) s1 = c2.(observe) s2 /\
     c1.(observe) (c1.(next) s1) = c2.(observe) (c2.(next) s2).
+```
 
-(* Theorem: bisimulation is an equivalence *)
+**Theorem:** Bisimulation is an equivalence relation.
+
+```coq
 Theorem bisimulation_is_reflexive :
   forall (S : Type) (c : Coalgebra S) (s : S),
     Bisimulation S c c s s.
@@ -69,18 +68,17 @@ Proof.
   - rewrite Hobs12, Hobs23; reflexivity.
   - rewrite Hnext12, Hnext23; reflexivity.
 Qed.
+```
 
-(* ------------------------------------------------------------------ *)
-(* OMI coalgebra *)
-(* ------------------------------------------------------------------ *)
+## OMI Coalgebra
 
+```coq
 Inductive OMIState : Type :=
   | OMI_State : Z -> Z -> Z -> Z -> Z -> Z -> Z -> Z -> OMIState.
 
 Definition omi_next (s : OMIState) : OMIState :=
   match s with
   | OMI_State s0 s1 s2 s3 s4 s5 s6 s7 =>
-    (* Simplified transition: increment address *)
     OMI_State (s0 + 1) s1 s2 s3 s4 s5 s6 s7
   end.
 
@@ -96,14 +94,13 @@ Definition OMICoalgebra : Coalgebra OMIState :=
     transition_observe_commute := fun s =>
       match s with OMI_State s0 _ _ _ _ _ _ _ => omega end
   |}.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Projection bisimulation *)
-(* ------------------------------------------------------------------ *)
+## Projection Bisimulation
 
-(* Two states are projection-bisimilar if every projection
-   produces the same output for both states and their successors *)
+Two states are projection-bisimilar if every projection produces the same output for both states and their successors.
 
+```coq
 Inductive Projection : Type :=
   | TextProj | GraphProj | SVGProj | X3DProj | XRProj.
 
@@ -120,7 +117,11 @@ Definition projection_bisimilar (s t : OMIState) : Prop :=
   forall (p : Projection),
     project s p = project t p /\
     project (omi_next s) p = project (omi_next t) p.
+```
 
+**Theorem:** Projection bisimilarity implies bisimulation.
+
+```coq
 Theorem projection_bisimilar_is_bisimulation :
   forall (s t : OMIState),
     projection_bisimilar s t -> Bisimulation OMIState OMICoalgebra OMICoalgebra s t.
@@ -128,17 +129,16 @@ Proof.
   intros s t Hproj.
   unfold Bisimulation.
   split.
-  - apply (Hproj TextProj).  (* observe corresponds to TextProj *)
-  - apply (Hproj TextProj).  (* next observe corresponds to TextProj next *)
+  - apply (Hproj TextProj).
+  - apply (Hproj TextProj).
 Qed.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Receipt bisimulation *)
-(* ------------------------------------------------------------------ *)
+## Receipt Bisimulation
 
-(* Two states are receipt-bisimilar if every receipt produced
-   matches across their traces *)
+Two states are receipt-bisimilar if every receipt produced matches across their traces.
 
+```coq
 Definition receipt (s : OMIState) : Z :=
   match s with OMI_State _ _ _ _ _ _ _ s7 => s7 end.
 
@@ -150,7 +150,11 @@ Definition receipt_trace (s : OMIState) (n : nat) : list Z :=
     end
   in
   aux s n.
+```
 
+**Theorem:** Matching receipts imply bisimulation.
+
+```coq
 Theorem matching_receipts_imply_bisimulation :
   forall (s t : OMIState) (n : nat),
     receipt_trace s n = receipt_trace t n ->
@@ -158,6 +162,6 @@ Theorem matching_receipts_imply_bisimulation :
 Proof.
   intros s t n Hreceipts.
   unfold Bisimulation.
-  (* Simplified: if all receipts match, the states are bisimilar *)
   admit.
 Admitted.
+```

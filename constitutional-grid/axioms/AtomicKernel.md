@@ -1,62 +1,50 @@
-(**
- * AtomicKernel.v
- *
- * Atomic kernel specification: proves the immutability and
- * atomicity properties of the OMI kernel. Establishes that
- * state transitions are atomic (all-or-nothing) and that
- * the kernel state is invariant under all lawful operations.
- *
- * Maps to: A4 (Escape), A6 (Proposal/Receipt), A7 (Branch/Reconciliation)
- * 112 cells: Q5A4c, Q5A4f, Q6A6c, Q6A6f, Q7A7c, Q7A7f
- *)
+# Atomic Kernel
 
+Atomic kernel specification: proves the immutability and atomicity properties of the OMI kernel. Establishes that state transitions are atomic (all-or-nothing) and that the kernel state is invariant under all lawful operations.
+
+**112 Matrix:** A4 (Escape), A6 (Proposal/Receipt), A7 (Branch/Reconciliation)  
+**Cells:** Q5A4c, Q5A4f, Q6A6c, Q6A6f, Q7A7c, Q7A7f
+
+```coq
 Require Import Coq.ZArith.ZArith.
 Require Import Coq.Lists.List.
 Import ListNotations.
 
 Local Open Scope Z_scope.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Kernel state *)
-(* ------------------------------------------------------------------ *)
+## Kernel State
 
+```coq
 Record KernelState : Type := {
-  (* Immutable kernel parameters *)
   genesis_seed   : Z;
   law_constant   : Z;
   max_frame_size : Z;
-
-  (* Mutable but kernel-controlled *)
   tick           : nat;
   current_frame  : list Z;
   receipt_log    : list Z;
 
-  (* Invariant: law_constant must be non-zero *)
   law_constant_nonzero : law_constant <> 0;
-
-  (* Invariant: frame must have exactly 8 segments *)
   frame_size_invariant : length current_frame = 8
 }.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Atomic transition *)
-(* ------------------------------------------------------------------ *)
+## Atomic Transition
 
+```coq
 Inductive TransitionResult : Type :=
   | TransitionSuccess : KernelState -> TransitionResult
   | TransitionFailure : TransitionResult.
 
 Definition atomic_transition (ks : KernelState) : TransitionResult :=
-  (* Pre-conditions *)
   if Zeq_bool ks.(law_constant) 0 then
     TransitionFailure
   else
     if negb (Nat.eqb (length ks.(current_frame)) 8) then
       TransitionFailure
     else
-      (* Execute transition atomically *)
       let new_tick := S ks.(tick) in
-      let new_frame := ks.(current_frame) in  (* simplified: frame unchanged *)
+      let new_frame := ks.(current_frame) in
       let new_receipt := ks.(tick) :: ks.(receipt_log) in
       TransitionSuccess (Build_KernelState
         ks.(genesis_seed)
@@ -67,7 +55,11 @@ Definition atomic_transition (ks : KernelState) : TransitionResult :=
         new_receipt
         ks.(law_constant_nonzero)
         ks.(frame_size_invariant)).
+```
 
+**Theorem:** Atomic transition either succeeds or fails.
+
+```coq
 Theorem atomic_transition_either_succeeds_or_fails :
   forall (ks : KernelState) (r : TransitionResult),
     atomic_transition ks = r ->
@@ -78,11 +70,11 @@ Proof.
   - left; eexists; reflexivity.
   - right; reflexivity.
 Qed.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Escape atomicity *)
-(* ------------------------------------------------------------------ *)
+## Escape Atomicity
 
+```coq
 Inductive EscapeScope : Type :=
   | NoEscape
   | InEscape : KernelState -> EscapeScope.
@@ -95,7 +87,11 @@ Definition exit_escape (e : EscapeScope) : TransitionResult :=
   | NoEscape => TransitionFailure
   | InEscape ks => TransitionSuccess ks
   end.
+```
 
+**Theorem:** Escape is bounded.
+
+```coq
 Theorem escape_is_bounded :
   forall (ks : KernelState),
     match enter_escape ks with
@@ -110,15 +106,15 @@ Proof.
   eexists.
   reflexivity.
 Qed.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Proposal/receipt atomicity *)
-(* ------------------------------------------------------------------ *)
+## Proposal/Receipt Atomicity
 
+```coq
 Inductive ProposalStatus : Type :=
   | Pending
-  | Accepted : Z -> ProposalStatus  (* receipt *)
-  | Rejected : Z -> ProposalStatus. (* rejection receipt *)
+  | Accepted : Z -> ProposalStatus
+  | Rejected : Z -> ProposalStatus.
 
 Record Proposal : Type := {
   proposer : Z;
@@ -135,7 +131,11 @@ Definition reject_proposal (p : Proposal) (reason : Z) : Proposal :=
   {| proposer := p.(proposer);
      changes  := p.(changes);
      status   := Rejected reason |}.
+```
 
+**Theorem:** All proposals are resolved.
+
+```coq
 Theorem all_proposals_are_resolved :
   forall (p : Proposal),
     match p.(status) with
@@ -147,26 +147,25 @@ Proof.
   intros p.
   destruct p.(status); auto.
 Qed.
+```
 
+**Theorem:** No transition without a receipt.
+
+```coq
 Theorem no_transition_without_receipt :
   forall (ks : KernelState) (p : Proposal),
     p.(status) = Pending ->
     ks.(current_frame) = p.(changes) ->
-    (* A pending proposal must not have been applied *)
     False.
 Proof.
   intros ks p Hpending Hframe.
-  (* If a proposal is still pending, its changes must not
-     be the current frame. Enforcement is at the protocol level. *)
-  (* This is a policy invariant, provable by construction if
-     the protocol correctly separates proposal from commit. *)
   admit.
 Admitted.
+```
 
-(* ------------------------------------------------------------------ *)
-(* Branch reconciliation atomicity *)
-(* ------------------------------------------------------------------ *)
+## Branch Reconciliation Atomicity
 
+```coq
 Record Branch : Type := {
   base_index : nat;
   deltas     : list (list Z);
@@ -180,7 +179,6 @@ Record ReconciliationResult : Type :=
 Definition reconcile (canonical : KernelState) (branch : Branch) :
   ReconciliationResult :=
   if Nat.ltb branch.(base_index) canonical.(tick) then
-    (* Valid base index: apply deltas *)
     if List.length branch.(branch_tip) =? 8 then
       let merged_frame := branch.(branch_tip) in
       let merged_tick := S canonical.(tick) in
@@ -199,7 +197,11 @@ Definition reconcile (canonical : KernelState) (branch : Branch) :
       MergeConflict
   else
     MergeConflict.
+```
 
+**Theorem:** Reconciliation preserves kernel invariants.
+
+```coq
 Theorem reconciliation_preserves_kernel_invariants :
   forall (canonical : KernelState) (branch : Branch) (ks : KernelState),
     reconcile canonical branch = MergeSuccess ks ->
@@ -207,6 +209,6 @@ Theorem reconciliation_preserves_kernel_invariants :
 Proof.
   intros canonical branch ks H.
   unfold reconcile in H.
-  (* If reconciliation succeeded, the kernel invariants hold *)
   admit.
 Admitted.
+```

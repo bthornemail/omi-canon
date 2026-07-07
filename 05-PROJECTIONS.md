@@ -24,7 +24,40 @@ The entire system is protected by one invariant: **only validation and receipt m
 
 ---
 
-## 2. The Projection Hierarchy
+## 2. The Projection Hierarchy (merged from root PROJECTIONS.md)
+
+```text
+Guiding gates:
+  ONTOLOGY.md
+  DOCTRINE.md
+  MANIFESTO.md
+  PROJECTIONS.md
+  GLOSSARY.md
+
+Executable truth gates:
+  RULES.omi  (MUST)
+  FACTS.omi  (FACT)
+  CLOSURES.omi  (CLOSE)
+  COMBINATORS.omi  (COMBINE)
+  CONS.omi  (CONS)
+
+Compiled mirrors:
+  RULES.imo
+  FACTS.imo
+  CLOSURES.imo
+  COMBINATORS.imo
+  CONS.imo
+
+Projection surfaces:
+  DOM / CSSOM / JSDOM
+  JSON Canvas
+  SSE / WAN telemetry
+  IPv6 frame / eBPF gate
+  Markdown / PDF / HTML
+  CLI / TUI
+  Visual (SVG / Canvas / QR / barcode)
+  Memory (5040 ring / receipt)
+```
 
 ```text
 Guiding gates:
