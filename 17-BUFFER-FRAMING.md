@@ -29,6 +29,34 @@ The length is the number of bytes in the framed Relation. The Relation itself is
 
 ---
 
+## Representation Neutrality
+
+A buffer frame does not care what the payload is.
+
+Whether the bytes represent OMI Relations, HTML markup, JSON data, JabCode barcodes, audio samples, or pixel values — the frame only guarantees that bytes enter and bytes leave in the same order.
+
+```text
+BufferFrame
+
+does not inspect
+
+the payload
+
+It only transports
+
+bytes → bytes
+```
+
+This is the **representation neutrality** principle: a buffer frame is a pipe, not an interpreter. Interpretation is the responsibility of the receiver's gauge (State 12) and projection faces (State 11). The frame carries; it does not read.
+
+Separation from Projection:
+- **Projection** (State 11) determines *how a Relation appears* to an observer
+- **Buffer framing** (State 17) determines *how a Relation moves* between observers
+
+A buffer frame is not a projection surface. It does not render, display, or interpret. It delivers a byte sequence from one location to another. The same buffer frame may carry an OMI envelope, a JPEG image, or an audio stream — the frame treats all payloads identically.
+
+---
+
 ## Carrier Types
 
 ### BLOB — Binary Large Object

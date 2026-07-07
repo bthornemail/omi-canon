@@ -39,10 +39,10 @@ omi-canon/
 ├── README.md                 ← State transition manifest (reading paths)
 ├── SKILLS.md                 ← Repeatable project workflows
 │
-├── constitutional-grid/      ← The 112 Proofs Matrix
+├── constitutional-grid/      ← The 448 Proofs Matrix
 │   ├── README.md             ← Grid overview
-│   ├── Q1-source-of-truth.md ← Invariant question 1 (14 proof cells)
-│   ├── Q2-system-movement.md ← Invariant question 2 (14 proof cells)
+│   ├── Q1-source-of-truth.md ← Invariant question 1 (56 proof cells)
+│   ├── Q2-system-movement.md ← Invariant question 2 (56 proof cells)
 │   ├── Q3-control-vs-payload.md
 │   ├── Q4-meaning-across-projections.md
 │   ├── Q5-intervention-and-replay.md
@@ -50,13 +50,13 @@ omi-canon/
 │   ├── Q7-branch-and-return.md
 │   ├── Q8-open-meaning-closed-law.md
 │   ├── algorithms/
-│   │   ├── A1-transition.md           ← Algorithm 1 (16 proof cells)
-│   │   ├── A2-control-plane.md        ← Algorithm 2 (16 proof cells)
-│   │   ├── A3-projection.md           ← Algorithm 3 (16 proof cells)
-│   │   ├── A4-escape.md               ← Algorithm 4 (16 proof cells)
-│   │   ├── A5-partition-chirality.md  ← Algorithm 5 (16 proof cells)
-│   │   ├── A6-proposal-receipt.md     ← Algorithm 6 (16 proof cells)
-│   │   └── A7-branch-reconciliation.md← Algorithm 7 (16 proof cells)
+│   │   ├── A1-transition.md           ← Algorithm 1 (64 proof cells)
+│   │   ├── A2-control-plane.md        ← Algorithm 2 (64 proof cells)
+│   │   ├── A3-projection.md           ← Algorithm 3 (64 proof cells)
+│   │   ├── A4-escape.md               ← Algorithm 4 (64 proof cells)
+│   │   ├── A5-partition-chirality.md  ← Algorithm 5 (64 proof cells)
+│   │   ├── A6-proposal-receipt.md     ← Algorithm 6 (64 proof cells)
+│   │   └── A7-branch-reconciliation.md← Algorithm 7 (64 proof cells)
 │   └── axioms/
 │       ├── verified_execution.md       ← Verified C/Coq correspondence
 │       ├── omi_pi_proof.md             ← π approximation via 1/73 weight block
@@ -295,8 +295,9 @@ Each Q × A cell now contains 8 sub-cells (4 citation pairs × 2 proof forms), e
 
 > 8 questions ask what must remain true.
 > 7 algorithms provide enforceable lanes for each answer.
+> 4 citation slots frame each claim in relational space.
 > 2 proof forms per lane (constructive + falsification) make every claim both buildable and break-testable.
-> Therefore the framework targets **112 proofs**.
+> Therefore the framework targets **448 proofs**.
 
 ---
 

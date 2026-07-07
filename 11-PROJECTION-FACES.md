@@ -4,11 +4,42 @@
 
 This state is the transition from "what cannot be reduced" to "how it becomes visible." After establishing the irreducible primitives, I needed to define how accepted truth is exposed, folded, projected, and inspected.
 
-This is the state where the invisible becomes visible. Where the abstract geometry of omicron anchors and Delta Laws meets the concrete surfaces of DOM, CSS, SVG, portals, and telemetry.
+This is the state where the invisible becomes visible.
 
 ---
 
-## 1. Projection Is Not Authority
+## 1. What Is a Face?
+
+A face is the answer to: *how does a Relation appear?*
+
+Every face follows the same four-step derivation:
+
+```text
+Relation        — the irreducible object (Null, Bit, Pair, Relation)
+    ↓
+Face            — the named surface orientation (which way the Relation is read)
+    ↓
+Projection      — the algorithm mapping Relation → surface representation
+    ↓
+Carrier         — the concrete medium (buffer, stream, pixel, memory)
+```
+
+A **face** is not the projection. The face names a **reading orientation**. The projection implements that orientation. The carrier transports the result.
+
+The same Relation can be read through many faces. Each face is a different answer to: *what does this mean when viewed this way?*
+
+Examples of faces:
+- **Omi-Ring** — the 5040-slot replay ring read as a circular store
+- **Omi-World** — the blackboard surface read as a navigable space
+- **Omi-Sense** — analog signals read as candidate Relations
+- **Omi-Portal** — the external nondeterminism boundary read as a gate
+- **Omi-Gnomon** — gauge orientation read as selection index
+
+These are not implementation names. They are **vocabulary items** — the terms used to describe which face a projection is realizing.
+
+---
+
+## 2. Projection Is Not Authority
 
 This is the first and most important principle of this state:
 
@@ -24,15 +55,35 @@ The entire system is protected by one invariant: **only validation and receipt m
 
 ---
 
-## 2. The Projection Hierarchy (merged from root PROJECTIONS.md)
+## 3. Carrier Implementations
+
+Once the face vocabulary is established, any concrete rendering technology is merely another carrier. The current set includes:
+
+### Text and Symbolic Carriers
+- **Markdown / HTML / PDF** — human-readable document projections
+- **CLI / TUI** — terminal-oriented projections
+- **SVG / Canvas / QR / barcode** — visual graphic carriers
+
+### Structured Data Carriers
+- **DOM / CSSOM / JSDOM** — browser document model projections
+- **JSON Canvas** — graph-oriented addressable surface
+
+### Network and Hardware Carriers
+- **SSE / WAN telemetry** — streaming event projections
+- **IPv6 frame / eBPF gate** — kernel-level network projections
+
+### Memory Carriers
+- **5040 ring / receipt** — internal storage projection
+
+Each carrier implements the four-step face derivation. None creates authority. None validates. Each is downstream of acceptance.
+
+---
+
+## 4. The Projection Hierarchy
 
 ```text
 Guiding gates:
-  ONTOLOGY.md
-  DOCTRINE.md
-  MANIFESTO.md
-  PROJECTIONS.md
-  GLOSSARY.md
+  ONTOLOGY.md, DOCTRINE.md, FOUNDATIONS.md, ATOMIC-KERNEL.md
 
 Executable truth gates:
   RULES.omi  (MUST)
@@ -42,13 +93,9 @@ Executable truth gates:
   CONS.omi  (CONS)
 
 Compiled mirrors:
-  RULES.imo
-  FACTS.imo
-  CLOSURES.imo
-  COMBINATORS.imo
-  CONS.imo
+  RULES.imo, FACTS.imo, CLOSURES.imo, COMBINATORS.imo, CONS.imo
 
-Projection surfaces:
+Carrier surfaces:
   DOM / CSSOM / JSDOM
   JSON Canvas
   SSE / WAN telemetry
@@ -58,26 +105,6 @@ Projection surfaces:
   Visual (SVG / Canvas / QR / barcode)
   Memory (5040 ring / receipt)
 ```
-
-```text
-Guiding gates:
-  ONTOLOGY, DOCTRINE, MANIFESTO, PROJECTIONS, GLOSSARY
-
-Executable truth gates:
-  RULES.omi (MUST)
-  FACTS.omi (FACT)
-  CLOSURES.omi (CLOSE)
-  COMBINATORS.omi (COMBINE)
-  CONS.omi (CONS)
-
-Compiled mirrors:
-  RULES.imo, FACTS.imo, CLOSURES.imo, COMBINATORS.imo, CONS.imo
-
-Projection surfaces:
-  DOM / CSSOM / JSDOM
-  JSON Canvas
-  SSE / WAN telemetry
-  IPv6 frame / eBPF gate
   Markdown / PDF / HTML
   CLI / TUI
   Visual (SVG / Canvas / QR / barcode)

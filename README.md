@@ -123,6 +123,58 @@ The project begins by asking what must exist before computation.
 
 Read the state files in order, `00-COSMOLOGY.md` through `20-GLOSSARY.md`. Each file represents a phase of discovery. Start with `00-COSMOLOGY.md` to understand where the project began, then follow the numbered progression.
 
+### As a Dependency Graph
+
+The canon is not a chain — it is a directed graph. After the blackboard resolves declarations, the path forks:
+
+```
+00 — COSMOLOGY
+    │
+01 — ONTOLOGY
+    │
+02 — DOCTRINE
+    │
+03 — FOUNDATIONS
+    │
+04 — ATOMIC KERNEL
+    │
+05 — PURE ALGORITHMS
+    │
+06 — FORMAL PROOFS
+    │
+07 — ISA
+    │
+08 — PROTOCOL
+    │
+09 — OMI-LISP
+    │
+10 — BLACKBOARD
+   ┌┴──────────────┐
+   │               │
+11 — PROJECTION  12 — GAUGE
+   └───────┬───────┘
+           │
+13 — SURFACE APPLICATIONS
+           │
+14 — WAVE SURFACE INTERPRETER
+           │
+15 — IMO PORTS
+           │
+16 — DISTRIBUTED OPEN WORLD
+           │
+17 — BUFFER FRAMING
+           │
+18 — VERSION CONTROL
+           │
+19 — CONSTITUTION
+           │
+20 — GLOSSARY
+```
+
+**Projection (11)** and **Gauge (12)** are sibling stages. Both operate over the same evaluated blackboard surface. Projection asks "how is this visible?" Gauge asks "which orientation is selected?" Neither contains the other. Both feed into Surface Applications (13), which render the gauge-oriented, projection-carried surface as a deterministic world.
+
+---
+
 ### As a Reference
 
 | Reader Type | Start With |
