@@ -178,28 +178,56 @@ Neither `CAR` nor `CDR` adds external metadata to identity.
 The pair is lawful only because both sides remain reducible to addressed
 relations.
 
-## Operation Rule
+## Primitive Operation Doctrine
 
-XOR remains the primary reversible composition operation.
-
-Rotation remains valid where closure and reversibility require orbit-preserving
-movement.
-
-Shift is not a general protocol primitive.
-
-Shift is allowed only as a narrow staging operation for:
+The definitive operation classification is:
 
 ```text
-64-bit register prefill
-tap-code in-stream staging
-Morse-code in-stream staging
-Polybius framing
-Tetragrammatron framing
-Metatron framing
+Primitive object behavior:
+monotonic unary array compose operations over addressed frames.
+
+Primary reversible operator:
+XOR.
+
+Valid orbit-preserving movement:
+rotation.
+
+Narrow staging-only movement:
+shift.
+
+Invalid:
+using shift as general protocol identity, address authority, receipt authority,
+or object behavior.
 ```
 
-If a shift would discard protocol identity or create an external address
-channel, it is invalid in the protocol core.
+XOR witnesses difference.
+
+Rotation preserves orbit.
+
+Unary compose builds object behavior.
+
+Shift only stages the next frame.
+
+Receipt accepts.
+
+Shift is not a protocol primitive.
+
+Shift may appear only as:
+
+```text
+1. implementation support for rotation
+2. explicit mask/register layout
+3. 64-bit unary register prefill
+4. tap-code or Morse-code in-stream staging
+5. Polybius coordinate preparation
+6. Tetragrammatron address/gate observation
+7. Metatron rule-set/projection framing
+```
+
+Any other use of shift is suspect until proven to be staging-only.
+
+If a shift would create identity, authority, address creation, receipt creation,
+or object behavior, it is invalid in the protocol core.
 
 ## 64-Bit Register Prefill Rule
 
@@ -230,6 +258,116 @@ It is not receipt.
 
 It is not metadata authority.
 
+## Proof Alignment
+
+The proof references align with this operation doctrine as follows.
+
+`DiagonalClosure.v` anchors the atomic Delta Law:
+
+```text
+delta16 =
+  rotl16(x, 1) XOR rotl16(x, 3) XOR rotr16(x, 2) XOR c
+```
+
+This supports the rule that XOR and rotation are the executable kernel
+movement.
+
+`FiniteIncidence.v` supports the finite incidence side:
+
+```text
+tetrahedron
+Fano plane
+Schlafli {3,5}/{5,3}
+rectified common core
+```
+
+This supports partition/chirality and projection geometry. It does not make
+geometry an acceptance authority.
+
+`BQFBridge.v` supports gauge and surface geometry:
+
+```text
+60x^2 + 16xy + 4y^2
+5! = 120
+240 = 2 * 5!
+Fano selector mod 7
+local240 selector mod 240
+```
+
+This supports selectors and surface application. It does not prove receipt
+acceptance.
+
+`functorial_semantics.v` supports projection lawfulness:
+
+```text
+Obs preserves identity/composition.
+obs(Delta^n s) = fA^n(obs s)
+```
+
+Projection is lawful only when it commutes with transition.
+
+`coalgebraic_bisimulation.v` and `OMI_bialgebra.v` support replay,
+observation streams, and trace equivalence:
+
+```text
+algebraic iteration = coalgebraic observation stream
+```
+
+These support observer/replay equivalence. They do not by themselves complete
+the receipt or VCS reconciliation proof layer.
+
+## Algorithm Separation
+
+Do not collapse distinct algorithms into one doctrine statement.
+
+The atomic Delta Law is:
+
+```text
+rotl / rotl / rotr / XOR / c
+```
+
+The GF(2^16) alpha step is:
+
+```text
+lsl / conditional reduction / mask
+```
+
+Both may be valid layers.
+
+They must not be described as the same algorithm unless a refinement theorem
+explicitly bridges them.
+
+## Shift Audit Rule
+
+Future implementation review must audit all Haskell, C, and documentation for:
+
+```text
+shift
+shiftL
+shiftR
+<<
+>>
+```
+
+Classify every occurrence as:
+
+```text
+A. rotation implementation
+B. mask/register layout
+C. unary prefill/staging
+D. invalid semantic shift
+```
+
+Fail the audit if any shift is used as:
+
+```text
+identity
+authority
+address creation
+receipt creation
+object behavior
+```
+
 ## Authority Boundary
 
 The carrier prefix stages.
@@ -259,4 +397,34 @@ Monotonic unary array compose is primitive object behavior.
 XOR is primary.
 Shift is limited to register/prefill staging.
 Receipt, not carrier/projection/metadata, is the acceptance boundary.
+```
+
+The later proof-support map should start from:
+
+```text
+A1 Transition:
+  DiagonalClosure.delta16_width_preserving
+  DiagonalClosure.delta16_deterministic
+
+A2 Control Plane:
+  DiagonalClosure D+/D- closure, RS=0x1E, wheel=0x78
+
+A3 Projection:
+  functorial_semantics functor_theorem
+  MetricProjection projection boundary
+
+A4 Escape:
+  not directly proven yet
+
+A5 Partition/Chirality:
+  FiniteIncidence Fano/tetra incidence
+  DiagonalClosure phase schedule
+  BQFBridge selectors
+
+A6 Proposal/Receipt:
+  not directly proven yet
+
+A7 Branch/Reconciliation:
+  coalgebraic_bisimulation trace/bisimulation material
+  partial support only
 ```
