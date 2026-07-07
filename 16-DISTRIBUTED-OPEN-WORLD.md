@@ -1,4 +1,4 @@
-# State 09 — Ecosystem: The World
+# State 16 — Distributed Open World: Independent Observers
 
 ## What This State Is
 
@@ -326,8 +326,8 @@ The label is an interface summary. The receipt chain is the inspectable evidence
 
 ---
 
-## The Transition to State 10
+## The Transition to State 17
 
-From this state — having placed the machine in the world — I moved to State 10 (The Closure) to answer: what do all these terms mean? The glossary closes the circle.
+From this state — having placed the machine in the world — I moved to State 17 (Buffer Framing) to answer: how are relations transported across boundaries? What carriers move frames across files, packets, and hardware?
 
-Continue to `10-GLOSSARY.md`.
+Continue to `17-BUFFER-FRAMING.md`.

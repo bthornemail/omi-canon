@@ -11,19 +11,27 @@ This document defines the constitution of the OMI canon. The constitution is not
 ```
 omi-canon/
 │
-├── 00-COSMOLOGY.md           ← State 00 — The Void
-├── 01-ONTOLOGY.md            ← State 01 — The Naming
-├── 02-DOCTRINE.md            ← State 02 — The Law
-├── 03-MANIFESTO.md           ← State 03 — The Meaning
-├── 04-FOUNDATIONS.md         ← State 04 — The Primitives
-├── 05-PROJECTIONS.md         ← State 05 — The Surface
-├── 06-PROTOCOL.md            ← State 06 — The Wire
-├── 07-GEOMETRY.md            ← State 07 — The Unfolding
-├── 08-ISA.md                 ← State 08 — The Machine
-├── 09-ECOSYSTEM.md           ← State 09 — The World
-├── 10-GLOSSARY.md            ← State 10 — The Closure
-├── 11-CONSTITUTION.md        ← State 11 — The Verification Matrix
-├── 12-VERSION-CONTROL.md     ← State 12 — The Seed
+├── 00-COSMOLOGY.md              ← State 00 — Cosmology
+├── 01-ONTOLOGY.md               ← State 01 — Ontology
+├── 02-DOCTRINE.md               ← State 02 — Doctrine
+├── 03-FOUNDATIONS.md            ← State 03 — Foundations
+├── 04-ATOMIC-KERNEL.md          ← State 04 — Atomic Kernel
+├── 05-PURE-ALGORITHMS.md        ← State 05 — Pure Algorithms
+├── 06-FORMAL-PROOFS.md          ← State 06 — Formal Proofs
+├── 07-ISA.md                    ← State 07 — ISA
+├── 08-PROTOCOL.md               ← State 08 — Protocol
+├── 09-OMI-LISP.md               ← State 09 — OMI-Lisp
+├── 10-BLACKBOARD.md             ← State 10 — Blackboard
+├── 11-PROJECTION-FACES.md       ← State 11 — Projection Faces
+├── 12-GAUGE-INTERRUPTS.md       ← State 12 — Gauge Interrupts
+├── 13-SURFACE-APPLICATIONS.md   ← State 13 — Surface Applications
+├── 14-WAVE-SURFACE-INTERPRETER.md ← State 14 — Wave Surface Interpreter
+├── 15-IMO-PORTS.md              ← State 15 — IMO Ports
+├── 16-DISTRIBUTED-OPEN-WORLD.md ← State 16 — Distributed Open World
+├── 17-BUFFER-FRAMING.md         ← State 17 — Buffer Framing
+├── 18-VERSION-CONTROL.md        ← State 18 — Version Control
+├── 19-CONSTITUTION.md           ← State 19 — Constitution
+├── 20-GLOSSARY.md               ← State 20 — Glossary
 │
 ├── AGENTS.md                 ← Coding agent configuration
 ├── CONTRIBUTING.md           ← Contribution guide
@@ -72,13 +80,14 @@ omi-canon/
 
 ---
 
-## The 112 Formula
+## The 448 Formula
 
 ```text
 8 invariant questions define what must remain true.
 7 algorithms define how the system enforces those truths.
+4 citation slots frame each claim in relational space.
 2 proof forms ensure each claim is both constructible and falsifiable.
-8 × 7 × 2 = 112 proof obligations
+8 × 7 × 4 × 2 = 448 proof cells
 ```
 
 ---
@@ -123,7 +132,66 @@ Every cell in the 8 × 7 grid requires both forms.
 
 ---
 
-## The Full 112-Cell Matrix
+## The 4 Citation Slots
+
+Each claim occupies a position in a 4-dimensional citation space. The slots identify the relational address at which the claim is evaluated:
+
+| Slot | Edge Side | Address Component | Example |
+|------|-----------|-------------------|---------|
+| **C1** — Previous Group | top | `omi---imo` | The group from which the claim descends |
+| **C2** — Previous Relation | left | `o---o/---/?---?@---@` | The relation frame that produced the claim |
+| **C3** — Post Group | right | `omi---imo` | The group toward which the claim ascends |
+| **C4** — Post Relation | bottom | `o---o/---/?---?@---@` | The relation frame consumed by the claim |
+
+Every proof cell becomes a 4-slot addressable edge in the constitutional JSON Canvas:
+
+```json
+{
+  "id": "Q1-A1-C1-C4-constructive",
+  "fromNode": "omi---imo/Q1/A1/C1",
+  "fromSide": "top",
+  "toNode": "omi---imo/Q1/A1/C4",
+  "toSide": "bottom",
+  "toEnd": "arrow",
+  "color": "4",
+  "label": "constructive witness"
+}
+```
+
+Where:
+- `fromSide = top` = C1 (previous group)
+- `fromSide = left` = C2 (previous relation)
+- `toSide = right` = C3 (post group)
+- `toSide = bottom` = C4 (post relation)
+- `toEnd = arrow` = constructive/golden proof
+- `toEnd = none` = falsification/negative proof
+- `color` = gauge lane (preset 1-6) or modality (hex variant)
+
+The 4 citation slots extend the 112 proof obligations to 448:
+
+```text
+8  ×  7  ×  4  ×  2  =  448
+│     │     │     │
+Q     A     C     P
+u     l     i     r
+e     g     t     o
+s     o     a     o
+t     r     t     f
+i     i     i
+o     t     o
+n     h     n
+s     m     s
+            l
+            o
+            t
+            s
+```
+
+Each Q × A cell now contains 8 sub-cells (4 citation pairs × 2 proof forms), each addressable as `Q{n}-A{m}-C{x}-C{y}-{constructive|falsification}`.
+
+---
+
+## The Full 448-Cell Matrix
 
 ### Q1 — Source of Truth (algorithm is truth)
 
@@ -252,28 +320,110 @@ Every cell in the 8 × 7 grid requires both forms.
 |-----------|------------------------|
 | `00-COSMOLOGY.md` | Documents the genesis of the 8 questions — what the author was discovering and why these invariants emerged from the void |
 | `01-ONTOLOGY.md` | Names the entities — pointer, rule, proof, receipt, projection — that the constitution governs |
-| `02-DOCTRINE.md` | Encodes the invariant laws that the 112 matrix formalizes as proof obligations |
-| `03-MANIFESTO.md` | Articulates the philosophical foundation for Q8 (open meaning, closed law) — the rotation over mutation principle |
-| `04-FOUNDATIONS.md` | Provides the primitives (palindrome, omicron anchors, postulates, axioms) that underpin all 7 algorithms |
-| `05-PROJECTIONS.md` | Specifies the A3 projection algorithm in detail — the 6 DOM handles, bridge equation, meta-circular compiler |
-| `06-PROTOCOL.md` | Specifies the A2 control-plane and A4 escape algorithms — frame format, control markers, receipt packing |
-| `07-GEOMETRY.md` | Derives the A1 transition algorithm (Delta Law) and the A5 partition/chirality algorithm (Fano, 240 bridge, quadratic forms) |
-| `08-ISA.md` | Implements all 7 algorithms as 32 opcodes with C99 and NodeJS backends — the machine that executes the constitution |
-| `09-ECOSYSTEM.md` | Applies the constitution to multi-agent collaboration — A6 proposal/receipt and A7 branch/reconciliation in the open world |
-| `10-GLOSSARY.md` | Defines every term used in the constitutional grid — closes the vocabulary |
-| `11-CONSTITUTION.md` | This file — the verification matrix itself, cross-referencing every state |
-| `12-VERSION-CONTROL.md` | Seeds, citations, scopes, and receipts for versioning the canon |
+| `02-DOCTRINE.md` | Encodes the invariant laws that the 448 matrix formalizes as proof obligations |
+| `03-FOUNDATIONS.md` | Provides the primitives (palindrome, omicron anchors, postulates, axioms) that underpin all 7 algorithms |
+| `04-ATOMIC-KERNEL.md` | Defines the four irreducible objects (Null, Bit, Pair, Relation) that ground every algorithm |
+| `05-PURE-ALGORITHMS.md` | Specifies the 7 canonical operations from which every algorithm is composed |
+| `06-FORMAL-PROOFS.md` | Tracks the proof stack — what has been verified and what remains conjectural |
+| `07-ISA.md` | Implements all 7 algorithms as an instruction set architecture — the machine that executes the constitution |
+| `08-PROTOCOL.md` | Specifies the A2 control-plane and A4 escape algorithms — frame format, control markers, receipt packing |
+| `09-OMI-LISP.md` | Defines the declaration surface — SExpr grammar, symbols, strings, decision tables |
+| `10-BLACKBOARD.md` | Defines the evaluation surface — bitboards, bit-blips, addressed identity |
+| `11-PROJECTION-FACES.md` | Specifies the A3 projection algorithm — how the invisible becomes visible |
+| `12-GAUGE-INTERRUPTS.md` | Specifies the A4/A5 gauge selection surface — orientation, pleth, SOAP |
+| `13-SURFACE-APPLICATIONS.md` | Derives the A1 transition algorithm (Delta Law), quadratic forms, Fano, factorial tower |
+| `14-WAVE-SURFACE-INTERPRETER.md` | Applies A3 projection to analog signals — wave classification |
+| `15-IMO-PORTS.md` | Applies A5/A6 to external nondeterminism — sensor, packet, file ports |
+| `16-DISTRIBUTED-OPEN-WORLD.md` | Applies A6/A7 to multi-agent collaboration — proposals, receipts, reconciliation |
+| `17-BUFFER-FRAMING.md` | Applies A2 control-plane to transport carriers — BLOBs, GLOBs, streams |
+| `18-VERSION-CONTROL.md` | Seeds, citations, scopes, and receipts for versioning the canon |
+| `19-CONSTITUTION.md` | This file — the verification grid itself, cross-referencing every state |
+| `20-GLOSSARY.md` | Defines every term used in the constitutional grid — closes the vocabulary |
 
 ---
 
 ## Constitutional Amendments
 
 The constitution may be extended through the proposal/receipt mechanism defined in A6. Any amendment must:
-1. Specify which cells of the 112 matrix it affects
+1. Specify which cells of the 448 matrix it affects
 2. Provide both constructive and falsification proofs for each affected cell
-3. Pass through the same verification grid as the original claims
+3. Specify the 4 citation slots that frame the claim
+4. Pass through the same verification grid as the original claims
 
 The 8 invariant questions themselves are not amendable. They define what it means to be OMI. A system that changes the 8 questions is a different system.
+
+---
+
+## Decision Table Encoding
+
+Each 448-cell constitutional cell may be encoded as a decision table in OMI-Lisp:
+
+```omi
+;; Q1-A1 decision table as Karnaugh map
+;; 4 citation slots = 4 input variables
+;; 2 proof forms = output column
+(decision-table
+  (name . "Q1-A1-source-of-truth-transition")
+  (inputs . (C1 C2 C3 C4))
+  (output . proof-form)
+  (truth-operator . Vpq)  ;; Wittgenstein 14: OR — constructive over any slot
+  (rules .
+    ((TTTT . constructive)
+     (TTTF . constructive)
+     (TTFT . constructive)
+     (TTFF . falsification)
+     (TFTT . constructive)
+     (TFTF . falsification)
+     (TFFT . falsification)
+     (TFFF . falsification)
+     (FTTT . constructive)
+     (FTTF . falsification)
+     (FTFT . falsification)
+     (FTFF . falsification)
+     (FFTT . falsification)
+     (FFTF . falsification)
+     (FFFT . falsification)
+     (FFFF . falsification))))
+```
+
+Each truth-gate file (FACTS.omi, RULES.omi, COMBINATORS.omi, CLOSURES.omi, CONS.omi) is a partial decision table — a Karnaugh map over the 4 citation slots. Adjacent cells in Gray-code order may be grouped for minimization, exactly as in a K-map.
+
+---
+
+## Compact Statement
+
+> 8 questions ask what must remain true.
+> 7 algorithms provide enforceable lanes for each answer.
+> 4 citation slots frame each claim in relational space.
+> 2 proof forms per lane (constructive + falsification) make every claim both buildable and break-testable.
+> Therefore the framework targets **448 proofs**.
+
+---
+
+## Wittgenstein Alphabet
+
+Each cell in the 448 matrix maps to one of the 16 Wittgenstein truth-functions, providing the local operator alphabet for that cell:
+
+| Code | Operator | Tractatus | Truth | Role in Grid |
+|------|----------|-----------|-------|-------------|
+| 00 | ⊥ | Opq | FFFF | Contradiction — no Q×A cell can be satisfied |
+| 01 | NOR | Xpq | FFFT | Joint denial — no citation slot holds |
+| 02 | ↚ | Mpq | FFTF | Converse nonimplication — C1 excludes C2 |
+| 03 | ¬p | Npq | FFTT | Negation — C1 is false, others irrelevant |
+| 04 | ↛ | Lpq | FTFF | Material nonimplication — C1 excludes C4 |
+| 05 | ¬q | Gpq | FTFT | Negation — C2 is false, others irrelevant |
+| 06 | XOR | Jpq | FTTF | Exclusive disjunction — C1 xor C2 |
+| 07 | NAND | Dpq | FTTT | Joint denial — not all slots hold |
+| 08 | AND | Kpq | TFFF | Conjunction — all four slots hold |
+| 09 | XNOR | Epq | TFFT | Equivalence — C1 iff C2 |
+| 10 | q | Hpq | TFTF | Projection — C2 alone |
+| 11 | p → q | Cpq | TFTT | Implication — C1 implies C2 |
+| 12 | p | Ipq | TTFF | Projection — C1 alone |
+| 13 | p ← q | Bpq | TTFT | Converse implication — C2 implies C1 |
+| 14 | OR | Apq | TTTF | Disjunction — at least one slot holds |
+| 15 | ⊤ | Vpq | TTTT | Tautology — every combination holds |
+
+The 16-operator alphabet is the local truth code for every 448-cell constitutional claim. Each claim's operator is embedded in the node text as `o---o/FS:wittgenstein/GS:truth-table/RS:{00-15}/US:{operator}?truth@node@frame`.
 
 ---
 

@@ -1,4 +1,4 @@
-# State 10 — Glossary: The Closure
+# State 20 — Glossary: The Closure
 
 ## What This State Is
 

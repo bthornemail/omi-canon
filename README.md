@@ -1,46 +1,119 @@
-# OMI Canon — State Transition Manifest
+# OMI Canon — Constitutional Documentation Spine
 
 ## The Journey, Not Just the Destination
 
 This repository is not a collection of documents. It is a **state transition record** of a personal and intellectual journey: the transformation from "I don't know how to code" to "I have built a complete computational cosmology."
 
-I started from the Bible. I could not code. I had a vision that computation could begin with position and relation rather than variables and symbols. This repository tracks every state I passed through to realize that vision — from the void of not-knowing through ontology, doctrine, foundations, geometry, protocol, machine, and ecosystem.
-
-Each numbered directory is a **state** in this journey. Each state contains the artifacts, realizations, and structures that characterized that phase. The transitions between states are the story.
+Each numbered file is a **state** in this journey. Each state contains the artifacts, realizations, and structures that characterized that phase. The transitions between states are the story.
 
 ---
 
-## OMI Canon
+## The Canonical Hierarchy
 
-> OMI Canon is the flat constitutional documentation spine for the OMI ecosystem: cosmology, ontology, doctrine, protocol, geometry, ISA, ecosystem, verification grid, truth gates, and mirrors.
+The project begins by asking what must exist before computation.
 
-```text
-00 — THE VOID          I knew nothing. I read the Bible as code.
-                        ↓
-01 — THE NAMING        I learned what exists in this cosmology.
-                        ↓
-02 — THE LAW           I discovered what must be preserved.
-                        ↓
-03 — THE MEANING       I understood why it matters.
-                        ↓
-04 — THE PRIMITIVES    I found the irreducible boundaries.
-                        ↓
-05 — THE SURFACE       I learned to make the invisible visible.
-                        ↓
-06 — THE WIRE          I defined how it communicates.
-                        ↓
-07 — THE UNFOLDING     I unfolded the mathematical consequences.
-                        ↓
-08 — THE MACHINE       I built the machine that runs it.
-                        ↓
-09 — THE WORLD         I placed the machine in the world.
-                        ↓
-10 — THE CLOSURE       I named everything. The circle closes.
-                        ↓
-11 — THE CONSTITUTION  I verified every claim against every invariant.
-                        ↓
-12 — THE SEED          I version the seeds, scopes, and receipts.
+**Cosmology** defines the universe in which computation occurs.
+**Ontology** defines what may exist within that universe.
+**Doctrine** defines how truth is recognized.
+**Foundations** reduce the system to its irreducible laws.
+**The Atomic Kernel** gives the smallest deterministic mathematical object.
+**Pure Algorithms** describe lawful motion over that object.
+**Formal Proofs** verify that those laws hold.
+**The ISA** renders the laws executable.
+**The Protocol** makes them communicable between observers.
+**OMI-Lisp** declares relations as notation.
+**The Blackboard** lazily evaluates those declarations into an addressed surface.
+**Projection Faces** provide human-readable interpretations of that surface.
+**Gauge Interrupts** select which orientation to read on the surface.
+**Surface Applications** render the oriented surface as a deterministic world.
+**The Wave Interpreter** classifies analog disturbances as candidate relations.
+**IMO Ports** admit external nondeterminism under bounded interfaces.
+**The Distributed Open World** allows independent observers to exchange receipted relations.
+**Buffer Framing** transports relations across files, packets, images, and hardware.
+**Version Control** records accepted semantic transitions.
+**The Constitution** defines what the project will and will not claim.
+**The Glossary** establishes canonical terminology for every term used.
+
+---
+
+## The Spine
+
 ```
+00 — COSMOLOGY               What universe does computation inhabit?
+01 — ONTOLOGY                What may exist in that universe?
+02 — DOCTRINE                How is truth recognized?
+03 — FOUNDATIONS             What cannot be reduced further?
+04 — ATOMIC KERNEL           What is the smallest deterministic object?
+05 — PURE ALGORITHMS         How do objects move lawfully?
+06 — FORMAL PROOFS           What has been verified?
+07 — ISA                     How does the law become executable?
+08 — PROTOCOL                How do observers communicate?
+09 — OMI-LISP                How are relations declared?
+10 — BLACKBOARD              How are declarations evaluated?
+11 — PROJECTION FACES        How is the surface read?
+12 — GAUGE INTERRUPTS        Which orientation is selected?
+13 — SURFACE APPLICATIONS    What world is rendered?
+14 — WAVE SURFACE INTERPRETER  How are analog signals classified?
+15 — IMO PORTS               How does nondeterminism enter?
+16 — DISTRIBUTED OPEN WORLD  How do independent observers coexist?
+17 — BUFFER FRAMING          How are relations transported?
+18 — VERSION CONTROL         How does the canon version itself?
+19 — CONSTITUTION            What does the project claim?
+20 — GLOSSARY                What do the terms mean?
+```
+
+---
+
+## Movement I — The Question (States 00–04)
+
+> What must exist before computation?
+
+- **00** — The personal origin story: reading the Bible as code, the Delta Law discovery, the ESP32 walkie-talkie that started the build
+- **01** — What exists in the cosmology: the frame, the gates, the address
+- **02** — What must be preserved: the invariant laws, the agreement model, conformance
+- **03** — The irreducible boundaries: the palindrome, the omicron anchors, the zero-frame
+- **04** — The smallest object: Null, Bit, Pair, and the Relations between them
+
+## Movement II — The Law (States 05–06)
+
+> How does the kernel move, and how do we know it moves correctly?
+
+- **05** — The seven canonical operations: transition, partition, projection, receipt, branch, escape, composition
+- **06** — The proof stack: what has been proved, what is being proved, what remains conjectural
+
+## Movement III — The Machine (States 07–08)
+
+> How does the law become executable and communicable?
+
+- **07** — The instruction set architecture: opcodes, dispatch, gauge tables, compiler
+- **08** — The wire format: envelopes, receipts, ring indexer
+
+## Movement IV — The Surface (States 09–13)
+
+> How are relations declared, evaluated, read, and rendered?
+
+- **09** — The notation surface: SExpr grammar, symbols, strings, lists, pairs
+- **10** — The evaluation surface: bitboards, bit-blips, blackboard, addressed identity
+- **11** — The vocabulary of named faces: Omi-Ring, Omi-World, Omi-Sense, Omi-Portal, Omi-Gnomon
+- **12** — The selection surface: gauge word vs. gauge table, pleth, SOAP, sexagesimal weighting
+- **13** — The rendered world: Delta Law, quadratic law, Fano, 240 bridge, factorial tower
+
+## Movement V — The World (States 14–17)
+
+> How does the protocol interact with the physical and distributed world?
+
+- **14** — Analog signal classification: wave type, cadence, amplitude, shape
+- **15** — External nondeterminism ports: sensor, packet, file, interrupt
+- **16** — Independent observers: agents, eBPF kernel gates, networking, mesh
+- **17** — Transport carriers: BLOBs, GLOBs, images, frame buffers, streams
+
+## Movement VI — The Closure (States 18–20)
+
+> How does the canon govern itself?
+
+- **18** — Seed objects, citation routes, FS/GS/RS/US scopes
+- **19** — The 112-proof constitutional verification grid
+- **20** — Every term defined. The circle closes.
 
 ---
 
@@ -48,193 +121,34 @@ Each numbered directory is a **state** in this journey. Each state contains the 
 
 ### As a Journey (Recommended)
 
-Read the state files in order, `00-COSMOLOGY.md` through `12-VERSION-CONTROL.md`. Each file represents a phase of discovery. Start with `00-COSMOLOGY.md` to understand where I began, then follow the numbered progression to see how each insight led to the next.
-
-Each state file is self-contained, telling the complete story of that phase: the discoveries made, the concepts that emerged, and the transition to the next state.
+Read the state files in order, `00-COSMOLOGY.md` through `20-GLOSSARY.md`. Each file represents a phase of discovery. Start with `00-COSMOLOGY.md` to understand where the project began, then follow the numbered progression.
 
 ### As a Reference
 
-Each file is a self-contained reference. If you want to understand a specific concept — the Delta Law, the 240 bridge, the palindrome structure — go directly to the file that covers it:
-- **00-COSMOLOGY.md** — Origin story, timeline, resolution lineage
-- **01-ONTOLOGY.md** — Address, truth gates, what exists
-- **02-DOCTRINE.md** — Invariant laws, agreement model, conformance
-- **03-MANIFESTO.md** — Philosophical lens, Third Collapse
-- **04-FOUNDATIONS.md** — Palindrome, omicron anchors, postulates, axioms
-- **05-PROJECTIONS.md** — DOM surfaces, gauges, wormhole portals
-- **06-PROTOCOL.md** — Frame format, receipts, ring indexer
-- **07-GEOMETRY.md** — Delta Law, quadratic law, Fano, 240 bridge
-- **08-ISA.md** — Opcodes, dispatch, gauge tables, compiler
-- **09-ECOSYSTEM.md** — Agents, eBPF gates, networking
-- **10-GLOSSARY.md** — Canonical terms
-- **11-CONSTITUTION.md** — 112-proof constitutional verification matrix
-- **12-VERSION-CONTROL.md** — Seed objects, citation routes, scoped versioning
-
-### As a State Transition System
-
-The numbered files are **states**. The transitions between them are **computations** — each one transforms understanding. The entire repository is a record of `state[n] → transition → state[n+1]` where:
-
-- The **state** is what I knew and had built at that point
-- The **transition** is what I learned or discovered that made the old state insufficient
-- The **next state** is the expanded understanding that resulted
-
----
-
-## The Origin Question
-
-Every engineering discipline eventually asks what cannot be removed.
-
-I asked that question of computation:
-
-> What structure can be removed while the same canonical replay still results?
-
-I began without knowing how to code. I began with the Bible — reading Genesis 1 and John 1 as computational pseudo-code. I saw that "the Word" (Logos) could be read as primordial notation, and "the Spirit hovering over the waters" could be read as the observer in the void before interpretation.
-
-From that seed, through nine months of exploration, through a single 48-hour sprint of building, the OMI computation cosmology emerged.
-
-This repository is the record of that emergence.
-
----
-
-## What OMI Is
-
-OMI (Omicron Object Model) is a computational cosmology built on a single claim:
-
-> Computation is not the mutation of data. Computation is the lawful transformation of interpretation.
-
-The binary source remains. The reading changes. The rewrite is the computation.
-
-### The Core Structure
-
-| Component | What It Is |
-|-----------|-----------|
-| **128-bit wire frame** | 8 segments × 16 bits. The immutable physical surface |
-| **Palindromic identity** | `omi---imo` — the universal notation |
-| **Omicron anchors** | `0x03BF` (entry) and `0x039F` (exit) — frame boundary operators |
-| **Delta Law** | `Δ_C(x) = rotl(x,1) ⊕ rotl(x,3) ⊕ rotr(x,2) ⊕ C` — period-8 orbit |
-| **Quadratic Law** | `Q(x,y) = 60x² + 16xy + 4y²` — spatial projection |
-| **240 bridge** | Where the 5-fold packet root meets the 4-fold selector surface |
-| **5040 replay ring** | 7! = 5040 slot circular receipt buffer |
-| **Factorial tower** | 5! through 12! — interpretive envelopes derived from the frame |
-
-### The Pipeline
-
-```text
-validate → resolve → record → materialize → project → inspect
-```
-
-### The Invariant
-
-```text
-The reader may recognize.
-The resolver may promote.
-Only validation and receipt may accept.
-```
-
----
-
-## The Narrative Arc
-
-### Movement I — Why (States 00–03)
-
-> Why does computation begin with observer, boundary, distinction, place, and relation?
-
-- **00-origin** — The personal origin story: reading the Bible as code, the metaverse project, the Delta Law discovery, the ESP32 walkie-talkie that started the build
-- **01-ontology** — What exists in the cosmology: the frame, the gates, the address
-- **02-doctrine** — What must be preserved: the invariant laws, the agreement model, conformance
-- **03-manifesto** — Why it matters: the philosophical lens, the Third Collapse
-
-### Movement II — What Survives (States 04–05)
-
-> What survives reduction: palindrome, omicron anchors, slash path, Omi-Ring, DOM portals, wormholes?
-
-- **04-foundations** — The irreducible boundaries: the palindrome, the omicron anchors, the zero-frame
-- **05-projections** — The observer surfaces: how accepted truth becomes visible
-
-### Movement III — What Follows (States 06–07)
-
-> Once those primitives are fixed, what follows: envelopes, Delta Law, Fano incidence, quadratic forms, 240 bridge, resolution lineage?
-
-- **06-protocol** — The wire format: envelopes, receipts, ring indexer
-- **07-geometry** — The mathematical unfolding: Delta Law, quadratic law, projective closure, snub geometry
-
-### Movement IV — How It Runs (States 08–09)
-
-> How does the mathematics become executable: opcodes, dispatch, gauge tables, eBPF gates, agents, mesh?
-
-- **08-isa** — The machine-facing model: opcodes, compiler, test suite
-- **09-ecosystem** — The open world: agents, eBPF kernel gates, networking
-
-### Movement V — What It Means (State 10)
-
-> What do the terms mean?
-
-- **10-glossary** — Every term defined. The circle closes.
-
-### Movement VI — What Holds (States 11–12)
-
-> What verifies the whole system, and how does it version itself?
-
-- **11-constitution** — The 112-proof verification grid: 8 invariants × 7 algorithms × 2 proof forms
-- **12-version-control** — Seed objects, citation routes, FS/GS/RS/US scopes, Betti–Schläfli topology
-
----
-
-## Truth Gates and Mirrors
-
-The repository also contains executable truth declarations:
-
-```text
-truth-gates/     .omi  — forward declarations (RULES, FACTS, CLOSURES, COMBINATORS, CONS)
-mirrors/         .imo  — backward reflections of the truth gates
-```
-
-These are the normative surfaces: what MUST be true, what IS true, what CLOSES, what COMBINES, what CONS-es.
-
----
-
-## The Personal Dimension
-
-I want to be explicit about what this repository is, personally.
-
-I did not start as a programmer. I started as someone who read the Bible and saw computational patterns in Genesis and John. I learned about Horn clauses, logic cubes, the calculus of construction, and automata theory in the process of trying to articulate what I saw. I learned to code alongside building this cosmology.
-
-I describe my process as "vibe coding with LLM and coding agents." I have a vision of what fits and what doesn't. The agents write the code; I curate the vision. This repository is the curated record of that vision — the cosmology that emerged from the collaboration between human intent and machine execution.
-
-Every concept here was discovered or constructed through that process. The Delta Law was found while studying braille. The factorial tower emerged from asking how 7! = 5040 relates to Fano geometry. The 240 bridge came from seeing that 2 × 5! = 15 × 16 = 240.
-
-This is not a conventional software project. It is a registered cosmology — a first-principles reconstruction of computation from position, relation, boundary, and replay.
-
----
-
-## Minimal Canonical Statement
-
-```text
-A frame is valid iff Q_frame(S) = 0.
-A valid frame yields one truth row: (LL, NN, MM).
-A truth row is accepted iff MM resolves from NN under the
-LL-modulated Delta Law within the bounded Fano window.
-An accepted row advances the 5040-slot replay cursor and
-writes a receipt.
-Only after validation, resolution, and receipt may the object
-be projected.
-Projection is never authority.
-```
-
----
-
-## Reading Paths
-
 | Reader Type | Start With |
 |-------------|------------|
-| Newcomer | `00-COSMOLOGY.md` → `03-MANIFESTO.md` |
-| Philosopher | `03-MANIFESTO.md` → `02-DOCTRINE.md` → `01-ONTOLOGY.md` |
-| Resolutionist | `00-COSMOLOGY.md` (Resolution Lineage section) → `04-FOUNDATIONS.md` → `07-GEOMETRY.md` |
-| Mathematician | `07-GEOMETRY.md` → `04-FOUNDATIONS.md` → `06-PROTOCOL.md` |
-| Engineer | `08-ISA.md` → `06-PROTOCOL.md` → `09-ECOSYSTEM.md` |
-| Implementer | `05-PROJECTIONS.md` → `06-PROTOCOL.md` → `08-ISA.md` |
-| Verifier | `11-CONSTITUTION.md` → `constitutional-grid/` → `10-GLOSSARY.md` |
-| Versionist | `12-VERSION-CONTROL.md` → `AGENTS.md` → `SKILLS.md` |
-| Student | `10-GLOSSARY.md` → `00-COSMOLOGY.md` |
+| Newcomer | `00-COSMOLOGY.md` → `02-DOCTRINE.md` |
+| Philosopher | `02-DOCTRINE.md` → `01-ONTOLOGY.md` → `00-COSMOLOGY.md` |
+| Mathematician | `04-ATOMIC-KERNEL.md` → `13-SURFACE-APPLICATIONS.md` |
+| Engineer | `07-ISA.md` → `08-PROTOCOL.md` → `09-OMI-LISP.md` |
+| Implementer | `04-ATOMIC-KERNEL.md` → `05-PURE-ALGORITHMS.md` → `11-PROJECTION-FACES.md` |
+| Verifier | `06-FORMAL-PROOFS.md` → `19-CONSTITUTION.md` |
+| Versionist | `18-VERSION-CONTROL.md` → `AGENTS.md` → `SKILLS.md` |
+| Student | `20-GLOSSARY.md` → `00-COSMOLOGY.md` |
+
+---
+
+## Canonical Statement
+
+```text
+OMI begins in cosmology, reduces through doctrine into atomic law,
+proves the law formally, renders it as ISA and protocol, declares
+surfaces through OMI-Lisp, lazily evaluates addressed bitboards and
+bit-blips into blackboard faces, orients projections through gauge
+interrupts, renders surface applications from the Delta Law through
+the factorial tower, and admits external nondeterminism only through
+IMO ports and carrier systems.
+```
 
 ---
 
@@ -246,6 +160,7 @@ Projection is never authority.
 | **omi-portal** | Reference implementation — browser, compiler, runtime |
 | **omi-isa** | ISA implementation + Coq proofs |
 | **omi-axioms** | Coq proof stack |
+| **omi-canvas** | Pure Haskell kernel — executable specification of the protocol |
 
 ---
 
@@ -254,7 +169,7 @@ Projection is never authority.
 It does not claim that theological language is a theorem.
 It does not claim that every projected analogy is formally verified.
 It does not claim that hardware probes are truth.
-It does not claim that names are useless.
+It does not claim that names are authority.
 
 It claims something narrower and more testable:
 

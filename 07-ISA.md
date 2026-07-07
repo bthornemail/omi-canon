@@ -1,4 +1,4 @@
-# State 08 — ISA: The Machine
+# State 07 — ISA: The Machine
 
 ## What This State Is
 
@@ -357,8 +357,8 @@ validated frame
 
 ---
 
-## The Transition to State 09
+## The Transition to State 08
 
-From this state — having built the machine — I moved to State 09 (The World) to answer: how does this live in the open world? How do agents, networks, and hardware environments interact with the machine?
+From this state — having built the machine — I moved to State 08 (Protocol) to answer: how does the machine communicate? What wire format carries state between observers?
 
-Continue to `09-ECOSYSTEM.md`.
+Continue to `08-PROTOCOL.md`.

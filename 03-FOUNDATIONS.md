@@ -1,4 +1,4 @@
-# State 04 — Foundations: The Primitives
+# State 03 — Foundations: The Primitives
 
 ## What This State Is
 
@@ -561,8 +561,8 @@ Neither creates identity; both operate on an already-valid address.
 
 ---
 
-## The Transition to State 05
+## The Transition to State 04
 
-From this state — having identified the irreducible boundaries — I moved to State 05 (The Surface) to answer: how does the invisible become visible? How are these primitives projected for observers?
+From this state — having identified the irreducible boundaries — I moved to State 04 (Atomic Kernel) to answer: what is the smallest deterministic object? What cannot be removed without changing replay?
 
-Continue to `05-PROJECTIONS.md`.
+Continue to `04-ATOMIC-KERNEL.md`.

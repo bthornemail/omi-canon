@@ -1,4 +1,4 @@
-# State 05 — Projections: The Surface
+# State 11 — Projection Faces: The Vocabulary
 
 ## What This State Is
 
@@ -318,8 +318,8 @@ The GUI is never the source of truth. It is always a projection of accepted stat
 
 ---
 
-## The Transition to State 06
+## The Transition to State 12
 
-From this state — having defined how the invisible becomes visible — I moved to State 06 (The Wire) to answer: how does it communicate? What is the wire format that carries state across the boundary?
+From this state — having defined the vocabulary of named faces — I moved to State 12 (Gauge Interrupts) to answer: which interpretation is selected? How does the gauge choose the reading orientation?
 
-Continue to `06-PROTOCOL.md`.
+Continue to `12-GAUGE-INTERRUPTS.md`.

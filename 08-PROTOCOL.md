@@ -1,4 +1,4 @@
-# State 06 — Protocol: The Wire
+# State 08 — Protocol: The Wire
 
 ## What This State Is
 
@@ -324,8 +324,8 @@ There is no database commit in this chain. The system proves relations and accep
 
 ---
 
-## The Transition to State 07
+## The Transition to State 09
 
-From this state — having defined the wire format — I moved to State 07 (The Unfolding) to answer: what are the mathematical consequences? What geometry emerges from these primitives?
+From this state — having defined the wire format — I moved to State 09 (OMI-Lisp) to answer: how are relations declared at rest? What notation expresses the protocol's carriers?
 
-Continue to `07-GEOMETRY.md`.
+Continue to `09-OMI-LISP.md`.
