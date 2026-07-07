@@ -22,7 +22,7 @@ The project begins by asking what must exist before computation.
 **The ISA** renders the laws executable.
 **The Protocol** makes them communicable between observers.
 **OMI-Lisp** declares relations as notation.
-**The Blackboard** lazily evaluates those declarations into an addressed surface.
+**The Blackboard** resolves those declarations into an addressed construction surface.
 **Projection Faces** provide human-readable interpretations of that surface.
 **Gauge Interrupts** select which orientation to read on the surface.
 **Surface Applications** render the oriented surface as a deterministic world.
@@ -49,7 +49,7 @@ The project begins by asking what must exist before computation.
 07 — ISA                     How does the law become executable?
 08 — PROTOCOL                How do observers communicate?
 09 — OMI-LISP                How are relations declared?
-10 — BLACKBOARD              How are declarations evaluated?
+10 — BLACKBOARD              How are declarations resolved?
 11 — PROJECTION FACES        How is the surface read?
 12 — GAUGE INTERRUPTS        Which orientation is selected?
 13 — SURFACE APPLICATIONS    What world is rendered?
@@ -90,10 +90,10 @@ The project begins by asking what must exist before computation.
 
 ## Movement IV — The Surface (States 09–13)
 
-> How are relations declared, evaluated, read, and rendered?
+> How are relations declared, resolved, read, and rendered?
 
 - **09** — The notation surface: SExpr grammar, symbols, strings, lists, pairs
-- **10** — The evaluation surface: bitboards, bit-blips, blackboard, addressed identity
+- **10** — The construction surface: citation, truth gates, Karnaugh reduction, combinators, Delta transition, closure, attestation
 - **11** — The vocabulary of named faces: Omi-Ring, Omi-World, Omi-Sense, Omi-Portal, Omi-Gnomon
 - **12** — The selection surface: gauge word vs. gauge table, pleth, SOAP, sexagesimal weighting
 - **13** — The rendered world: Delta Law, quadratic law, Fano, 240 bridge, factorial tower
@@ -195,8 +195,8 @@ The canon is not a chain — it is a directed graph. After the blackboard resolv
 ```text
 OMI begins in cosmology, reduces through doctrine into atomic law,
 proves the law formally, renders it as ISA and protocol, declares
-surfaces through OMI-Lisp, lazily evaluates addressed bitboards and
-bit-blips into blackboard faces, orients projections through gauge
+surfaces through OMI-Lisp, resolves addressed bitboards and
+bit-blips into blackboard construction states, orients projections through gauge
 interrupts, renders surface applications from the Delta Law through
 the factorial tower, and admits external nondeterminism only through
 IMO ports and carrier systems.

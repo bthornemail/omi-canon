@@ -329,7 +329,7 @@ Each Q × A cell now contains 8 sub-cells (4 citation pairs × 2 proof forms), e
 | `07-ISA.md` | Implements all 7 algorithms as an instruction set architecture — the machine that executes the constitution |
 | `08-PROTOCOL.md` | Specifies the A2 control-plane and A4 escape algorithms — frame format, control markers, receipt packing |
 | `09-OMI-LISP.md` | Defines the declaration surface — SExpr grammar, symbols, strings, decision tables |
-| `10-BLACKBOARD.md` | Defines the evaluation surface — bitboards, bit-blips, addressed identity |
+| `10-BLACKBOARD.md` | Defines the construction surface — citation, truth gates, Karnaugh reduction, combinators, Delta transition, closure, attestation |
 | `11-PROJECTION-FACES.md` | Specifies the A3 projection algorithm — how the invisible becomes visible |
 | `12-GAUGE-INTERRUPTS.md` | Specifies the A4/A5 gauge selection surface — orientation, pleth, SOAP |
 | `13-SURFACE-APPLICATIONS.md` | Derives the A1 transition algorithm (Delta Law), quadratic forms, Fano, factorial tower |
