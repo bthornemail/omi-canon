@@ -27,6 +27,36 @@ place-value frame
 Everything else is carrier behavior, projection behavior, debugging metadata,
 or external compatibility material.
 
+## Algebraic Core
+
+The relational access envelope reduces to:
+
+```text
+|OMI---IMO>
+=
+Gauge
++
+Place Value
++
+Relation
+```
+
+Where:
+
+```text
+Gauge:
+F* 00 1C 1D 1E 1F 20 F*
+
+Place Value:
+o---o/---/?---?@---@
+
+Relation:
+S0..S7?PAYLOAD?MASK@CAR@CDR
+```
+
+The 512-bit envelope is the carrier/access realization of this smaller
+algebraic core.
+
 ## Canonical Relational Access Envelope
 
 The canonical envelope is:
@@ -97,7 +127,11 @@ S0..S7?PAYLOAD?MASK@CAR@CDR
 
 The envelope stages access. It does not accept state.
 
-Receipt accepts.
+Validation determines.
+
+Omi-Attestation witnesses.
+
+Accepted Omi-State may be recorded.
 
 ## Place-Value Frame
 
@@ -196,7 +230,7 @@ Narrow staging-only movement:
 shift.
 
 Invalid:
-using shift as general protocol identity, address authority, receipt authority,
+using shift as general protocol identity, address authority, attestation authority,
 or object behavior.
 ```
 
@@ -208,7 +242,11 @@ Unary compose builds object behavior.
 
 Shift only stages the next frame.
 
-Receipt accepts.
+Validation determines.
+
+Omi-Attestation witnesses.
+
+Accepted Omi-State may be recorded.
 
 Shift is not a protocol primitive.
 
@@ -226,7 +264,7 @@ Shift may appear only as:
 
 Any other use of shift is suspect until proven to be staging-only.
 
-If a shift would create identity, authority, address creation, receipt creation,
+If a shift would create identity, authority, address creation, attestation creation,
 or object behavior, it is invalid in the protocol core.
 
 ## 64-Bit Register Prefill Rule
@@ -241,7 +279,7 @@ tap-code
 Morse-code
 Polybius coordinate preparation
 Tetragrammatron address/gate observation
-Metatron rule-set/receipt closure
+Metatron rule-set / attestation framing
 ```
 
 The prefill entrains the next frame through:
@@ -254,7 +292,7 @@ The 64-bit register prefill is staging.
 
 It is not identity.
 
-It is not receipt.
+It is not Omi-Attestation.
 
 It is not metadata authority.
 
@@ -294,8 +332,8 @@ Fano selector mod 7
 local240 selector mod 240
 ```
 
-This supports selectors and surface application. It does not prove receipt
-acceptance.
+This supports selectors and surface application. It does not prove
+Omi-Attestation or accepted Omi-State.
 
 `functorial_semantics.v` supports projection lawfulness:
 
@@ -314,7 +352,7 @@ algebraic iteration = coalgebraic observation stream
 ```
 
 These support observer/replay equivalence. They do not by themselves complete
-the receipt or VCS reconciliation proof layer.
+the attestation or VCS reconciliation proof layer.
 
 ## Algorithm Separation
 
@@ -364,7 +402,7 @@ Fail the audit if any shift is used as:
 identity
 authority
 address creation
-receipt creation
+attestation creation
 object behavior
 ```
 
@@ -382,7 +420,11 @@ XOR and rotation preserve reversible relation behavior.
 
 Narrow shifts may stage stream entry.
 
-Receipt accepts.
+Validation determines.
+
+Omi-Attestation witnesses.
+
+Accepted Omi-State may be recorded.
 
 ## Later Constitutional-Grid Verification
 
@@ -396,7 +438,7 @@ No overloaded object metadata channel exists in the protocol core.
 Monotonic unary array compose is primitive object behavior.
 XOR is primary.
 Shift is limited to register/prefill staging.
-Receipt, not carrier/projection/metadata, is the acceptance boundary.
+Accepted Omi-State, not carrier/projection/metadata, is the acceptance boundary.
 ```
 
 The later proof-support map should start from:
@@ -421,7 +463,7 @@ A5 Partition/Chirality:
   DiagonalClosure phase schedule
   BQFBridge selectors
 
-A6 Proposal/Receipt:
+A6 Proposal/Omi-Attestation:
   not directly proven yet
 
 A7 Branch/Reconciliation:

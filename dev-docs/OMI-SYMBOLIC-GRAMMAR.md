@@ -109,6 +109,54 @@ The projection group is named-face vocabulary.
 Named faces are readable surfaces. They are not protocol identity by
 themselves.
 
+## Four Orthogonal Layers
+
+The architecture separates identity, transformation, state, and projection:
+
+```text
+Identity:
+  Omi-Notation
+  Omi-Citation
+  Omi-Ring
+
+Transformation:
+  Truth Gate
+  Decision Table
+  Karnaugh
+  Combinator
+  Omi-Delta
+
+State:
+  Validation
+  Omi-Attestation
+  Omi-State
+  Omi-Attribution
+
+Projection:
+  Omi-Carrier
+  Omi-Projection
+  Omi-Psi
+  Named Faces
+```
+
+Every adapter should ingest Omi-Ring as protocol identity, then decode into
+its local representation.
+
+Later targets include:
+
+```text
+Markdown
+Canvas
+OMI-Lisp
+Stream
+Snapshot
+Routing
+Scheduler
+Runtime
+ISA
+Hardware
+```
+
 ## Canonical Pipeline
 
 The symbolic sequence is:
