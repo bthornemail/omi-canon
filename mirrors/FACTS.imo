@@ -1,0 +1,19 @@
+# FACTS.imo
+# Mirror of FACTS.omi — compiled ground truth records.
+# Hand-written canon mirror. Portal compiles FACTS.omi → FACTS.imo.
+
+ο = omi-genesis/accept slot=1504,steps=1,Q_frame(S)=0 /8 Ο
+ο = omi-delta/canonical C=0x5A3C /8 Ο
+ο = omi-delta/period period-8 /8 Ο
+ο = omi-ring/size 5040=7! /8 Ο
+ο = omi-bridge/240 240=15*16=2*5! /8 Ο
+ο = omi-bridge/720 720=6! /8 Ο
+ο = omi-bridge/20736 20736=12^4 /8 Ο
+ο = omi-tetrahedron/edges 6 /8 Ο
+ο = omi-tetrahedron/faces 4 /8 Ο
+ο = omi-tetrahedron/vertices 4 /8 Ο
+ο = omi-palindrome/omicron 0x039F,0x03BF /8 Ο
+ο = omi-fano/points 7 /8 Ο
+ο = omi-fano/lines 7 /8 Ο
+ο = omi-miquel/points 8 /8 Ο
+ο = omi-miquel/circles 6 /8 Ο

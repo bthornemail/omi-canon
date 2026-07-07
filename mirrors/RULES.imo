@@ -1,0 +1,20 @@
+# RULES.imo
+# Mirror of RULES.omi — compiled invariant records.
+# Hand-written canon mirror. Portal compiles RULES.omi → RULES.imo
+# via `scripts/compile-omi.js` with proper 128-bit wire addresses.
+
+ο != omi-frame/validation Q_frame(S)=0 /8 Ο
+ο != omi-frame/anchors 0x039F@S6,0x03BF@S1 /8 Ο
+ο != omi-truth/fields (MM,NN,LL) extractable /8 Ο
+ο != omi-rule/believe!=render /8 Ο
+ο != omi-rule/authority!=projection /8 Ο
+ο != omi-rule/receipt-before-project /8 Ο
+ο != omi-rule/base36-after-validation /8 Ο
+ο != omi-rule/no-state-without-receipt /8 Ο
+ο != omi-rule/delta-law-period-8 /8 Ο
+ο != omi-rule/fano-lottery-steps-max-15 /8 Ο
+ο != omi-rule/cons-hd-not-mutable /8 Ο
+ο != omi-rule/notation-as-cipher /8 Ο
+ο != omi-rule/cipher-as-notation /8 Ο
+ο != omi-rule/source-unchanged /8 Ο
+ο != omi-rule/reading-rotates /8 Ο

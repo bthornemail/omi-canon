@@ -1,0 +1,10 @@
+# COMBINATORS.imo
+# Mirror of COMBINATORS.omi — compiled transformation records.
+# Hand-written canon mirror. Portal compiles COMBINATORS.omi → COMBINATORS.imo.
+
+ο + omi-transform/delta C⊕rotr(x,2)⊕rotl(x,3)⊕rotl(x,1) /8 Ο
+ο + omi-transform/orbit [3,6,9,8,6,3,1,0]=B /8 Ο
+ο + omi-transform/snub re-face+twist+cut /8 Ο
+ο + omi-transform/slot local240+role3*240+fano7*720 /8 Ο
+ο + omi-transform/inversion Inv(x)=x XOR 0x5A3C /8 Ο
+ο + omi-transform/project Q_xy(x,y)=60x²+16xy+4y² /8 Ο

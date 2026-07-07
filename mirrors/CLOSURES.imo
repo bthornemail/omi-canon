@@ -1,0 +1,10 @@
+# CLOSURES.imo
+# Mirror of CLOSURES.omi — compiled sealed forms.
+# Hand-written canon mirror. Portal compiles CLOSURES.omi → CLOSURES.imo.
+
+ο ) omi-frame/128-bit S7-S0 range /8 Ο
+ο ) omi-truth/once one-row-per-frame /8 Ο
+ο ) omi-delta/16-bit 0xFFFF-mask /8 Ο
+ο ) omi-ring/5040 maximum-slot /8 Ο
+ο ) omi-bqf/positive 4y²+16xy+60x² /8 Ο
+ο ) omi-address/8-segment /8 Ο

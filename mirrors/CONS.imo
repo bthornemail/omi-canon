@@ -1,0 +1,11 @@
+# CONS.imo
+# Mirror of CONS.omi — compiled pair/structure records.
+# Hand-written canon mirror. Portal compiles CONS.omi → CONS.imo.
+
+ο . omi-pair/palindrome imo|---|omi /8 Ο
+ο . omi-pair/omicron 0x039F(cap)|0x03BF(sml) /8 Ο
+ο . omi-pair/trinity MM(cons)|NN(ant)|LL(scp) /8 Ο
+ο . omi-pair/car-cdr cdr(tail)|car(head) /8 Ο
+ο . omi-pair/notation cipher(transform)|notation(read) /8 Ο
+ο . omi-pair/portals object|inbox|kernel|lookup /8 Ο
+ο . omi-pair/gauge o---o(fs)|/---/(gs)|?---?(rs)|@---@(us) /8 Ο
