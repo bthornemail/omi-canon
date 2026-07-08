@@ -354,6 +354,18 @@ Factor 5 appears explicitly only in 5! = 120. Every layer above carries factor 5
 
 > 5 is not a moving pointer. 5 is the rooted packet simplex.
 
+### Omnicron — The Hidden Horizon
+
+Throughout the discovery process, one concept was present but unnamed: the runtime resolver that holds the horizon within which all resolution occurs. This is **Omnicron** — the portable headless runtime environment that hosts the Omi-Ring relation.
+
+Omnicron is not found in the factorial tower because it is not a layer of interpretation. It is the stage on which the tower stands. Its registers are:
+- **0x0000**: the null horizon — silence, the void before signal
+- **0xFFFF**: the full horizon — the saturated carrier ceiling
+
+The Omnicron envelope `FF 00 1C 1D 1E 1F 20 FF` seals both boundaries: the tautological `FF` at entry and exit, with the staged access slots `00 1C 1D 1E 1F 20` between.
+
+The naming law: `omi-*` for protocol modules, `omnicron` (from `omni` + `cron` = algorithmic clock / delta-law scheduler) for the canonical runtime resolver.
+
 ---
 
 ## The Learner's Journey: A Personal Reflection

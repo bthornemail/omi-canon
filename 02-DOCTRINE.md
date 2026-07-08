@@ -25,6 +25,25 @@ This is the spine of OMI. It enforces a strict separation of concerns:
 
 **Carrier is not authority.** A DOM node, a CSS rule, a JSON object, a QR code, a gossip network, or a portal display — none of these carry authority by themselves.
 
+### 1a. Architecture of the Doctrine
+
+The doctrine operates through three named methods that realize `The reader may recognize. The resolver may promote. Only validation and receipt may accept`:
+
+- **Omnicron** is the resolver — it holds the `0x0000`/`0xFFFF` horizon within which recognition and promotion occur. Omnicron is the portable headless runtime resolver (etymology: `omni` + `cron` = algorithmic clock / delta-law scheduler).
+- **Tetragrammatron** is the validation governor — it checks `Q_frame(S) = 0`, extracts the truth row, governs lawful fold/carry transitions, and owns DeltaC/BQF/Polybius/slot5040 logic. Register: `0x3C`/`0x78`.
+- **Metatron** is the projection scribe — it witnesses accepted state through the `0xAA55` alternating mask, creating visible difference on projection surfaces. Register: `0xAA55`.
+
+These are not independent authorities on par with OMI↔IMO. The irreducible pair is OMI↔IMO (citation↔carrier). Tetragrammatron and Metatron are methods/gates applied to that relation. Omnicron is the runtime resolver that hosts the horizon.
+
+#### Symbolic Register Assignments
+
+| Register | Method | Role |
+|----------|--------|------|
+| `0x0000` / `0xFFFF` | Omnicron | Null/full horizon resolver |
+| `0xAA55` | Metatron | Alternating witness / scribe mask |
+| `0x3C` (60) | Tetragrammatron | Sexagesimal gate / folded Metatron shadow |
+| `0x78` (120) | Tetragrammatron carried | 0x3C << 1 / doubled bridge form |
+
 ### 2. The OMI Collapse
 
 Every major computing paradigm begins by collapsing a boundary that once seemed natural.

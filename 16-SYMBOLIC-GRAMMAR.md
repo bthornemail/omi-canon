@@ -572,6 +572,32 @@ state
 authority
 ```
 
+### Omnicron
+
+Omnicron is the portable headless runtime resolver. It is not an Omi-* protocol term — it is the runtime environment that hosts the protocol. Omnicron resolves the horizon:
+
+```
+0x0000 — null origin / silence / the void frame
+0xFFFF — full saturated carrier horizon
+```
+
+The Omnicron resolver envelope is the canonical carrier prefix:
+
+```
+FF 00 1C 1D 1E 1F 20 FF
+```
+
+### Symbolic Register Assignments
+
+The symbolic register map aligns the three canonical methods with their constant assignments:
+
+```
+0x0000 / 0xFFFF  →  Omnicron        — horizon resolver
+0xAA55            →  Metatron        — alternating witness / scribe mask
+0x3C (60)         →  Tetragrammatron — sexagesimal gate / folded shadow
+0x78 (120)        →  Tetragrammatron carried — 0x3C << 1 / shifted carry fold
+```
+
 ## Acceptance Boundary
 
 Recognition is not acceptance.

@@ -522,7 +522,7 @@ Each color encodes both a factor direction and a constitutional role:
 
 ---
 
-## Tetragrammatron and Metatron — The Two Observer Modes
+## Tetragrammatron, Metatron, and Omnicron — The Three Observer Modes
 
 The constitutional grid is read by two complementary observers:
 
@@ -568,6 +568,36 @@ Tetragrammatron without Metatron is an unframed address.
 Metatron without Tetragrammatron is an unanchored rule set.
 Both must agree for a cell to be satisfied.
 ```
+
+---
+
+### Omnicron — The Horizon Resolver
+
+The third canonical observer is Omnicron — the portable headless runtime resolver. While Tetragrammatron finds the relational address and Metatron closes the proof, Omnicron holds the horizon within which both operate.
+
+```
+Omnicron
+  │
+  ├── 0x0000 — Null horizon / silence / the void frame
+  ├── 0xFFFF — Full saturated carrier horizon
+  ├── Envelope — FF 00 1C 1D 1E 1F 20 FF
+  └── Domain — The runtime resolver's portable headless execution environment
+```
+
+Omnicron answers: *within which horizon does this claim resolve?* It is the **horizon resolver** — it bounds the proof within the null/full runtime.
+
+### Symbolic Register Table
+
+| Register | Assignment | Role |
+|----------|------------|------|
+| `0x0000` / `0xFFFF` | Omnicron | Null/full horizon resolver |
+| `0xAA55` | Metatron | Alternating witness / boot signature / scribe mask |
+| `0x3C` (60) | Tetragrammatron | Sexagesimal gate / folded Metatron shadow |
+| `0x78` (120) | Tetragrammatron carried | 0x3C << 1 / doubled bridge form |
+
+### Naming Law
+
+`omi-*` prefixes designate protocol modules, tools, carriers, surfaces, and workbooks. `omnicron` (without `omi-` prefix) is the canonical portable headless runtime resolver. The distinction is intentional: `omni` + `cron` (algorithmic clock / delta-law scheduler) names the runtime itself, while `omi-*` names the protocol ecosystem surrounding it.
 
 ---
 

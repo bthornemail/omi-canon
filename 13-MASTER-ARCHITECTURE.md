@@ -24,6 +24,39 @@ Omi-Attestation witnesses.
 Accepted Omi-State may be recorded.
 Projection only displays accepted relation state.
 
+## Corrected Authority Hierarchy
+
+The fundamental pair is OMI↔IMO (citation↔carrier). Around this pair, three named methods provide the operational protocol:
+
+| Method | Role | Register | Description |
+|--------|------|----------|-------------|
+| **Omnicron** | Horizon resolver | `0x0000`/`0xFFFF` | Portable headless runtime resolver — holds the null/full horizon where resolution occurs |
+| **Tetragrammatron** | Validation governor | `0x3C`↔`0x78` | Fold/carry validation method — owns DeltaC/BQF/Polybius/slot5040 logic |
+| **Metatron** | Alternating scribe | `0xAA55` | Alternating projection witness — scribe of apparent difference through the Omi-Ring |
+
+These are not independent authorities. The irreducible relation is OMI↔IMO. Tetragrammatron and Metatron are methods/gates applied to that relation. Omnicron is the runtime resolver that hosts the horizon within which the relation operates.
+
+### Symbolic Register Assignments
+
+```
+0x0000 / 0xFFFF = Omnicron      — null/full horizon resolver
+0xAA55           = Metatron      — alternating witness / boot signature
+0x3C (60)        = Tetragrammatron — sexagesimal gate / folded Metatron shadow
+0x78 (120)       = Tetragrammatron carried — 0x3C << 1 / shifted carry fold
+```
+
+### Omnicron Resolver Envelope
+
+```
+FF 00 1C 1D 1E 1F 20 FF
+```
+
+This 8-byte pre-header is the canonical carrier horizon. It is not a frame — it is the envelope within which the Omi-Ring relation `omi---imo` is carried. `FF` at both ends seals the tautological boundary.
+
+### Naming Law
+
+`omi-*` prefixes are used for protocol modules, tools, carriers, surfaces, and workbooks (e.g., `omi-vault`, `omi-mcrsgsp`, `omi-canon`, `omi-isa`). `omnicron` (not `omi-omicron`) is the canonical portable headless runtime resolver.
+
 ## Repository Relationship
 
 | Repository | Role |

@@ -196,6 +196,8 @@ The glossary is the last document to read and the first to reference. It closes 
 
 **Materializer** — Applies an accepted rule address to affect object structure, document projection, DOM/CSSOM/JSDOM state.
 
+**Metatron** — The alternating witness / scribe of apparent difference. Register: `0xAA55` (alternating 1/0 mask). Observational reference that creates visible contrast on projection surfaces by alternating between 1 and 0 at every bit position. Not an independent authority — the projection scribe method applied to the Omi-Ring relation. See `14-CANONICAL-CONSTITUTION.md` §Tetragrammatron, Metatron, and Omnicron.
+
 **Meta-circular compiler** — A compiler that can compile its own source code. Proves OMI is self-describing.
 
 **Mirror** — The `.imo` compiled form of a truth gate. The backward reflection.
@@ -219,6 +221,10 @@ The glossary is the last document to read and the first to reference. It closes 
 **o---o** — The object carrier boundary (FS gauge). Also used as the abstract protocol surface (this repository).
 
 **Observer in the void** — The primordial computational context from Genesis 1:2. Undefined state plus observer before interpretation.
+
+**Omnicron** — The portable headless runtime resolver. Registers: `0x0000` (null horizon / silence / void frame) and `0xFFFF` (full saturated carrier horizon). Etymology: `omni` + `cron` (algorithmic clock / delta-law scheduler). Not an `omi-*` protocol module — the runtime resolver that hosts the horizon within which the Omi-Ring operates. See `14-CANONICAL-CONSTITUTION.md` §Omnicron — The Horizon Resolver.
+
+**Omnicron envelope** — The 8-byte canonical carrier prefix `FF 00 1C 1D 1E 1F 20 FF`. `FF` seals the tautological boundary at entry and exit; `00 1C 1D 1E 1F 20` are the staged access slots. Not a frame — the envelope within which `omi---imo` is carried.
 
 **Omi-Nomogram** — See **Nomogram**.
 
@@ -311,6 +317,8 @@ The glossary is the last document to read and the first to reference. It closes 
 ---
 
 ## T
+
+**Tetragrammatron** — The lawful fold/carry validation governor. Register: `0x3C` (60 = sexagesimal gate, folded Metatron shadow) and `0x78` (120 = 0x3C << 1, carried/doubled bridge form). Owns deterministic validation, DeltaC/BQF/Polybius/Fano/slot5040 logic. The Polybius governor — answers "at which relational address does this claim hold?" Not an independent authority — the validation method applied to the Omi-Ring relation. See `14-CANONICAL-CONSTITUTION.md` §Tetragrammatron, Metatron, and Omnicron.
 
 **Third Collapse** — OMI's position alongside Lisp (program/object) and POSIX (storage/communication) as the collapse of representation/interpretation.
 

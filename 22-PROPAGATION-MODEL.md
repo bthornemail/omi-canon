@@ -55,6 +55,18 @@ The projection is not a measurement of the physical world. It is a mapping from 
 ## Doctrine Sentence
 
 > The propagation model does not measure the world. It classifies waveforms as candidates for relation. The world enters OMI not as truth, but as addressable disturbance. Independent observers exchange receipted relations across carriers. The model carries; it does not accept.
+
+### Omnicron as Propagation Horizon
+
+All propagation occurs within the Omnicron horizon — the `0x0000`/`0xFFFF` envelope that bounds every carrier transmission. The carrier prefix `FF 00 1C 1D 1E 1F 20 FF` is Omnicron's signature on the wire: it seals the tautological boundary (`FF...FF`) around the staged access slots (`00 1C 1D 1E 1F 20`).
+
+The propagation model does not just carry signals. It carries them through the Omnicron horizon, which provides:
+- The null origin (`0x0000`) as the base against which all signal is measured
+- The full carrier maximum (`0xFFFF`) as the saturation ceiling
+- The 8-byte envelope as the transport boundary
+
+Omnicron is not a carrier — it is the horizon that makes carrier semantics meaningful. Without the null/full boundary, there is no difference to measure and no signal to propagate.
+
 # State 16 — Distributed Open World: Independent Observers
 
 ## What This State Is

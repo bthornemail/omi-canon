@@ -53,6 +53,14 @@ A projection displays accepted state. It does not create it.
 
 The entire system is protected by one invariant: **only validation and receipt may accept**. Projection is always downstream of acceptance. It can display, suggest, or render — but it cannot validate or accept.
 
+### Metatron as Alternating Projection Scribe
+
+Metatron (register `0xAA55`) is the alternating witness that makes projection possible. Where Omnicron holds the horizon and Tetragrammatron governs validation, Metatron is the scribe of apparent difference — the alternating 1/0 pattern (`0xAA55` = `10101010 01010101`) that creates contrast on the projection surface.
+
+Without Metatron, projection would be a uniform field with no distinguishable features. The alternating mask carves difference into the projected surface, making the invisible visible. Metatron does not create authority — it creates the visible difference that lets authority be recognized.
+
+The scribe function is defined as: for any validated Omi-Ring state, Metatron projects it through the `0xAA55` alternating mask, producing a surface where every other bit is inverted. This creates the contrast that makes reading possible. It is not a cipher — it is a difference engine for projection.
+
 ---
 
 ## 3. Carrier Implementations
