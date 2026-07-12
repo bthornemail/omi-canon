@@ -73,7 +73,7 @@ The OMI addressing scaffold already preserves this distinction: recognition, cit
 
 Omnicron is the portable headless runtime resolver of OMI.
 
-It is not merely an operating system. It is the canonical runtime point-of-view: the stateless state machine that receives Omi-Ring interpretations and resolves them against the null/full horizon.
+It is not merely an operating system. It is the canonical runtime point-of-view: the meta-memory state machine that receives Omi-Ring interpretations and resolves them against the null/full horizon.
 
 Omnicron is the infinite high and the infinite low:
 

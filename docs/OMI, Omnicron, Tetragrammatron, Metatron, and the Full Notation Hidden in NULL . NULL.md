@@ -330,7 +330,7 @@ It holds the null/full horizon:
  infinite high
 ```
 
-Omnicron is the stateless state machine that receives any Omi-Ring interpretation and resolves it against the root. It is the empty address, the null address, the headless resolver, the decentralized metric metronome.
+Omnicron is the meta-memory state machine that receives any Omi-Ring interpretation and resolves it against the root. It is the empty address, the null address, the headless resolver, the decentralized metric metronome.
 
 The canonical resolver envelope is:
 
@@ -687,7 +687,7 @@ omi-lab
 
 omnicron
  portable headless runtime resolver
- stateless state machine
+ meta-memory state machine
  null/full horizon metronome
 
 omi-tetragrammatron

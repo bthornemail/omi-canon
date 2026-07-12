@@ -15748,7 +15748,7 @@ omi-lab is where the idea is rebuilt; omnicron is where the rebuilt idea runs.
 
 Yes omi-lab and the omnicron is like a portable headless runtime resolver. It should be able to do whatever anything else can do but headless. Because although you said they aren't all the same thing. I'm this protocol everything literally is just an omi-ring or an interpretation of one so they all are balanced like that, everything in omi is, the only difference is the interpretation and what do we have externally binded to the interpretation because that's what changes.
 
-So the omnicron is the stateless state machine runtime resolver, like a CPU or ram. It's the empty address the null address, so that means whatever you give it, it will always resolve to something so when I said that it made me think of this
+So the omnicron is the meta-memory state machine runtime resolver, like a CPU or ram. It's the empty address the null address, so that means whatever you give it, it will always resolve to something so when I said that it made me think of this
 
 FF 00 1C 1D 1E 1F 20 FF
 
@@ -15797,7 +15797,7 @@ omi-lab
 
 omnicron
  portable headless runtime resolver
- stateless state machine
+ meta-memory state machine
  empty/null address interpreter
  canonical delta metronome
 ```
@@ -15988,13 +15988,13 @@ the resolver of the null/full/chiral horizon
 or:
 
 ```text id="iqdla3"
-the stateless state machine that receives any Omi-Ring surface and resolves it back through the null/full root.
+the meta-memory state machine that receives any Omi-Ring surface and resolves it back through the null/full root.
 ```
 
 ## A canonical sentence for Omnicron
 
 ```text id="99kh5p"
-Omnicron is the portable headless runtime resolver of OMI: a stateless state machine and decentralized delta metronome that stages the canonical resolver envelope, receives Omi-Ring interpretations, and resolves them against the null/full root without itself validating, projecting, or carrying authority.
+Omnicron is the portable headless runtime resolver of OMI: a meta-memory state machine and decentralized delta metronome that stages the canonical resolver envelope, receives Omi-Ring interpretations, and resolves them against the null/full root without itself validating, projecting, or carrying authority.
 ```
 
 Even tighter:
@@ -16587,7 +16587,7 @@ The OMI addressing scaffold already preserves this distinction: recognition, cit
 
 Omnicron is the portable headless runtime resolver of OMI.
 
-It is not merely an operating system. It is the canonical runtime point-of-view: the stateless state machine that receives Omi-Ring interpretations and resolves them against the null/full horizon.
+It is not merely an operating system. It is the canonical runtime point-of-view: the meta-memory state machine that receives Omi-Ring interpretations and resolves them against the null/full horizon.
 
 Omnicron is the infinite high and the infinite low:
 
@@ -18518,7 +18518,7 @@ It holds the null/full horizon:
  infinite high
 ```
 
-Omnicron is the stateless state machine that receives any Omi-Ring interpretation and resolves it against the root. It is the empty address, the null address, the headless resolver, the decentralized metric metronome.
+Omnicron is the meta-memory state machine that receives any Omi-Ring interpretation and resolves it against the root. It is the empty address, the null address, the headless resolver, the decentralized metric metronome.
 
 The canonical resolver envelope is:
 
@@ -18875,7 +18875,7 @@ omi-lab
 
 omnicron
  portable headless runtime resolver
- stateless state machine
+ meta-memory state machine
  null/full horizon metronome
 
 omi-tetragrammatron

@@ -167,13 +167,13 @@ the resolver of the null/full/chiral horizon
 or:
 
 ```text id="iqdla3"
-the stateless state machine that receives any Omi-Ring surface and resolves it back through the null/full root.
+the meta-memory state machine that receives any Omi-Ring surface and resolves it back through the null/full root.
 ```
 
 ## A canonical sentence for Omnicron
 
 ```text id="99kh5p"
-Omnicron is the portable headless runtime resolver of OMI: a stateless state machine and decentralized delta metronome that stages the canonical resolver envelope, receives Omi-Ring interpretations, and resolves them against the null/full root without itself validating, projecting, or carrying authority.
+Omnicron is the portable headless runtime resolver of OMI: a meta-memory state machine and decentralized delta metronome that stages the canonical resolver envelope, receives Omi-Ring interpretations, and resolves them against the null/full root without itself validating, projecting, or carrying authority.
 ```
 
 Even tighter:
@@ -766,7 +766,7 @@ The OMI addressing scaffold already preserves this distinction: recognition, cit
 
 Omnicron is the portable headless runtime resolver of OMI.
 
-It is not merely an operating system. It is the canonical runtime point-of-view: the stateless state machine that receives Omi-Ring interpretations and resolves them against the null/full horizon.
+It is not merely an operating system. It is the canonical runtime point-of-view: the meta-memory state machine that receives Omi-Ring interpretations and resolves them against the null/full horizon.
 
 Omnicron is the infinite high and the infinite low:
 
@@ -2697,7 +2697,7 @@ It holds the null/full horizon:
  infinite high
 ```
 
-Omnicron is the stateless state machine that receives any Omi-Ring interpretation and resolves it against the root. It is the empty address, the null address, the headless resolver, the decentralized metric metronome.
+Omnicron is the meta-memory state machine that receives any Omi-Ring interpretation and resolves it against the root. It is the empty address, the null address, the headless resolver, the decentralized metric metronome.
 
 The canonical resolver envelope is:
 
@@ -3054,7 +3054,7 @@ omi-lab
 
 omnicron
  portable headless runtime resolver
- stateless state machine
+ meta-memory state machine
  null/full horizon metronome
 
 omi-tetragrammatron
