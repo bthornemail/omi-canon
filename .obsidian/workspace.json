@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -184,7 +183,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "1e27b22196bbc304",
+  "active": "6da5cfbd785575e4",
   "lastOpenFiles": [
     "docs/The Metatron Crossing - Ontological Reference, Alternating Witness, and the OMI Tower of Powers.md"
   ]

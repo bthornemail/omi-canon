@@ -1,6 +1,6 @@
 # Emergent Axial Lisp
 
-## A Homoiconic Multi-Axial Declarative Language for the Meta-CONS Runtime
+## A Homoiconic Multi-Axial Declarative Language for the OMI Object Model Runtime
 
 ### Formal Architecture, Type System, Reflective Metaobject Protocol, Quasigroup Recovery Model, and Pure Haskell Reference Design
 

@@ -1,4 +1,4 @@
-
+codex resume 019f755b-dac9-7650-88b6-8576d3390354
 ## Why the QuQuart matters
 
 The QuQuart gives the active four-state selector:
