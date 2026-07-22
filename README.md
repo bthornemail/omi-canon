@@ -387,3 +387,34 @@ This is a structural interpretation of stream routing, not permission to
 discard adapter safety, diagnostics, or tests. Inner OMINO arithmetic kernels
 remain branchless fixed-width coordinate transformations relative to the fixed
 `OMINO Centroid`.
+
+## Verified Coq Core
+
+The current active proof registry for bounded OMINO claims is checked in
+`/home/main/omi/omi-axioms/coq/00..04`.
+
+```text
+64 active modules
+368 theorem anchors
+0 forbidden active proof markers
+make proof-strict passed
+coqchk passed
+```
+
+Representative anchors include:
+
+```text
+golden_field06_pair_components
+golden_quaternion_norm_unfolds
+fano_incidence_sample_coordinates
+icosian_units_basis_norm_one
+hopf_projection13_norm4_unfolds
+weyl_reflection_mask16_full
+aal_width11_positive
+verified_execution_step_deterministic
+```
+
+This registry proves the exact finite statements named by its active theorem
+anchors. Archived Weyl, Hopf, octonion, Cayley-Dickson, and delta-orbit drafts
+remain provenance unless their active 00..04 counterparts prove the exact
+claim being cited.

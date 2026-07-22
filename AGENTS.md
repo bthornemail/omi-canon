@@ -399,3 +399,36 @@ stdout/stderr  -> Lorentzian Lattice II_25_1 null-horizon projection
 Adapters may still use ordinary bounded control flow for diagnostics, buffers,
 transport safety, and tests. Inner arithmetic kernels remain branchless
 fixed-width transforms relative to the `OMINO Centroid`.
+
+## 64-Module Coq Verification Lock
+
+The formal proof authority for current OMINO bounded-core claims is the active
+Coq registry in `/home/main/omi/omi-axioms/coq/00..04`.
+
+Verified status:
+
+```text
+active_sources=64
+theorem_anchors=368
+forbidden_active=0
+make proof-strict passed
+coqchk passed
+```
+
+Representative checked theorem anchors:
+
+```text
+golden_field06_pair_components
+golden_quaternion_norm_unfolds
+fano_incidence_sample_coordinates
+icosian_units_basis_norm_one
+hopf_projection13_norm4_unfolds
+weyl_reflection_mask16_full
+aal_width11_positive
+verified_execution_step_deterministic
+```
+
+Do not cite archived drafts as active proof authority. Do not overstate finite
+anchor theorems into unverified global complexity or hyper-complex claims.
+Future proof edits must keep `make proof-registry-lock`, `make proof-strict`,
+and `proof-status forbidden_active=0` green.

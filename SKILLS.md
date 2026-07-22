@@ -228,3 +228,42 @@ right_torque = ROR64(axis_word, 2)
 blended      = left_torque ^ right_torque
 output       = blended ^ 0x1D1D1D1D1D1D1D1DULL
 ```
+
+## Verified Core Proof Lock Work
+
+Use when updating proof-status documentation, Coq registry references, or
+automation rules that depend on the active OMINO proof complex.
+
+Verified status:
+
+```text
+active_sources=64
+theorem_anchors=368
+forbidden_active=0
+make proof-strict passed
+coqchk passed
+```
+
+Representative active theorem anchors:
+
+```text
+golden_field06_pair_components
+golden_quaternion_norm_unfolds
+fano_incidence_sample_coordinates
+icosian_units_basis_norm_one
+hopf_projection13_norm4_unfolds
+weyl_reflection_mask16_full
+aal_width11_positive
+verified_execution_step_deterministic
+```
+
+Rules:
+
+1. Active proof authority lives in `/home/main/omi/omi-axioms/coq/00..04`.
+2. `_archive/current` remains provenance unless an active counterpart proves
+   the exact statement.
+3. Do not introduce `Admitted`, `admit`, `Axiom`, `Parameter`, `Conjecture`,
+   or `Abort` into active sources.
+4. Do not claim universal P=NP from local fixed-width theorem anchors.
+5. Run `make proof-registry-lock`, `make proof-strict`, and `make proof-status`
+   for proof-sensitive changes.
