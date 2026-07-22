@@ -1845,3 +1845,36 @@ MANDATORY:
   active 00..04 modules only for proof authority
   _archive/current remains quarantined until open obligations are discharged
 ```
+
+## [SKILL_23: PROMOTE_AXIOMATIC_SUITE]
+
+```text
+OBJECTIVE:
+  Maintain the 64-module independent active Coq registry.
+
+COUNT LOCK:
+  23 existing active modules
+  + 38 independently promoted archive basenames
+  + 3 active bridge modules
+  = 64 active modules
+
+FORBIDDEN:
+  merging promoted archive basenames into existing owners
+  collapsing promoted files into aggregate modules
+  Admitted
+  admit
+  Axiom
+  Parameter
+  Conjecture
+  Abort
+  Omega or omega in active sources
+  Fin.case_dep in active sources
+  stale rational/natural vector drift in active sources
+
+MANDATORY:
+  every promoted archive basename remains an independent active file
+  coq-docs/ARCHIVE-PROMOTION-MAP.md records the exact promotion map
+  make proof-registry-lock
+  make proof-strict
+  proof-status must report active_sources=64
+```

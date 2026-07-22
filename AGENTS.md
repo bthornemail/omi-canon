@@ -2,6 +2,29 @@
 
 This repository is the root OMI Portal workspace. Treat it as the canonical implementation branch.
 
+## Multi-Project Concentric OSI Matrix
+
+This repository participates in the 9-tier concentric ecosystem map. The map is
+a repository-boundary lock and structural routing analogy:
+
+```text
+Layer 7  Application       metaverse-kit / metaverse-build
+Layer 6  Presentation      mind-git / mind-git-vr-ecosystem
+Layer 5  Session           axiomatic-sovereignty
+Layer 4  Transport         setco-framework-model
+Layer 3  Network           omnicron-epistemic-model
+Layer 2  Data Link         omi-object-model
+Layer 1  Physical          emergent-axial-lisp
+Layer 0  Substrate Core    omino-tensor-model
+Layer -1 Cognitive Origin  god-is-word
+```
+
+Do not mix dependencies, state models, build products, or implementation
+abstractions across layers. Communication between layers must approach from the
+outside in through declared `.omi`, `.imo`, and `.o` surfaces. Local OMINO
+transitions remain branchless coordinate derivations relative to the fixed
+`OMINO Centroid` at `0x00` and `0 degrees`.
+
 The First Principle of the OMI Protocol is defined in `docs/agreement-is-all-you-need.md` — agreement as constructive alignment, disagreement as an unresolved file path, and the collaboration doctrine that turns shared intelligence into executable structure.
 
 ## Ground Rules
@@ -302,3 +325,77 @@ make release patch          # full release (tag, multi-arch build, push to GHCR)
 - `Dockerfile.qemu` — Multi-arch test container for `--platform linux/amd64|arm64|arm/v7`
 - `docker-bake.hcl` — Buildx bake matrix with GHA cache, provenance attestation, and release tag variants
 - `Dockerfile.softmmu` — QEMU full-system emulator suite (x86_64, i386, aarch64, riscv64, ppc64, mips64)
+
+## Unified 17-Tier Master Matrix Overlay
+
+This repository also participates in the 17-tier master ledger from `-8`
+through `+8`. Treat this as a canon routing overlay and hidden-substrate
+convention layered on top of the existing 9-tier repository map.
+
+```text
++8  CONTRACTS      Behavioral specification agreements / AAL invariants
++7  ALGORITHMS     Branchless O(1) state transformation procedures
++6  PROOFS         64-module active admit-free Coq proof book
++5  AXIOMS         First-principles foundational assertions
++4  TYPES          Fixed-width classification and custody bounds
++3  SEMANTICS      Meaning assignments mapped to designated domains
++2  DOMAINS        Bounded universes and n=6 truth-table surfaces
++1  SYNTAX         Rules for well-formed bit formulas
+ 0  SYMBOLS        OMINO raw tokens / OMINO Centroid at 0x00 and 0 degrees
+-1  RULES          Point / Node / Hypotenuse / 0-Sphere
+-2  FACTS          Line / Edge / Circle / Sphere
+-3  CLOSURES       Triangle / Graph / Plane / Tetrahedron
+-4  COMBINATORS    Square / Incidence / Volume / Cube
+-5  CONS           Pentagon / Multigraph / Solid / Tesseract
+-6  CONFIGURATIONS Hexagon / Hypergraph / Topology / Hyper-Volume
+-7  CLAUSES        Fano Plane / [7,4,3] SEC / Meta-Cons / .omi-.imo carriers
+-8  MODULES        Octagon / Octonion / COBS-CONS / hidden .o executables
+```
+
+Visible Markdown remains the human-facing canon surface. Machine-readable
+`.omi`, `.imo`, and `.o` targets belong under the project-local hidden root:
+
+```text
+./.omi/
+```
+
+Canonical hidden targets:
+
+```text
+-8 MODULES        -> ./.omi/modules.o
+-7 CLAUSES        -> ./.omi/clauses.omi and ./.omi/clauses.imo
+-6 CONFIGURATIONS -> ./.omi/configurations.o
+-5 CONS           -> ./.omi/cons.o
+-4 COMBINATORS    -> ./.omi/combinators.o
+-3 CLOSURES       -> ./.omi/closures.o
+-2 FACTS          -> ./.omi/facts.o
+-1 RULES          -> ./.omi/rules.o
+ 0 SYMBOLS        -> OMINO core token / OMINO Centroid
++1..+8            -> Syntax through Contracts
+```
+
+Do not move existing files or create destructive migrations merely because this
+overlay exists. Migration into `.omi/` must be semantic, reviewed, and tied to a
+specific implementation task.
+
+## Interpreter Hinge And I/O Lattice
+
+The interpreter hinge aligns message bits to scope tiers:
+
+```text
+-1 US -> bit 6 -> CLOSURES / ./.omi/closures.o
+-2 RS -> bit 5 -> COMBINATORS / ./.omi/combinators.o
+-3 GS -> bit 4 -> RULES / ./.omi/rules.o
+-4 FS -> bit 2 -> FACTS / ./.omi/facts.o
+```
+
+System I/O is documented as a carrier-boundary analogy:
+
+```text
+stdin          -> Leech Lattice Lambda_24 coordinate field
+stdout/stderr  -> Lorentzian Lattice II_25_1 null-horizon projection
+```
+
+Adapters may still use ordinary bounded control flow for diagnostics, buffers,
+transport safety, and tests. Inner arithmetic kernels remain branchless
+fixed-width transforms relative to the `OMINO Centroid`.

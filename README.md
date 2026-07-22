@@ -8,6 +8,32 @@ Each numbered file is a **state** in this journey. Each state contains the artif
 
 ---
 
+## Multi-Project Concentric OSI Matrix
+
+The canon is synchronized with the 9-tier concentric ecosystem map. Each tier
+is autonomous and communicates from the outside in through declared `.omi`,
+`.imo`, and `.o` surfaces.
+
+```text
+Layer 7  Application       metaverse-kit / metaverse-build
+Layer 6  Presentation      mind-git / mind-git-vr-ecosystem
+Layer 5  Session           axiomatic-sovereignty
+Layer 4  Transport         setco-framework-model
+Layer 3  Network           omnicron-epistemic-model
+Layer 2  Data Link         omi-object-model
+Layer 1  Physical          emergent-axial-lisp
+Layer 0  Substrate Core    omino-tensor-model
+Layer -1 Cognitive Origin  god-is-word
+```
+
+This matrix is a routing and repository-boundary lock. It does not authorize
+dependency contamination between projects. OMINO-local transitions remain
+branchless coordinate derivations relative to the fixed `OMINO Centroid` at
+`0x00` and `0 degrees`, with executable substrate lanes named `rules.o`,
+`facts.o`, `closures.o`, `combinators.o`, and `cons.o`.
+
+---
+
 ## The Canonical Hierarchy
 
 The project begins by asking what must exist before computation.
@@ -272,3 +298,92 @@ That is the research program. This repository is its state transition record.
 ---
 
 **Start here:** `00-COSMOLOGY.md`
+
+---
+
+## Unified 17-Tier Master Matrix
+
+The 9-tier concentric ecosystem map is now refined by a 17-tier ledger from
+`-8` through `+8`. This ledger unifies the geometric downstream strata, the
+interpreter hinge, and the semantic upstream strata around the central
+`0: SYMBOLS` pivot.
+
+```text
+THE MASTER ALIGNMENT MATRIX (-8 to +8)
+
++8  CONTRACTS      Behavioral specification agreements / AAL invariants
++7  ALGORITHMS     Branchless O(1) state transformation procedures
++6  PROOFS         64-module active admit-free Coq proof book
++5  AXIOMS         First-principles foundational assertions
++4  TYPES          Fixed-width classification and custody bounds
++3  SEMANTICS      Meaning assignments mapped to designated domains
++2  DOMAINS        Bounded universes and n=6 truth-table surfaces
++1  SYNTAX         Rules for well-formed bit formulas
+ 0  SYMBOLS        OMINO raw tokens / OMINO Centroid at 0x00 and 0 degrees
+-1  RULES          Point / Node / Hypotenuse / 0-Sphere
+-2  FACTS          Line / Edge / Circle / Sphere
+-3  CLOSURES       Triangle / Graph / Plane / Tetrahedron
+-4  COMBINATORS    Square / Incidence / Volume / Cube
+-5  CONS           Pentagon / Multigraph / Solid / Tesseract
+-6  CONFIGURATIONS Hexagon / Hypergraph / Topology / Hyper-Volume
+-7  CLAUSES        Fano Plane / [7,4,3] SEC / Meta-Cons / .omi-.imo carriers
+-8  MODULES        Octagon / Octonion / COBS-CONS / hidden .o executables
+```
+
+The visible repository root remains the Markdown canon surface. The
+machine-readable substrates are routed through the hidden project-local root:
+
+```text
+./.omi/
+```
+
+Canonical hidden targets:
+
+```text
+-8 MODULES        -> ./.omi/modules.o
+-7 CLAUSES        -> ./.omi/clauses.omi and ./.omi/clauses.imo
+-6 CONFIGURATIONS -> ./.omi/configurations.o
+-5 CONS           -> ./.omi/cons.o
+-4 COMBINATORS    -> ./.omi/combinators.o
+-3 CLOSURES       -> ./.omi/closures.o
+-2 FACTS          -> ./.omi/facts.o
+-1 RULES          -> ./.omi/rules.o
+ 0 SYMBOLS        -> OMINO core token / OMINO Centroid
++1..+8            -> Syntax through Contracts
+```
+
+## Interpreter Hinge
+
+The five interpreter tiers align to the systematic message-scope bits:
+
+```text
+±4 NETWORK  -> Omi-Port Matrix       -> User-Remote Meta-Memory Network
+±3 USER     -> Blackboard Surface    -> User-Public coordinate surface
+±2 SYSTEM   -> Emergent Axial Lisp   -> User-Local System-Land (CAR . CDR)
+±1 KERNEL   -> Hidden .o binaries    -> User-Private register substrate
+±0 SYMBOLS  -> OMINO raw characters  -> OMINO Centroid origin
+
+-1 US -> bit 6 -> Unit Scope   -> CLOSURES
+-2 RS -> bit 5 -> Record Scope -> COMBINATORS
+-3 GS -> bit 4 -> Group Scope  -> RULES
+-4 FS -> bit 2 -> File Scope   -> FACTS
+```
+
+## High-Dimensional I/O Lattice
+
+The canon records system I/O as a carrier-boundary overlay:
+
+```text
+stdin
+  -> Leech Lattice Lambda_24 coordinate field
+  -> 24 parallel Circular Slide Rulers
+
+stdout / stderr
+  -> Lorentzian Lattice II_25_1 projection surface
+  -> 0xFFFFFFFF 0xFFFFFFFF null-horizon boundary
+```
+
+This is a structural interpretation of stream routing, not permission to
+discard adapter safety, diagnostics, or tests. Inner OMINO arithmetic kernels
+remain branchless fixed-width coordinate transformations relative to the fixed
+`OMINO Centroid`.

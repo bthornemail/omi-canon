@@ -2,6 +2,27 @@
 
 This file records the repeatable project workflows used in the OMI Portal.
 
+## Multi-Project Concentric OSI Matrix
+
+Use this whenever work touches cross-repository architecture, project
+boundaries, canon synchronization, or layer ownership.
+
+```text
+Layer 7  Application       metaverse-kit / metaverse-build
+Layer 6  Presentation      mind-git / mind-git-vr-ecosystem
+Layer 5  Session           axiomatic-sovereignty
+Layer 4  Transport         setco-framework-model
+Layer 3  Network           omnicron-epistemic-model
+Layer 2  Data Link         omi-object-model
+Layer 1  Physical          emergent-axial-lisp
+Layer 0  Substrate Core    omino-tensor-model
+Layer -1 Cognitive Origin  god-is-word
+```
+
+Keep each layer autonomous. Do not solve local work by importing another
+layer's internals or by adding inter-project dependency contamination. Express
+layer communication through `.omi`, `.imo`, and `.o` surfaces.
+
 ## Documentation Declaration
 
 Use when turning exploratory `dev-docs/` material into canonical framework docs or adding root-layer specs.
@@ -131,3 +152,79 @@ Use when defining or revising the root-layer document stack (POSTULATES → AXIO
 3. DECLARATIONS.md defines *derivation* — how RULES.omi clauses become FACTS.omi rows via a-list transitions, bitboard masks, and bitblip corrections.
 4. Every address point must trace through the full chain: construct → rule → fact → fold → declare → test → replay → project.
 5. Run `make compile-ebpf-gate && npm test && npm run build` to verify.
+
+## 17-Tier Master Matrix Work
+
+Use when updating canon files, front matter, hidden-substrate references, or
+cross-project architecture descriptions.
+
+1. Preserve visible Markdown as the human-facing canon surface.
+2. Route machine-readable `.omi`, `.imo`, and `.o` targets through a
+   project-local hidden root named `./.omi/`.
+3. Treat the 17-tier ledger as a routing overlay, not as permission to move or
+   delete existing files without a migration task.
+4. Keep `0: SYMBOLS` centered on the fixed `OMINO Centroid` at `0x00` and
+   `0 degrees`.
+5. Keep active proof authority tied to the 64-module admit-free Coq registry
+   in `/home/main/omi/omi-axioms/coq/00..04`.
+
+Canonical tier map:
+
+```text
++8 CONTRACTS      -> behavioral specs / AAL invariants
++7 ALGORITHMS     -> branchless O(1) register procedures
++6 PROOFS         -> 64-module active Coq proof book
++5 AXIOMS         -> first-principles assertions
++4 TYPES          -> fixed-width custody bounds
++3 SEMANTICS      -> designated meaning domains
++2 DOMAINS        -> bounded n=6 truth-table surfaces
++1 SYNTAX         -> well-formed bit formula rules
+ 0 SYMBOLS        -> OMINO tokens / OMINO Centroid
+-1 RULES          -> ./.omi/rules.o
+-2 FACTS          -> ./.omi/facts.o
+-3 CLOSURES       -> ./.omi/closures.o
+-4 COMBINATORS    -> ./.omi/combinators.o
+-5 CONS           -> ./.omi/cons.o
+-6 CONFIGURATIONS -> ./.omi/configurations.o
+-7 CLAUSES        -> ./.omi/clauses.omi and ./.omi/clauses.imo
+-8 MODULES        -> ./.omi/modules.o
+```
+
+## Interpreter Hinge Work
+
+Use when documenting or implementing SECDED scope routing across hidden
+substrates.
+
+```text
+-1 US -> bit 6 -> Unit Scope   -> closures.o
+-2 RS -> bit 5 -> Record Scope -> combinators.o
+-3 GS -> bit 4 -> Group Scope  -> rules.o
+-4 FS -> bit 2 -> File Scope   -> facts.o
+```
+
+Canonical extraction:
+
+```text
+d1_fs = (inbound_stream_byte >> 2) & 1
+d2_gs = (inbound_stream_byte >> 4) & 1
+d3_rs = (inbound_stream_byte >> 5) & 1
+d4_us = (inbound_stream_byte >> 6) & 1
+```
+
+## Lattice I/O Work
+
+Use when documenting stdin/stdout/stderr as OMINO carrier boundaries.
+
+```text
+stdin          -> Leech Lattice Lambda_24 coordinate field
+stdout/stderr  -> Lorentzian Lattice II_25_1 null-horizon projection
+```
+
+Inside arithmetic kernels, keep the direct register transform:
+
+```text
+left_torque  = ROL64(input_word, 1)
+right_torque = ROR64(axis_word, 2)
+blended      = left_torque ^ right_torque
+output       = blended ^ 0x1D1D1D1D1D1D1D1DULL
+```
