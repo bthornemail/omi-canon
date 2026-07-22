@@ -1810,3 +1810,38 @@ Omnicron Object Model resolves its circular runtime relative to the OMINO Centro
 The Algorithmic Clock advances the Circular Slide Ruler Array.
 No form may become an additional source of core law.
 ```
+
+## [SKILL_22: ENFORCE_PROOF_REPAIR_PLAN]
+
+```text
+OBJECTIVE:
+  Keep the active Coq proof registry admit-free and OMINO-named.
+
+ACTIVE OWNERS:
+  /home/main/omi/omi-axioms/coq/00-foundations/OminoSECDEDCell.v
+  /home/main/omi/omi-axioms/coq/02-closure/PowerClosureGate.v
+  /home/main/omi/omi-axioms/coq/03-projection/E8RootsEnumerate240.v
+  /home/main/omi/omi-axioms/coq/04-execution/OminoParallelSpatialScaling.v
+
+INVARIANTS:
+  OminoSECDEDCell.v maps [LOGOS NOMOS FS PATHOS GS RS US OMINO]
+  PowerClosureGate.v proves the total numerator factorization
+  E8RootsEnumerate240.v proves 112 + 128 = 240 and norm 2
+  OminoParallelSpatialScaling.v proves constant step descriptor over a supplied substrate
+
+FORBIDDEN:
+  Admitted
+  admit
+  Axiom
+  Parameter
+  Conjecture
+  Abort
+  deprecated OMINO-name variants
+  universal complexity claims not stated as supplied-substrate theorems
+
+MANDATORY:
+  make proof-registry-lock
+  make proof-strict
+  active 00..04 modules only for proof authority
+  _archive/current remains quarantined until open obligations are discharged
+```

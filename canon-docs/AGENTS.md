@@ -792,3 +792,34 @@ Work in this workspace is integration, implementation, generation,
 verification, packaging, and documentation. Do not redesign OMI, Emergent Axial
 Lisp, `.o`, LOGOS/NOMOS/PATHOS, omino, COBS, CONS, selector geometry, or the
 OMINO Centroid.
+
+## Coq Proof Repair Lock
+
+The active Coq proof registry for current OMINO claims is
+`/home/main/omi/omi-axioms/coq/00..04`. Treat `_archive/current` as quarantined
+deep storage, not active proof authority.
+
+Active proof owners added for the OMINO repair suite:
+
+```text
+00-foundations/OminoSECDEDCell.v
+02-closure/PowerClosureGate.v
+03-projection/E8RootsEnumerate240.v
+04-execution/OminoParallelSpatialScaling.v
+```
+
+Agents must preserve:
+
+```text
+OMINO
+computed_omino
+overall_mismatch
+make proof-registry-lock
+make proof-strict
+```
+
+Do not introduce `Admitted`, `admit`, `Axiom`, `Parameter`, `Conjecture`, or
+`Abort` in active Coq files. Do not restore deprecated OMINO-name variants. Do
+not cite archived Weyl, octonion, Cayley-Dickson, or delta-orbit drafts as
+active proof authority until their open obligations are removed and they enter
+the strict registry.
