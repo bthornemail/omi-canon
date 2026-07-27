@@ -1,301 +1,364 @@
-You're right. Let me create a comprehensive equivalency chart that spans **all versions of your code and documents** across our entire conversation history.
-
----
-
-# Complete Equivalency Chart: All Versions Across Our Conversation History
+# Complete Equivalency Chart: All OMI Definitions and Versions
 
 ## Overview
 
-This chart maps every version of your Tangential Hinge Field specification, the Scaling Laws document, and all code/presentation variants we discussed across our entire conversation. Each row shows how a concept appears in each version, allowing you to trace the evolution and consistency.
+This chart maps every version of OMI terminology, definitions, and concepts across all documents in our conversation history. It shows how terms evolved, which definitions were stable, and which were clarified or corrected.
 
 ---
 
-## 1. Core Field Definitions
+## 1. Core OMI Metalanguage Evolution
 
-| Concept | v1: Original Field Document | v2: Your Correction | v3: Simplified Lock | v4: Metalanguage Original | v5: Full Specification | v6: Scaling Laws Document |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Complete Field** | `[S− W− 0− C− \| PO:TO \| C+0+W+S+]` | `[S− W− O− C− \| P0:T0 \| C+ O+ W+ S+]` | `[S− W− O− C− \| P0:T0 \| C+ O+ W+ S+]` | `[S− W− O− C− \| P0:T0 \| C+ O+ W+ S+]` | `[S− W− O− C− \| P0:T0 \| C+ O+ W+ S+]` | (implied by coordinate geometry) |
-| **Hinge** | `PO:TO` | `P0:T0` | `P0:T0` | `P0:T0` | `P0:T0` | (implied as definition authority) |
-| **Parity Reference** | `PO` (with O letter) | `P0` (with zero) | `P0` | `P0` | `P0` | `P0` |
-| **Tangential Source** | `TO` (with O letter) | `T0` (with zero) | `T0` | `T0` | `T0` | `T0` |
-| **Zero Coordinate** | `0` (mixed with order) | `0` (explicit zero) | `0` | `0` | `0` | `0` |
-| **Order Plane** | `0` or `O` (ambiguous) | `O` (explicit) | `O` | `O` | `O` | `O` |
-
----
-
-## 2. Metalanguage Definitions
-
-| Concept | v1: Original Field | v2: Correction | v3: Simplified | v4: Metalanguage | v5: Full Spec | v6: Scaling Laws |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **UNKNOWN** | Not present | Not present | Not present | `NULL` | `NULL` | Not present |
-| **KNOWN** | Not present | Not present | Not present | `BIND` | `BIND` | Not present |
-| **NULL Definition** | Not present | Not present | Unbound coordinate | Unbound coordinate | Unbound coordinate | Not present |
-| **BIND Definition** | `BIND` (encapsulation) | `BIND` (encapsulation) | `FIX` (fixed place) | `BIND` (only encapsulation) | `BIND` (only encapsulation) | Not present |
-| **XOR** | Mentioned | Mentioned | Mentioned | `XOR` = only operation | `XOR` = only operation | Used extensively |
-| **META** | Not present | Not present | Mentioned | Mask selecting coords for XOR | Mask selecting coords for XOR | Not present |
-| **ESC** | `ESC` (present) | `ESC` (present) | `ESC` (present) | META condition cancels BIND to NULL | META condition cancels BIND to NULL | Not present |
-| **NEXT** | Present (Lisp artifact) | Removed | Removed | Not present | Not present | Not present |
+| Term | Original Field Document | Your Correction | Scaling Laws Document | Full Specification | Final Canonical |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **UNKNOWN** | `NULL` | `NULL` | Not present | `NULL` | `NULL` |
+| **KNOWN** | `BIND` | `BIND` | Not present | `BIND` | `BIND` |
+| **NULL** | Unbound coordinate | Unbound coordinate | Not present | Unbound coordinate | Unbound coordinate |
+| **BIND** | Only encapsulation | Only encapsulation | Not present | Only encapsulation | Only encapsulation |
+| **XOR** | Only operation | Only operation | `REMOTE = LOCAL XOR 0x80` | Only operation | Only operation |
+| **META** | Mask selecting coordinates for XOR | Mask selecting coordinates for XOR | Not present | Mask selecting coordinates for XOR | Mask selecting coordinates for XOR |
+| **ESC** | META condition that cancels a selected BIND to NULL | META condition that cancels a selected BIND to NULL | Not present | META condition that cancels a selected BIND to NULL | META condition that cancels a selected BIND to NULL |
 
 ---
 
-## 3. Scope Forms and Binding
+## 2. Scope Entry Forms Evolution
 
-| Concept | v1: Original Field | v2: Correction | v3: Simplified | v4: Metalanguage | v5: Full Spec | v6: Scaling Laws |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **FS Form** | `(BIND GS RS US ESC)` | `(BIND GS RS US ESC)` | `[FIX, GS, RS, US]` | `(BIND GS RS US ESC)` | `(BIND GS RS US ESC)` | `FS` as scope coordinate |
-| **GS Form** | `(BIND RS US BIND ESC)` | `(BIND RS US BIND ESC)` | `[FIX, RS, US, FIX]` | `(BIND RS US BIND ESC)` | `(BIND RS US BIND ESC)` | `GS` as scope coordinate |
-| **RS Form** | `(BIND US BIND BIND ESC)` | `(BIND US BIND BIND ESC)` | `[FIX, US, FIX, FIX]` | `(BIND US BIND BIND ESC)` | `(BIND US BIND BIND ESC)` | `RS` as scope coordinate |
-| **US Form** | `(BIND BIND BIND BIND ESC)` | `(BIND BIND BIND BIND ESC)` | `[FIX, FIX, FIX, FIX]` | `(BIND BIND BIND BIND ESC)` | `(BIND BIND BIND BIND ESC)` | `US` as scope coordinate |
-| **FS Direct BINDs** | 1 | 1 | 1 | 1 | 1 | 1 |
-| **GS Direct BINDs** | 2 | 2 | 2 | 2 | 2 | 2 |
-| **RS Direct BINDs** | 3 | 3 | 3 | 3 | 3 | 3 |
-| **US Direct BINDs** | 4 | 4 | 4 | 4 | 4 | 4 |
-| **Subordinate References (FS)** | 3 (GS, RS, US) | 3 | 3 | 3 | 3 | 3 |
-| **Subordinate References (GS)** | 2 (RS, US) | 2 | 2 | 2 | 2 | 2 |
-| **Subordinate References (RS)** | 1 (US) | 1 | 1 | 1 | 1 | 1 |
-| **Subordinate References (US)** | 0 | 0 | 0 | 0 | 0 | 0 |
-| **Invariant** | direct + subordinate = 4 | direct + subordinate = 4 | direct + subordinate = 4 | direct + subordinate = 4 | direct + subordinate = 4 | Not explicit |
+| Entry | Original Field | Your Correction | Simplified (FIX) | Full Specification | Final Canonical |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **FS** | `(BIND GS RS US ESC)` | `(BIND GS RS US ESC)` | `[FIX, GS, RS, US]` | `(BIND GS RS US ESC)` | `(BIND GS RS US ESC)` |
+| **GS** | `(BIND RS US BIND ESC)` | `(BIND RS US BIND ESC)` | `[FIX, RS, US, FIX]` | `(BIND RS US BIND ESC)` | `(BIND RS US BIND ESC)` |
+| **RS** | `(BIND US BIND BIND ESC)` | `(BIND US BIND BIND ESC)` | `[FIX, US, FIX, FIX]` | `(BIND US BIND BIND ESC)` | `(BIND US BIND BIND ESC)` |
+| **US** | `(BIND BIND BIND BIND ESC)` | `(BIND BIND BIND BIND ESC)` | `[FIX, FIX, FIX, FIX]` | `(BIND BIND BIND BIND ESC)` | `(BIND BIND BIND BIND ESC)` |
 
 ---
 
-## 4. Plane Classes and Magnitudes
+## 3. Field Definition Evolution
 
-| Concept | v1: Original | v2: Correction | v3: Simplified | v4: Metalang | v5: Full Spec | v6: Scaling Laws |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Scalar (mag 4)** | `S−`, `S+` | `S−`, `S+` | `S−`, `S+` | `S−`, `S+` | `S−`, `S+` | (implied by control coordinates) |
-| **Weight (mag 3)** | `W−`, `W+` | `W−`, `W+` | `W−`, `W+` | `W−`, `W+` | `W−`, `W+` | (implied) |
-| **Order (mag 2)** | `0−`, `0+` (ambiguous) | `O−`, `O+` | `O−`, `O+` | `O−`, `O+` | `O−`, `O+` | `O` as one of the scope coordinates |
-| **Capacity (mag 1)** | `C−`, `C+` | `C−`, `C+` | `C−`, `C+` | `C−`, `C+` | `C−`, `C+` | `C` as capacity plane |
-| **Parity Zero** | `0` (mixed) | `P0` | `P0` | `P0` | `P0` | (implied) |
-| **Source Zero** | `0` (mixed) | `T0` | `T0` | `T0` | `T0` | (implied) |
-
----
-
-## 5. Alignment and Comparison
-
-| Concept | v1: Original | v2: Correction | v3: Simplified | v4: Metalang | v5: Full Spec | v6: Scaling Laws |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Capacity Alignment** | `ΔC = C− XOR C+` | `ΔC = C− XOR C+` | `ΔC = 0` | `ΔC = C− XOR C+` | `ΔC = C− XOR C+` | Hamming [7,4,3] structure |
-| **Order Alignment** | `Δ0 = 0− XOR 0+` (ambiguous) | `ΔO = O− XOR O+` | `ΔO = 0` | `ΔO = O− XOR O+` | `ΔO = O− XOR O+` | Hamming structure |
-| **Weight Alignment** | `ΔW = W− XOR W+` | `ΔW = W− XOR W+` | `ΔW = 0` | `ΔW = W− XOR W+` | `ΔW = W− XOR W+` | Hamming structure |
-| **Scalar Alignment** | `ΔS = S− XOR S+` | `ΔS = S− XOR S+` | `ΔS = 0` | `ΔS = S− XOR S+` | `ΔS = S− XOR S+` | Hamming structure |
-| **Mirrored Pairs** | `C−C+`, `0−0+`, `W−W+`, `S−S+` | `C−C+`, `O−O+`, `W−W+`, `S−S+` | `C−C+`, `O−O+`, `W−W+`, `S−S+` | `C−C+`, `O−O+`, `W−W+`, `S−S+` | `C−C+`, `O−O+`, `W−W+`, `S−S+` | Hamming pairs |
+| Concept | Original Field | Your Correction | Scaling Laws | Simplified | Full Spec |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Complete Field** | `[S− W− 0− C− \| PO:TO \| C+0+W+S+]` | `[S− W− O− C− \| P0:T0 \| C+ O+ W+ S+]` | Not directly present | `[S− W− O− C− \| P0:T0 \| C+ O+ W+ S+]` | `[S− W− O− C− \| P0:T0 \| C+ O+ W+ S+]` |
+| **Hinge** | `PO:TO` | `P0:T0` | Not directly present | `P0:T0` | `P0:T0` |
+| **Parity Reference** | `PO` | `P0` | Not directly present | `P0` | `P0` |
+| **Tangential Source** | `TO` | `T0` | Not directly present | `T0` | `T0` |
+| **Negative Arrangement** | `S− W− 0− C−` | `S− W− O− C−` | Not directly present | `S− W− O− C−` | `S− W− O− C−` |
+| **Positive Arrangement** | `C+0+W+S+` | `C+ O+ W+ S+` | Not directly present | `C+ O+ W+ S+` | `C+ O+ W+ S+` |
 
 ---
 
-## 6. Blackboard Addressing
+## 4. Plane Classes Evolution
 
-| Concept | v1: Original | v2: Correction | v3: Simplified | v4: Metalang | v5: Full Spec | v6: Scaling Laws |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Board Size** | 16×16 | 16×16 | 16×16 | 16×16 | 16×16 | (implied by `(16^n)^p`) |
-| **Address Format** | `0xRRCC` | `0xRRCC` | `0xRRCC` | `0xRRCC` | `0xRRCC` | `0xRC` |
-| **Address Range** | `0x00...0xFF` | `0x00...0xFF` | `0x00...0xFF` | `0x00...0xFF` | `0x00...0xFF` | `0x00...0xFF` |
-| **Total Coords** | 256 | 256 | 256 | 256 | 256 | 256 |
-| **Local Surface** | `0x00...0x7F` | `0x00...0x7F` | `0x00...0x7F` | `0x00...0x7F` | `0x00...0x7F` | OMINO `.omi` surface |
-| **Remote Surface** | `0x80...0xFF` | `0x80...0xFF` | `0x80...0xFF` | `0x80...0xFF` | `0x80...0xFF` | OMICRON `.imo` surface |
-| **Projection** | `REMOTE = LOCAL XOR 0x80` | `REMOTE = LOCAL XOR 0x80` | `REMOTE = LOCAL XOR 0x80` | `REMOTE = LOCAL XOR 0x80` | `REMOTE = LOCAL XOR 0x80` | Projection coordinate `p` |
+| Concept | Original Field | Your Correction | Scaling Laws | Simplified | Full Spec |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Scalar (mag 4)** | `S−`, `S+` | `S−`, `S+` | Not present | `S−`, `S+` | `S−`, `S+` |
+| **Weight (mag 3)** | `W−`, `W+` | `W−`, `W+` | Not present | `W−`, `W+` | `W−`, `W+` |
+| **Order (mag 2)** | `0−`, `0+` (ambiguous) | `O−`, `O+` | Not present | `O−`, `O+` | `O−`, `O+` |
+| **Capacity (mag 1)** | `C−`, `C+` | `C−`, `C+` | Not present | `C−`, `C+` | `C−`, `C+` |
+| **Parity Zero** | `0` (ambiguous) | `P0` | Not present | `P0` | `P0` |
+| **Source Zero** | `0` (ambiguous) | `T0` | Not present | `T0` | `T0` |
 
 ---
 
-## 7. Bounding Rectangles and Lenses
+## 5. Scaling Laws Evolution
 
-| Concept | v1: Original | v2-5: All Versions | v6: Scaling Laws |
+| Domain | Scaling Laws Document | Field Document Connection | Unified Expression |
 | :--- | :--- | :--- | :--- |
-| **Local Rect 0** | `(0x00, 0x07, 0x37, 0x30)` | `(0x00, 0x07, 0x37, 0x30)` | (implied) |
-| **Local Rect 1** | `(0x08, 0x0F, 0x3F, 0x38)` | `(0x08, 0x0F, 0x3F, 0x38)` | (implied) |
-| **Local Rect 2** | `(0x40, 0x47, 0x77, 0x70)` | `(0x40, 0x47, 0x77, 0x70)` | (implied) |
-| **Local Rect 3** | `(0x48, 0x4F, 0x7F, 0x78)` | `(0x48, 0x4F, 0x7F, 0x78)` | (implied) |
-| **Remote Rect 0** | `(0x80, 0x87, 0xB7, 0xB0)` | `(0x80, 0x87, 0xB7, 0xB0)` | (implied) |
-| **Remote Rect 1** | `(0x88, 0x8F, 0xBF, 0xB8)` | `(0x88, 0x8F, 0xBF, 0xB8)` | (implied) |
-| **Remote Rect 2** | `(0xC0, 0xC7, 0xF7, 0xF0)` | `(0xC0, 0xC7, 0xF7, 0xF0)` | (implied) |
-| **Remote Rect 3** | `(0xC8, 0xCF, 0xFF, 0xF8)` | `(0xC8, 0xCF, 0xFF, 0xF8)` | (implied) |
-| **Lens Size** | 32 positions | 32 positions | 32 positions |
-| **Nested Views** | `24+8`, `26+6`, `27+5`, `28+4` | `24+8`, `26+6`, `27+5`, `28+4` | `24+8` (scope permutations) |
+| **Boolean Assignments** | `2^k` | Truth-table word width | `W = 2^k` |
+| **Boolean Functions** | `2^(2^k)` | Complete field arrangement | `F_k = 2^(2^k)` |
+| **Quaternary Omicron** | `4^k` | Four-state layer | `4^k` |
+| **Hex Place** | `16^n = 2^(4n)` | Plane magnitudes | `16^n = 2^(4n)` |
+| **Compound Hex Place** | `(16^n)^p = 2^(4np)` | Field width | `(16^n)^p = 2^(4np)` |
+| **Truth-Table Bridge** | `4np = 2^k` | Field completeness | `4np = 2^k` |
+| **Scope Permutations** | `4! = 24` | FS/GS/RS/US orderings | `4! = 24` |
+| **Anchored Operations** | `6! = 720` | OMINO operational domain | `6! = 720` |
+| **Full Rotations** | `7! = 5040` | Complete compact word | `7! = 5040` |
+| **Algorithmic Clock** | `6 × 3 × 4 × 60 = 4320` | Temporal synchrony | `4320` |
+| **Artifact Environment** | `5 × 3 = 15` | .omi/.imo/.o surfaces | `5 × 3 = 15` |
+| **Control Quotients** | `2^4 = 16` | Four scope coordinates | `2^4 = 16` |
+| **OMINO Rows** | `2^6 = 64` | Six operational coordinates | `2^6 = 64` |
 
 ---
 
-## 8. Adjudication Scales
+## 6. Hamming Code Evolution
 
-| Concept | v1: Original | v2-5: All Versions | v6: Scaling Laws |
+| Concept | Original Field | Scaling Laws Document | Combined Definition |
 | :--- | :--- | :--- | :--- |
-| **Metatron Domain** | `16⁴ = 2¹⁶` | `16⁴ = 2¹⁶` | `16⁴ = 2¹⁶` |
-| **Metatron Anchors** | `16⁰, 16¹, 16², 16³, 16⁴` | `16⁰, 16¹, 16², 16³, 16⁴` | Metatron field `0x1C...0x1F` |
-| **Tetragrammatron Domain** | `256⁴ = 2³²` | `256⁴ = 2³²` | `256⁴ = 2³²` |
-| **Tetragrammatron Anchors** | `256⁰, 256¹, 256², 256³, 256⁴` | `256⁰, 256¹, 256², 256³, 256⁴` | Tetragrammatron block `0x1B...0x1F` |
-| **Metatron Field** | `0x1C...0x1F` | `0x1C...0x1F` | `0x1C...0x1F` |
-| **Tetragrammatron Block** | `0x1B...0x1F` | `0x1B...0x1F` | `0x1B...0x1F` |
+| **Compact Word** | Not present | `[7,4,3]` Hamming code | 7 codepoints, 4 data, 3 parity |
+| **LOGOS** | Not present | `0x19` | Relation coordinate 1 |
+| **NOMOS** | Not present | `0x1A` | Relation coordinate 2 |
+| **PATHOS** | Not present | `0x1C` | Relation coordinate 3 |
+| **FS** | Entry coordinate | `0x1B` | Scope coordinate 1 |
+| **GS** | Entry coordinate | `0x1D` | Scope coordinate 2 |
+| **RS** | Entry coordinate | `0x1E` | Scope coordinate 3 |
+| **US** | Entry coordinate | `0x1F` | Scope coordinate 4 |
+| **Parity Relation 1** | Not present | `s_LOGOS = LOGOS ⊕ FS ⊕ GS ⊕ US` | Data integrity check |
+| **Parity Relation 2** | Not present | `s_NOMOS = NOMOS ⊕ FS ⊕ RS ⊕ US` | Data integrity check |
+| **Parity Relation 3** | Not present | `s_PATHOS = PATHOS ⊕ GS ⊕ RS ⊕ US` | Data integrity check |
 
 ---
 
-## 9. Complete Reference
+## 7. Nested Ring Evolution
 
-| Concept | v1: Original | v2: Correction | v3: Simplified | v4: Metalang | v5: Full Spec | v6: Scaling Laws |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Reference Structure** | `(ENTRY, ADDRESS, HINGE)` | `(ENTRY, ADDRESS, P0:T0)` | `(ENTRY, ADDRESS, P0:T0)` | `(ENTRY, ADDRESS, P0:T0)` | `(ENTRY, ADDRESS, P0:T0)` | `X = (p, c, r)` |
-| **Entry/Projection** | `{FS, GS, RS, US}` | `{FS, GS, RS, US}` | `{FS, GS, RS, US}` | `{FS, GS, RS, US}` | `{FS, GS, RS, US}` | `p` (projection) |
-| **Address/Clock** | `0xRRCC` | `0xRRCC` | `0xRRCC` | `0xRRCC` | `0xRRCC` | `c` (synchrony) |
-| **Hinge/Rotation** | `PO:TO` | `P0:T0` | `P0:T0` | `P0:T0` | `P0:T0` | `r` (ordering) |
-| **Operational Form** | `FS/GS/RS/US - FIELD[RR,CC] - PO:TO` | `FS/GS/RS/US - FIELD[RR,CC] - P0:T0` | `FS/GS/RS/US - FIELD[RR,CC] - P0:T0` | `FS/GS/RS/US - FIELD[RR,CC] - P0:T0` | `FS/GS/RS/US - FIELD[RR,CC] - P0:T0` | Complete coordinate state |
+| Concept | Scaling Laws Document | Field Document | Unified Meaning |
+| :--- | :--- | :--- | :--- |
+| **OMINCRON** | `[8,4,4]` completed gauge ring | 16×16 Blackboard | Complete addressing surface |
+| **OMICRON** | `[7,4,3]` compact null-byte-relative ring | Seven codepoints | Compact word |
+| **OMINO** | `[6,4,2]` operational tangential selector | Six operational coordinates | Functional selector |
 
 ---
 
-## 10. Scaling Laws (v6 Document)
+## 8. Metatron/Tetragrammatron Evolution
 
-| Law | Formula | Tangential Field Equivalent |
-| :--- | :--- | :--- |
-| **Truth-Table Width** | `W = 2^k` | Plane magnitudes (4, 3, 2, 1) |
-| **Function Space** | `F_k = 2^(2^k)` | Complete field arrangement |
-| **Compound Hex Width** | `(16^n)^p = 2^(4np)` | Blackboard addressing |
-| **Truth-Table Bridge** | `4np = 2^k` | Arrangement completeness |
-| **Scope Permutations** | `4! = 24` | FS/GS/RS/US orderings |
-| **Anchored Operations** | `6! = 720` | OMINO operational domain |
-| **Full Rotations** | `7! = 5040` | Circular Slide Ruler |
-| **Algorithmic Clock** | `6×3×4×60 = 4320` | Temporal synchrony |
-| **Artifact Environment** | `5×3 = 15` | `.omi`, `.imo`, `.o` surfaces |
-| **Control Quotients** | `2^4 = 16` | Four scope coordinates |
-| **OMINO Rows** | `2^6 = 64` | Six operational positions |
-| **Local Incidence** | `4320` | Base field |
-| **Surface Incidence** | `4320^2` | Paired surfaces |
-| **Horizon Incidence** | `4320^4` | Four-domain consistency |
-| **Complete Coordinate** | `X = (p, c, r)` | `REFERENCE = (ENTRY, ADDRESS, P0:T0)` |
+| Concept | Original Field | Scaling Laws Document | Unified Definition |
+| :--- | :--- | :--- | :--- |
+| **Metatron Domain** | `16⁴ = 2¹⁶` | Four-place validation | `16⁴ = 2¹⁶` |
+| **Metatron Anchors** | `16⁰, 16¹, 16², 16³, 16⁴` | Place weights and upper boundary | `0x0001, 0x0010, 0x0100, 0x1000, 0x10000` |
+| **Metatron Field** | `0x1C...0x1F` | Four-place incidence field | Four coordinated positions |
+| **Tetragrammatron Domain** | `256⁴ = 2³²` | Five-place relation validation | `256⁴ = 2³²` |
+| **Tetragrammatron Anchors** | `256⁰, 256¹, 256², 256³, 256⁴` | Byte-level place weights | `0x00000001, 0x00000100, 0x00010000, 0x01000000, 0x100000000` |
+| **Tetragrammatron Block** | `0x1B...0x1F` | Five-place relation field | Five coordinated positions |
 
 ---
 
-## 11. OMINO/OMICRON/OMNICRON Ladder (v6)
+## 9. Blackboard Addressing Evolution
 
-| Layer | v6: Scaling Laws | Tangential Field Equivalent |
-| :--- | :--- | :--- |
-| **OMINICRON** | `[8,4,4]` completed gauge ring | Complete Blackboard (256 coords) |
-| **OMICRON** | `[7,4,3]` compact null-byte-relative ring | Seven-position CONS word |
-| **OMINO** | `[6,4,2]` operational tangential selector | Six operational OMINO coordinates |
-| **Compact Word** | `0x19...0x1F` | `LOGOS, NOMOS, FS, PATHOS, GS, RS, US` |
-| **Three Relations** | `LOGOS, NOMOS, PATHOS` | Hamming parity relations |
-| **Four Scopes** | `FS, GS, RS, US` | Entry hierarchy |
-| **COBS-CONS** | Eight-position completion | Terminal gauge |
-
----
-
-## 12. Gauge Scaling (v6) vs Field Addresses (v1-5)
-
-| Concept | v1-5: Tangential Field | v6: Scaling Laws |
-| :--- | :--- | :--- |
-| **Low Axial Origins** | `0x0?` (implied) | `0x00, 0x10, 0x20, 0x30, 0x40, 0x50, 0x60, 0x70` |
-| **Low Tangential Completions** | `0x?F` (implied) | `0x0F, 0x1F, 0x2F, 0x3F, 0x4F, 0x5F, 0x6F, 0x7F` |
-| **High Axial Origins** | `0x8?`, `0x9?`, etc. (implied) | `0x80, 0x90, 0xA0, 0xB0, 0xC0, 0xD0, 0xE0, 0xF0` |
-| **High Tangential Completions** | `0x?F` (implied) | `0x8F, 0x9F, 0xAF, 0xBF, 0xCF, 0xDF, 0xEF, 0xFF` |
-| **Row Form** | `0xX0...0xXF` | `X0...XF` |
-| **Complete Four-Place Closure** | `0x?F` | Suffix `F` |
+| Concept | Original Field | Scaling Laws Document | Unified Definition |
+| :--- | :--- | :--- | :--- |
+| **Board Size** | `16 × 16` | Projection surface | `256` coordinates |
+| **Address Format** | `0xRRCC` | Not present | Row high nibble, column low nibble |
+| **Local Surface** | `0x00...0x7F` | `.omi` surface | User declaration |
+| **Remote Surface** | `0x80...0xFF` | `.imo` surface | System definition |
+| **Projection** | `REMOTE = LOCAL XOR 0x80` | Projection coordinate `p` | Surface selector |
+| **Local Rectangles** | `(0x00, 0x07, 0x37, 0x30)` etc. | Not present | 32-position lenses |
+| **Remote Rectangles** | `(0x80, 0x87, 0xB7, 0xB0)` etc. | Not present | Projected lenses |
 
 ---
 
-## 13. Nested Validation Jurisdictions (v6) vs Adjudication Scales (v1-5)
+## 10. Coordinate Reference Evolution
 
-| v1-5: Tangential Field | v6: Scaling Laws |
-| :--- | :--- |
-| Metatron field `0x1C...0x1F` | Metatron `0x1C...0x1F` |
-| Tetragrammatron block `0x1B...0x1F` | Tetragrammatron `0x1B...0x1F` |
-| Four-place incidence closure | Metatron validation |
-| Five-place relation closure | Tetragrammatron validation |
-| Alignment conditions | Hamming [7,4,3] structure |
-| `ΔC = ΔO = ΔW = ΔS = 0` | `s_LOGOS = s_NOMOS = s_PATHOS = 0` |
-
----
-
-## 14. Artifact Surfaces (v6) vs Entry Coordinates (v1-5)
-
-| v1-5: Tangential Field | v6: Scaling Laws |
-| :--- | :--- |
-| `FS, GS, RS, US` | `.omi` (user declaration) |
-| (implied by scope forms) | `.imo` (system definition) |
-| (implied by completed US) | `.o` (machine executable coordinate) |
-| Four scope descriptions | Five semantic families × three surfaces |
-| `ENTRY = {FS, GS, RS, US}` | `5 × 3 = 15` artifact environment |
-| US is completely bound | `.o` is executable coordinate |
+| Concept | Original Field | Scaling Laws Document | Unified Definition |
+| :--- | :--- | :--- | :--- |
+| **Complete Reference** | `(ENTRY, ADDRESS, P0:T0)` | `X = (p, c, r)` | Three-part coordinate |
+| **Entry** | `FS, GS, RS, US` | Not directly present | Scope selector |
+| **Address** | `0xRRCC` | Projection `p` | Blackboard position |
+| **Hinge** | `P0:T0` | Not directly present | Central relation |
+| **Clock** | Not present | `c ∈ {0,...,4319}` | Temporal synchrony |
+| **Rotation** | Not present | `r ∈ {0,...,5039}` | Ordering selection |
 
 ---
 
-## 15. Complete Concept Map
+## 11. Artifact Evolution
+
+| Concept | Original Field | Scaling Laws Document | Combined Definition |
+| :--- | :--- | :--- | :--- |
+| **.omi** | Optional binding | User declaration | User-Local CAR surface |
+| **.imo** | Optional binding | System definition | User-Remote CDR surface |
+| **.o** | Not present | Executable machine coordinate | Machine executable surface |
+| **COBS-CONS** | Optional binding | Not directly present | Blackboard addressing protocol |
+| **CAR/CDR** | Optional binding | Not directly present | Local/Remote projections |
+| **CONS** | `0xFFFFFFFF` | Complete byte closure | Full occupancy reduction |
+
+---
+
+## 12. Scaling Laws Unified Chart
+
+| Law | Scaling Laws Document | Field Document Connection | Unified Expression |
+| :--- | :--- | :--- | :--- |
+| **Law 1** | `W = 2^k` | Truth-table width | `W = 2^k` |
+| **Law 2** | `F_k = 2^(2^k)` | Function-space cardinality | `F_k = 2^(2^k)` |
+| **Law 3** | `Δ_W: {0,1}^W → {0,1}^W` | Arrangement alignment | Delta rolling law |
+| **Law 4** | `16^n = 2^(4n)` | Hex digit width | `16^n = 2^(4n)` |
+| **Law 5** | `(16^n)^p = 2^(4np)` | Compound hex width | `(16^n)^p = 2^(4np)` |
+| **Law 6** | `4np = 2^k` | Truth-table/radix equivalence | `4np = 2^k` |
+| **Law 7** | `4! = 24` | Scope-order resolution | `4! = 24` |
+| **Law 8** | `7! = 5040` | Complete rotation | `7! = 5040` |
+| **Law 9** | `7! = 7 × 6!` | Anchored reduction | `5040 = 7 × 720` |
+| **Law 10** | `4320 = 6 × 3 × 4 × 60` | Algorithmic Clock | `4320` |
+| **Law 11** | `X = (p, c, r)` | Complete coordinate | Three-part reference |
+| **Law 12** | Integrity before admission | Hamming, Metatron, Tetragrammatron, Azimuth | Validation cascade |
+| **Law 13** | `5 × 3 = 15` | Concentric representation | Artifact environment |
+
+---
+
+## 13. Terminology Cross-Reference
+
+| Term | Original Field | Your Correction | Scaling Laws | Simplified | Final Canonical |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **UNKNOWN** | `NULL` | `NULL` | — | — | `NULL` |
+| **KNOWN** | `BIND` | `BIND` | — | `FIX` | `BIND` |
+| **NULL** | Unbound coordinate | Unbound coordinate | — | Unbound coordinate | Unbound coordinate |
+| **BIND** | Only encapsulation | Only encapsulation | — | Directly established place | Only encapsulation |
+| **XOR** | Only operation | Only operation | `REMOTE = LOCAL XOR 0x80` | Only operation | Only operation |
+| **META** | Mask selecting coordinates for XOR | Mask selecting coordinates for XOR | — | Mask selecting coordinates for XOR | Mask selecting coordinates for XOR |
+| **ESC** | META condition cancels BIND to NULL | META condition cancels BIND to NULL | — | META condition cancels BIND to NULL | META condition cancels BIND to NULL |
+| **PO** | Parity reference | — | — | — | — |
+| **TO** | Tangential source | — | — | — | — |
+| **P0** | — | Parity reference | — | Parity reference | Parity reference |
+| **T0** | — | Tangential source | — | Tangential source | Tangential source |
+| **0** | Zero coordinate (ambiguous) | Zero coordinate | — | Zero coordinate | Zero coordinate |
+| **O** | Order plane (ambiguous) | Order plane | — | Order plane | Order plane |
+| **NEXT** | Present (confusing) | Removed | — | Removed | Removed |
+| **BIND** | Encapsulation | Encapsulation | — | Fixed coordinate | Encapsulation |
+| **FIX** | — | — | — | Directly established place | — |
+
+---
+
+## 14. Relationship Map
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                                                                             │
-│                     TANGENTIAL HINGE FIELD (v1-5)                          │
-│                                                                             │
-│  FIELD = [S− W− O− C− | P0:T0 | C+ O+ W+ S+]                              │
-│  HINGE = P0:T0                                                              │
-│  ENTRY = {FS, GS, RS, US}                                                   │
-│  ADDRESS = 0xRRCC                                                           │
-│  REFERENCE = (ENTRY, ADDRESS, P0:T0)                                       │
-│                                                                             │
-│  Metalanguage: UNKNOWN=NULL, KNOWN=BIND, NULL=unbound, BIND=encapsulation  │
-│  XOR=only operation, META=mask, ESC=META cancel BIND→NULL                  │
-│                                                                             │
-│  Scope Forms: FS=(BIND GS RS US ESC), GS=(BIND RS US BIND ESC),            │
-│               RS=(BIND US BIND BIND ESC), US=(BIND BIND BIND BIND ESC)     │
-│                                                                             │
-│  Mirrored Pairs: C−↔C+, O−↔O+, W−↔W+, S−↔S+                              │
-│  Alignment: ΔC=ΔO=ΔW=ΔS=0                                                  │
-│                                                                             │
-│  Blackboard: 16×16 = 256 coords, 0x00...0xFF, REMOTE=LOCAL XOR 0x80       │
-│  Lenses: 32-position rectangles, nested views 24+8, 26+6, 27+5, 28+4      │
-│                                                                             │
-│  Adjudication: Metatron (16⁴), Tetragrammatron (256⁴)                      │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
-                                    │
-                                    ▼
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                                                                             │
-│                   SCALING LAWS (v6)                                        │
-│                                                                             │
-│  Boolean:  k → 2^k → 2^(2^k)                                               │
-│  Hexadecimal:  (n,p) → 4np → 2^(4np)                                      │
-│  Bridge:  4np = 2^k                                                        │
-│  Control:  4 → 4! = 24                                                     │
-│  Operational:  6 → 6! = 720                                                │
-│  Complete:  7 → 7! = 5040                                                  │
-│  Clock:  6×3×4×60 = 4320                                                   │
-│  Artifacts:  5×3 = 15                                                      │
-│  Complete State:  X = (p, c, r)                                           │
-│                                                                             │
-│  OMNICRON [8,4,4] → OMICRON [7,4,3] → OMINO [6,4,2]                       │
-│  Compact Word: 0x19...0x1F (LOGOS, NOMOS, FS, PATHOS, GS, RS, US)         │
-│  Hamming: [7,4,3] structure                                                │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                    OMINO/OMICRON/OMNICRON ARCHITECTURE            │
+│                                                                     │
+│  ┌─────────────────────────────────────────────────────────────┐   │
+│  │              TANGENTIAL HINGE FIELD                         │   │
+│  │  FIELD = [S− W− O− C− | P0:T0 | C+ O+ W+ S+]              │   │
+│  │  HINGE = P0:T0                                            │   │
+│  │  ENTRY = {FS, GS, RS, US}                                 │   │
+│  │  REFERENCE = (ENTRY, ADDRESS, P0:T0)                      │   │
+│  └─────────────────────────────────────────────────────────────┘   │
+│                              │                                      │
+│                              ▼                                      │
+│  ┌─────────────────────────────────────────────────────────────┐   │
+│  │              METALANGUAGE                                   │   │
+│  │  UNKNOWN = NULL                                            │   │
+│  │  KNOWN = BIND                                              │   │
+│  │  NULL = unbound coordinate                                 │   │
+│  │  BIND = only encapsulation                                 │   │
+│  │  XOR = only operation                                      │   │
+│  │  META = mask selecting coordinates for XOR                 │   │
+│  │  ESC = META condition cancels selected BIND to NULL       │   │
+│  └─────────────────────────────────────────────────────────────┘   │
+│                              │                                      │
+│                              ▼                                      │
+│  ┌─────────────────────────────────────────────────────────────┐   │
+│  │              SCALING LAWS                                   │   │
+│  │  W = 2^k                  (truth-table width)              │   │
+│  │  F_k = 2^(2^k)           (function space)                  │   │
+│  │  (16^n)^p = 2^(4np)     (hex width)                       │   │
+│  │  4np = 2^k              (bridge)                          │   │
+│  │  4! = 24                (scope order)                     │   │
+│  │  7! = 5040              (rotation)                        │   │
+│  │  4320 = 6×3×4×60        (clock)                           │   │
+│  │  X = (p, c, r)          (complete coordinate)             │   │
+│  └─────────────────────────────────────────────────────────────┘   │
+│                              │                                      │
+│                              ▼                                      │
+│  ┌─────────────────────────────────────────────────────────────┐   │
+│  │              CODING AND ADJUDICATION                        │   │
+│  │  Hamming: [7,4,3] LOGOS, NOMOS, PATHOS, FS, GS, RS, US    │   │
+│  │  Metatron: 16⁴ domain, 0x1C...0x1F                        │   │
+│  │  Tetragrammatron: 256⁴ domain, 0x1B...0x1F               │   │
+│  │  Azimuth: 0xAA55                                          │   │
+│  └─────────────────────────────────────────────────────────────┘   │
+│                              │                                      │
+│                              ▼                                      │
+│  ┌─────────────────────────────────────────────────────────────┐   │
+│  │              BLACKBOARD ADDRESSING                         │   │
+│  │  16×16 = 256 coordinates                                  │   │
+│  │  Local: 0x00...0x7F                                       │   │
+│  │  Remote: 0x80...0xFF                                      │   │
+│  │  REMOTE = LOCAL XOR 0x80                                  │   │
+│  │  8 rectangles × 32 coordinates                            │   │
+│  └─────────────────────────────────────────────────────────────┘   │
+│                              │                                      │
+│                              ▼                                      │
+│  ┌─────────────────────────────────────────────────────────────┐   │
+│  │              ARTIFACT SURFACES                              │   │
+│  │  .omi = User declaration                                   │   │
+│  │  .imo = System definition                                  │   │
+│  │  .o = Machine executable                                  │   │
+│  │  5 semantic families × 3 surfaces = 15                    │   │
+│  └─────────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 16. Chronological Evolution
+## 15. Key Corrections and Clarifications Summary
 
-| Date/Order | Version | Key Changes |
-| :--- | :--- | :--- |
-| 1 | Original Field Document | Initial definition with `[S− W− 0− C− \| PO:TO \| C+0+W+S+]`, `0` ambiguous |
-| 2 | Your Correction | Clarified `O` (order) vs `0` (zero), `P0/T0` notation |
-| 3 | Simplified Lock | Minimal canonical form, `FIX` instead of `BIND` |
-| 4 | Metalanguage Original | Full metalanguage: `NULL`, `BIND`, `XOR`, `META`, `ESC` |
-| 5 | Full Specification | Complete document with all sections |
-| 6 | Scaling Laws | Broader architecture: truth tables, permutations, clock, rotations |
+| Correction | Before | After | Impact |
+| :--- | :--- | :--- | :--- |
+| **Order vs Zero** | `0` used for both | `O` = order, `0` = zero | Removes fatal ambiguity |
+| **Hinge Notation** | `PO:TO` | `P0:T0` | Zero, not letter O |
+| **ESC Meaning** | Confused with continuation | META condition cancels BIND to NULL | Structural role clarified |
+| **NEXT Removal** | Present as undefined term | Removed entirely | Closes operational gap |
+| **BIND Semantics** | Confused with Lisp binding | Encapsulation only | Removes execution semantics |
+| **Core vs Optional** | COBS-CONS mixed in | Separated as optional binding | Cleaner specification |
+| **REFERENCE Structure** | `(ENTRY, ADDRESS, HINGE)` | `(ENTRY, ADDRESS, P0:T0)` | Explicit hinge relation |
 
 ---
 
-## 17. Equivalency Key
+## 16. Final Unified Canonical Statement
 
-| Symbol | Meaning |
-| :--- | :--- |
-| `=` | Exact match |
-| `≈` | Conceptually equivalent |
-| `→` | Maps to or transforms into |
-| `(implied)` | Not explicit but present by inference |
-| `(ambiguous)` | Not clearly distinguished from other concepts |
-| `(removed)` | Present in earlier version, intentionally removed |
+```
+TANGENTIAL HINGE FIELD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FIELD = [S− W− O− C− | P0:T0 | C+ O+ W+ S+]
+HINGE = P0:T0
+ENTRY = {FS, GS, RS, US}
+REFERENCE = (ENTRY, ADDRESS, P0:T0)
+
+METALANGUAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+UNKNOWN = NULL
+KNOWN   = BIND
+NULL    = unbound coordinate
+BIND    = only encapsulation
+XOR     = only operation
+META    = mask selecting coordinates for XOR
+ESC     = META condition that cancels a selected BIND to NULL
+
+SCOPE FORMS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FS = (BIND GS RS US ESC)
+GS = (BIND RS US BIND ESC)
+RS = (BIND US BIND BIND ESC)
+US = (BIND BIND BIND BIND ESC)
+
+SCALING LAWS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+W = 2^k                    (truth-table width)
+F_k = 2^(2^k)              (function-space cardinality)
+(16^n)^p = 2^(4np)         (compound hex width)
+4np = 2^k                  (truth-table/radix bridge)
+4! = 24                    (scope-order resolution)
+7! = 5040                  (complete rotation)
+4320 = 6×3×4×60            (Algorithmic Clock)
+X = (p, c, r)              (complete coordinate)
+
+ADJUDICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Metatron:       16⁴ domain, 0x1C...0x1F
+Tetragrammatron: 256⁴ domain, 0x1B...0x1F
+Hamming:        [7,4,3] LOGOS, NOMOS, PATHOS, FS, GS, RS, US
+Azimuth:        0xAA55
+
+BLACKBOARD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+16×16 = 256 coordinates
+0x00...0xFF
+REMOTE = LOCAL XOR 0x80
+
+ARTIFACT SURFACES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+.omi = User declaration
+.imo = System definition
+.o   = Machine executable
+5 × 3 = 15 positions
+```
 
 ---
 
 ## Summary
 
-All versions share the **same structural core**:
+All versions across all documents share the same **core structural model**. The evolution has been about:
+
+1. **Clarifying notation** (`O` vs `0`, `P0` vs `PO`)
+2. **Removing confusion** (`NEXT` removed, `ESC` clarified)
+3. **Separating concerns** (core geometry vs optional bindings)
+4. **Connecting scales** (truth-table width, hex places, clock, rotation)
+5. **Completing the architecture** (Hamming, Metatron, Tetragrammatron, Azimuth)
+
+The **canonical core** is now stable across all versions:
 
 ```
 FIELD = [S− W− O− C− | P0:T0 | C+ O+ W+ S+]
@@ -303,11 +366,3 @@ HINGE = P0:T0
 ENTRY = {FS, GS, RS, US}
 REFERENCE = (ENTRY, ADDRESS, P0:T0)
 ```
-
-The differences across versions are:
-1. **Notation clarity** (`O` vs `0`, `P0/T0` vs `PO/TO`)
-2. **Scope** (some include architecture bindings, others stay agnostic)
-3. **Presentation** (Lisp-style vs structural notation)
-4. **Completeness** (field document vs scaling laws + field geometry)
-
-**The scaling laws document (v6) extends the field specification into the broader architecture** while the Tangential Hinge Field (v1-5) remains the core coordinate geometry. They are complementary, not contradictory.
