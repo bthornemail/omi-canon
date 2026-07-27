@@ -1,0 +1,1121 @@
+# OMI–IMO / US?-O_o Notation Protocol
+
+## 1. Primitive paired notation
+
+The complete protocol object is:
+
+```text
+omi---imo . US?/O_o
+```
+
+The dot is the pairing operator:
+
+```text
+(A . B)
+```
+
+Therefore the complete notation object is:
+
+```text
+(omi---imo . US?/O_o)
+```
+
+Interpretation:
+
+```text
+omi---imo
+ defines the scoped state surface
+
+US?/O_o
+ defines the temporal gauge traversal
+
+.
+ binds the scoped surface to its traversal
+```
+
+The object is not a receipt and does not mean accepted state.
+
+It is a **paired computational notation**:
+
+```text
+scope configuration
+.
+temporal transition configuration
+```
+
+---
+
+# 2. `omi---imo`: the scope rail
+
+The scope rail contains:
+
+```text
+FS
+GS
+RS
+US
+```
+
+Their Blackboard meanings are:
+
+```text
+FS = Known Known
+GS = Known Unknown
+RS = Unknown Known
+US = Unknown Unknown
+```
+
+The four scope states are arranged as two paired halves:
+
+```text
+omi-(FS . GS)-(RS . US)-imo
+```
+
+This is the expanded form of:
+
+```text
+omi---imo
+```
+
+Structure:
+
+```text
+omi
+ │
+ ├── (FS . GS)
+ │ known-origin side
+ │
+ ├── (RS . US)
+ │ unknown-origin side
+ │
+imo
+```
+
+More exactly:
+
+```text
+(FS . GS)
+=
+known-source pair
+
+(RS . US)
+=
+unknown-source pair
+```
+
+The complete scope rail is:
+
+```text
+omi
+ open scope boundary
+
+(FS . GS)
+ forward epistemic pair
+
+(RS . US)
+ reverse epistemic pair
+
+imo
+ reflected scope boundary
+```
+
+Blackboard form:
+
+```text
+ RESULT
+ known unknown
+ ┌────────────┬────────────┐
+SOURCE known │ FS │ GS │
+ │ KK │ KU │
+ ├────────────┼────────────┤
+SOURCE unk. │ RS │ US │
+ │ UK │ UU │
+ └────────────┴────────────┘
+```
+
+So the linear notation:
+
+```text
+omi-(FS . GS)-(RS . US)-imo
+```
+
+is the folded one-dimensional reading of the two-dimensional Blackboard.
+
+---
+
+# 3. `US?/O_o`: the temporal gauge rail
+
+The temporal rail contains:
+
+```text
+LL
+MM
+NN
+```
+
+with:
+
+```text
+LL
+ previous phase
+
+MM
+ present phase
+
+NN
+ next phase
+```
+
+Its linear form is:
+
+```text
+o-LL-MM-NN-o
+```
+
+Interpretation:
+
+```text
+opening o
+ previous boundary
+
+LL
+ phase entering the transition
+
+MM
+ phase under present gauge
+
+NN
+ phase produced by the transition
+
+closing o
+ forward boundary
+```
+
+The temporal recurrence is:
+
+```text
+NN = Δ(MM, gauge)
+```
+
+After one shift:
+
+```text
+LL' = MM
+MM' = NN
+NN' = Δ(NN, next gauge)
+```
+
+Therefore:
+
+```text
+o-LL-MM-NN-o
+```
+
+is a three-phase moving window rather than three fixed memory regions.
+
+---
+
+# 4. Expanded `US?/O_o` notation
+
+The full temporal-gauge notation is:
+
+```text
+Δ-(US . ?)-(/ . O)-(_ . o)-Δ
+```
+
+This contains three paired character cells enclosed by delta boundaries:
+
+```text
+opening Δ
+ directed entry
+
+(US . ?)
+ unresolved scope paired with query
+
+(/ . O)
+ branch or division paired with oriented object
+
+(_ . o)
+ retained place paired with local object
+
+closing Δ
+ directed exit
+```
+
+The three paired cells correspond to the temporal window:
+
+```text
+LL = (US . ?)
+
+MM = (/ . O)
+
+NN = (_ . o)
+```
+
+Therefore:
+
+```text
+o-LL-MM-NN-o
+```
+
+expands to:
+
+```text
+Δ-(US . ?)-(/ . O)-(_ . o)-Δ
+```
+
+The correspondence is:
+
+```text
+LL
+=
+(US . ?)
+
+MM
+=
+(/ . O)
+
+NN
+=
+(_ . o)
+```
+
+Operational interpretation:
+
+```text
+LL = (US . ?)
+ the previous phase carries an unresolved state and a query
+
+MM = (/ . O)
+ the present phase applies a branch/division gauge to an oriented object
+
+NN = (_ . o)
+ the next phase retains the resolved place and emits a local object
+```
+
+---
+
+# 5. Complete paired protocol
+
+Substitute both expanded rails into the primitive pair:
+
+```text
+(
+ omi-(FS . GS)-(RS . US)-imo
+ .
+ Δ-(US . ?)-(/ . O)-(_ . o)-Δ
+)
+```
+
+Compact form:
+
+```text
+(omi---imo . US?/O_o)
+```
+
+Expanded form:
+
+```text
+(
+ omi-(FS . GS)-(RS . US)-imo
+ .
+ Δ-(US . ?)-(/ . O)-(_ . o)-Δ
+)
+```
+
+This means:
+
+```text
+scope Blackboard
+paired with
+three-phase gauge traversal
+```
+
+---
+
+# 6. Scope and time form a product state
+
+A complete state contains:
+
+```text
+scope ∈ {FS, GS, RS, US}
+
+time ∈ {LL, MM, NN}
+```
+
+Therefore the local state lattice contains:
+
+```text
+4 × 3 = 12
+```
+
+scope-time configurations:
+
+```text
+LL.FS LL.GS LL.RS LL.US
+MM.FS MM.GS MM.RS MM.US
+NN.FS NN.GS NN.RS NN.US
+```
+
+With sixty sexagesimal phases:
+
+```text
+3 × 4 × 60
+=
+720
+```
+
+The notation address is:
+
+```text
+Temporal.Scope.Phase
+```
+
+Examples:
+
+```text
+LL.US.17
+MM.GS.18
+NN.FS.19
+```
+
+or directly in notation:
+
+```text
+(US . ?)
+→
+(GS . /O)
+→
+(FS . _o)
+```
+
+The symbolic characters express the same transition without converting it into a numeric slot first.
+
+---
+
+# 7. XOR of two complete notation objects
+
+The first expression is:
+
+```text
+(omi---imo . US?/O_o)
+XOR
+(omi---imo . US?/O_o)
+```
+
+Because any bit-pattern XOR itself is zero:
+
+```text
+X XOR X = 0
+```
+
+the complete paired object self-cancels:
+
+```text
+(omi---imo . US?/O_o)
+XOR
+(omi---imo . US?/O_o)
+=
+(NULL . NULL)
+```
+
+In protocol notation:
+
+```text
+scope XOR same scope
+=
+NULL
+
+gauge XOR same gauge
+=
+NULL
+```
+
+Therefore:
+
+```text
+(A . B) XOR (A . B)
+=
+(A XOR A . B XOR B)
+=
+(NULL . NULL)
+```
+
+This is the folded null of the complete notation pair.
+
+It does not erase the definition of the notation alphabet.
+
+It means that the two supplied instances contain no difference.
+
+---
+
+# 8. Component-wise XOR law
+
+For two arbitrary paired notation objects:
+
+```text
+(A . B) XOR (C . D)
+```
+
+the component-wise law is:
+
+```text
+(A XOR C . B XOR D)
+```
+
+Therefore:
+
+```text
+(
+ omi---imo₁
+ .
+ US?/O_o₁
+)
+XOR
+(
+ omi---imo₂
+ .
+ US?/O_o₂
+)
+```
+
+resolves as:
+
+```text
+(
+ omi---imo₁ XOR omi---imo₂
+ .
+ US?/O_o₁ XOR US?/O_o₂
+)
+```
+
+The left result is the scope difference.
+
+The right result is the temporal-gauge difference.
+
+This distinction is essential:
+
+```text
+left XOR
+ asks which epistemic positions differ
+
+right XOR
+ asks which temporal or orientation positions differ
+```
+
+---
+
+# 9. Gauge-injected notation
+
+Your second expanded expression is:
+
+```text
+(
+ omi---imo
+ XOR
+ (o|O)-US?/O_o-(o|O)
+)
+XOR
+(
+ omi---imo
+ XOR
+ (o|O)-US?/O_o-(o|O)
+)
+```
+
+Define the gauge-wrapped traversal as:
+
+```text
+G =
+(o|O)-US?/O_o-(o|O)
+```
+
+Then the expression becomes:
+
+```text
+(omi---imo XOR G)
+XOR
+(omi---imo XOR G)
+```
+
+By associativity and commutativity of XOR:
+
+```text
+=
+omi---imo
+XOR G
+XOR omi---imo
+XOR G
+```
+
+Reorder identical terms:
+
+```text
+=
+(omi---imo XOR omi---imo)
+XOR
+(G XOR G)
+```
+
+Each pair cancels:
+
+```text
+=
+NULL XOR NULL
+```
+
+Therefore:
+
+```text
+=
+NULL
+```
+
+In paired notation:
+
+```text
+=
+(NULL . NULL)
+```
+
+So the full identity is:
+
+```text
+(
+ omi---imo XOR (o|O)-US?/O_o-(o|O)
+)
+XOR
+(
+ omi---imo XOR (o|O)-US?/O_o-(o|O)
+)
+=
+(NULL . NULL)
+```
+
+This is the self-cancellation law for a gauge-injected scope state.
+
+---
+
+# 10. Meaning of `(o|O)`
+
+The notation:
+
+```text
+(o|O)
+```
+
+is an orientation choice.
+
+It contains:
+
+```text
+o
+ local or low orientation
+
+O
+ projected or high orientation
+
+|
+ branch selection between them
+```
+
+Therefore:
+
+```text
+(o|O)-US?/O_o-(o|O)
+```
+
+means:
+
+```text
+select an orientation
+apply the US?/O_o traversal
+resolve into an orientation
+```
+
+Expanded directional possibilities include:
+
+```text
+o-US?/O_o-o
+o-US?/O_o-O
+O-US?/O_o-o
+O-US?/O_o-O
+```
+
+These represent:
+
+```text
+o → o
+ local persistence
+
+o → O
+ local-to-projected traversal
+
+O → o
+ projected-to-local traversal
+
+O → O
+ projected persistence
+```
+
+The vertical bar does not mean that both states are simultaneously selected.
+
+It exposes the orientation branch that the gauge must resolve.
+
+---
+
+# 11. The slide-ruler reading
+
+The complete slide ruler is:
+
+```text
+SCOPE RAIL
+
+omi-(FS . GS)-(RS . US)-imo
+```
+
+paired with:
+
+```text
+TEMPORAL RAIL
+
+Δ-(US . ?)-(/ . O)-(_ . o)-Δ
+```
+
+Together:
+
+```text
+ SCOPE
+ omi-(FS . GS)-(RS . US)-imo
+ .
+ Δ-(US . ?)-(/ . O)-(_ . o)-Δ
+ TEMPORAL
+```
+
+The dot is the axle of the circular slide ruler.
+
+The scope rail and temporal rail rotate relative to each other around this pairing.
+
+At each alignment, one scope state overlays one temporal state.
+
+For example:
+
+```text
+GS aligned with MM
+```
+
+means:
+
+```text
+known source
+unknown result
+under the present gauge
+```
+
+In symbolic form:
+
+```text
+(GS . (/ . O))
+```
+
+Another alignment:
+
+```text
+FS aligned with NN
+```
+
+means:
+
+```text
+fully resolved scope
+at the next phase
+with retained local output
+```
+
+In symbolic form:
+
+```text
+(FS . (_ . o))
+```
+
+---
+
+# 12. Transition example in notation
+
+Start with:
+
+```text
+LL = (US . ?)
+```
+
+This means:
+
+```text
+unresolved previous state
+with an active query
+```
+
+The gauge moves the state into:
+
+```text
+MM = (/ . O)
+```
+
+and the Blackboard moves:
+
+```text
+US → GS
+```
+
+So the present paired state is:
+
+```text
+(GS . (/ . O))
+```
+
+Interpretation:
+
+```text
+the source relation has become known,
+the output remains unresolved,
+and the present operator is projecting through / toward O
+```
+
+The next state becomes:
+
+```text
+NN = (_ . o)
+```
+
+and the Blackboard resolves:
+
+```text
+GS → FS
+```
+
+The next paired state is:
+
+```text
+(FS . (_ . o))
+```
+
+Complete transition:
+
+```text
+(US . (US . ?))
+→
+(GS . (/ . O))
+→
+(FS . (_ . o))
+```
+
+Using the rail notation:
+
+```text
+omi-(RS . US)-imo
+ .
+Δ-(US . ?)-Δ
+```
+
+advances through:
+
+```text
+omi-(FS . GS)-imo
+ .
+Δ-(/ . O)-Δ
+```
+
+and closes as:
+
+```text
+omi-(FS . FS)-imo
+ .
+Δ-(_ . o)-Δ
+```
+
+The compact conceptual path is:
+
+```text
+query
+→ gauge
+→ place
+```
+
+and:
+
+```text
+US
+→ GS
+→ FS
+```
+
+---
+
+# 13. Reverse transition
+
+The reverse or abductive path begins from an observed result:
+
+```text
+RS
+=
+Unknown Known
+```
+
+The temporal object begins at:
+
+```text
+(_ . o)
+```
+
+The reverse gauge asks for its source:
+
+```text
+(/ . O)
+```
+
+and returns to query:
+
+```text
+(US . ?)
+```
+
+So the reverse path is:
+
+```text
+(FS . (_ . o))
+→
+(RS . (/ . O))
+→
+(US . (US . ?))
+```
+
+The epistemic path is:
+
+```text
+FS → RS → US
+```
+
+while constructive resolution is:
+
+```text
+US → GS → FS
+```
+
+Thus the two traversals are:
+
+```text
+forward:
+US → GS → FS
+
+reverse:
+FS → RS → US
+```
+
+These are the two sides of the circular slide ruler.
+
+---
+
+# 14. Proper notation grammar
+
+The grammar can be written as:
+
+```text
+<Protocol>
+ ::= "(" <ScopeRail> "." <TemporalRail> ")"
+
+<ScopeRail>
+ ::= "omi-" <ForwardScope> "-" <ReverseScope> "-imo"
+
+<ForwardScope>
+ ::= "(" "FS" "." "GS" ")"
+
+<ReverseScope>
+ ::= "(" "RS" "." "US" ")"
+
+<TemporalRail>
+ ::= "Δ-" <Previous> "-" <Present> "-" <Next> "-Δ"
+
+<Previous>
+ ::= "(" "US" "." "?" ")"
+
+<Present>
+ ::= "(" "/" "." "O" ")"
+
+<Next>
+ ::= "(" "_" "." "o" ")"
+
+<Orientation>
+ ::= "o" | "O"
+
+<OrientationGate>
+ ::= "(" "o" "|" "O" ")"
+```
+
+The canonical expanded object is:
+
+```text
+(
+ omi-(FS . GS)-(RS . US)-imo
+ .
+ Δ-(US . ?)-(/ . O)-(_ . o)-Δ
+)
+```
+
+The canonical compact object is:
+
+```text
+(omi---imo . US?/O_o)
+```
+
+---
+
+# 15. Rewrite identities
+
+## Identity pairing
+
+```text
+A XOR NULL = A
+```
+
+Therefore:
+
+```text
+(omi---imo . US?/O_o)
+XOR
+(NULL . NULL)
+=
+(omi---imo . US?/O_o)
+```
+
+## Self-cancellation
+
+```text
+A XOR A = NULL
+```
+
+Therefore:
+
+```text
+(omi---imo . US?/O_o)
+XOR
+(omi---imo . US?/O_o)
+=
+(NULL . NULL)
+```
+
+## Reversible gauge injection
+
+Let:
+
+```text
+S = omi---imo
+G = (o|O)-US?/O_o-(o|O)
+```
+
+Then:
+
+```text
+S' = S XOR G
+```
+
+Applying the same gauge again:
+
+```text
+S' XOR G
+=
+(S XOR G) XOR G
+=
+S XOR (G XOR G)
+=
+S XOR NULL
+=
+S
+```
+
+So:
+
+```text
+gauge injection
+followed by
+the same gauge injection
+```
+
+restores the original scope rail.
+
+## Difference comparison
+
+For two states:
+
+```text
+P₁ = (S₁ . T₁)
+P₂ = (S₂ . T₂)
+```
+
+their difference is:
+
+```text
+P₁ XOR P₂
+=
+(S₁ XOR S₂ . T₁ XOR T₂)
+```
+
+This reports separately:
+
+```text
+scope difference
+temporal-gauge difference
+```
+
+---
+
+# 16. Final notation lock
+
+```text
+omi---imo
+=
+omi-(FS . GS)-(RS . US)-imo
+```
+
+```text
+US?/O_o
+=
+o-LL-MM-NN-o
+=
+Δ-(US . ?)-(/ . O)-(_ . o)-Δ
+```
+
+```text
+(omi---imo . US?/O_o)
+=
+scope Blackboard
+paired with
+temporal gauge window
+```
+
+```text
+(omi---imo . US?/O_o)
+XOR
+(omi---imo . US?/O_o)
+=
+(NULL . NULL)
+```
+
+```text
+(
+ omi---imo
+ XOR
+ (o|O)-US?/O_o-(o|O)
+)
+XOR
+(
+ omi---imo
+ XOR
+ (o|O)-US?/O_o-(o|O)
+)
+=
+(NULL . NULL)
+```
+
+The proper computational sentence is:
+
+> `omi---imo` carries the four-state epistemic Blackboard, `US?/O_o` carries the three-phase temporal gauge window, the dot pairs them into one notation object, and XOR exposes or cancels the difference between aligned scope-and-time configurations.
